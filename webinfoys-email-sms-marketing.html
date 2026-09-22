@@ -1,0 +1,5127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Email &amp; SMS Marketing — Campaigns That Reach People | Webinfoys</title>
+  <meta name="description"
+    content="Personalized email and SMS campaigns from Webinfoys that strengthen customer relationships, increase engagement and drive conversions through targeted messaging." />
+  <meta name="theme-color" content="#080A10" />
+  <link rel="canonical" href="https://webinfoys.com/email-sms-marketing/" />
+  <link rel="icon"
+    href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%238B7BF2'/%3E%3Cstop offset='.55' stop-color='%23C77BE0'/%3E%3Cstop offset='1' stop-color='%23F49AC0'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='16' fill='%23080A10'/%3E%3Ctext x='32' y='44' font-family='Segoe UI,Arial,sans-serif' font-size='34' font-weight='700' fill='url(%23g)' text-anchor='middle'%3Ew%3C/text%3E%3C/svg%3E" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Webinfoys" />
+  <meta property="og:url" content="https://webinfoys.com/email-sms-marketing/" />
+  <meta property="og:title" content="Email &amp; SMS Marketing — Campaigns That Reach People | Webinfoys" />
+  <meta property="og:description"
+    content="Personalized email and SMS campaigns from Webinfoys that strengthen customer relationships, increase engagement and drive conversions through targeted messaging." />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Email &amp; SMS Marketing — Campaigns That Reach People | Webinfoys" />
+  <meta name="twitter:description"
+    content="Personalized email and SMS campaigns from Webinfoys that strengthen customer relationships, increase engagement and drive conversions through targeted messaging." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700;800&family=Instrument+Serif:ital@0;1&family=Space+Mono:wght@400;700&display=swap" />
+  <style>
+    :root {
+      --bg: #080A10;
+      --ink: #F2F1F7;
+      /* body-copy grey. Raised from #9A98AC so it clears 7:1 on the page ground
+         AND stays above 4.5:1 on the lightest part of a glass card, where a lit
+         3D slab can pass behind it. Nothing important sits below this value. */
+      --muted: #ABA9BD;
+      /* the violet is legible as a fill but marginal as small text, so links and
+         micro-labels use the lighter tint instead of --b1 */
+      --b1: #8B7BF2;
+      --b1-text: #AFA3F8;
+      --b2: #C77BE0;
+      --b3: #F49AC0;
+      --b4: #F49AC0;
+      --violet: #8B7BF2;
+      --magenta: #C77BE0;
+      --rose: #F49AC0;
+      --accent: linear-gradient(120deg, #8B7BF2, #C77BE0 55%, #F49AC0);
+      --hair: rgba(236, 234, 243, 0.12);
+      --hairSoft: rgba(236, 234, 243, 0.06);
+      --radius: 28px;
+      --ease: cubic-bezier(.22, 1, .36, 1);
+      /* THE global content container — the only two values that decide
+         where the page's left and right content edges fall. Every major
+         section resolves through .section / .hero / footer below. */
+      --site-max: 1320px;
+      --site-pad: 24px;
+      /* vertical rhythm — three steps, not one value everywhere */
+      --sy: clamp(76px, 8vw, 122px);
+      --sy-lg: clamp(88px, 9.5vw, 140px);
+      --sy-sm: clamp(60px, 6vw, 88px);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0
+    }
+
+    html {
+      scroll-behavior: smooth;
+      /* anchors clear the floating nav pill instead of landing under it */
+      scroll-padding-top: 104px;
+      /* the left/right reveal variants start 54px outside their container, which
+         is enough to make the document scroll sideways before they animate in.
+         `clip` (not `hidden`) removes that without creating a scroll container,
+         so the sticky nav keeps sticking to the viewport. */
+      overflow-x: clip
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--ink);
+      font-family: 'Inter', system-ui, sans-serif;
+      overflow-x: hidden;
+      position: relative;
+      -webkit-font-smoothing: antialiased;
+      letter-spacing: -0.011em
+    }
+
+    ::selection {
+      background: var(--b2);
+      color: #fff
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none
+    }
+
+    h1,
+    h2,
+    h3,
+    h4 {
+      font-family: 'Sora', sans-serif;
+      letter-spacing: -0.03em;
+      line-height: 1.04;
+      font-weight: 700
+    }
+
+    /* even line lengths, so headings, eyebrows, leads and subtitles never end on
+       a lone word (browsers without support keep their usual wrapping) */
+    h1,
+    h2,
+    h3,
+    h4,
+    .eyebrow,
+    .lede,
+    .sub {
+      text-wrap: balance
+    }
+
+    .serif {
+      font-family: 'Instrument Serif', serif;
+      font-style: italic;
+      font-weight: 400;
+      letter-spacing: -0.005em
+    }
+
+    .gt {
+      background: var(--accent);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent
+    }
+
+    /* ============ GLOBAL SITE CONTAINER ============ */
+    /* Single source of truth. Backgrounds (.aurora, .vignette, .grain and the
+       per-section [data-atmo] glows) stay full-bleed and are unaffected —
+       only content resolves through this container. */
+    .section,
+    .hero,
+    .about-hero,
+    footer {
+      width: min(var(--site-max), calc(100% - var(--site-pad) * 2));
+      margin-inline: auto
+    }
+
+    .section {
+      padding: var(--sy) 0;
+      position: relative;
+      z-index: 2
+    }
+
+    /* rhythm modifiers — lg for the commercial sections, sm where two
+       sections read as one idea (frontiers/support, advantage/CTA) */
+    .section.sy-lg {
+      padding-block: var(--sy-lg)
+    }
+
+    .section.sy-sm {
+      padding-block: var(--sy-sm)
+    }
+
+    .section.no-top {
+      padding-top: 0
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      font-family: 'Space Mono', monospace;
+      font-size: 12px;
+      font-weight: 400;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--b3)
+    }
+
+    .eyebrow svg {
+      width: 14px;
+      height: 14px
+    }
+
+    .muted {
+      color: var(--muted)
+    }
+
+    /* ============ REALISTIC LIQUID GLASS ============ */
+    /* The card tint is deliberately opaque enough (0.82) that a lit 3D slab
+       drifting behind a card can never wash out the text on it. The gradient,
+       border, sheen and shadow stack are untouched, so it still reads as glass. */
+    .glass {
+      position: relative;
+      background: linear-gradient(145deg, rgba(255, 255, 255, 0.075), rgba(255, 255, 255, 0.026) 45%, rgba(255, 255, 255, 0.011)), rgba(10, 13, 24, 0.82);
+      backdrop-filter: blur(24px) saturate(140%);
+      -webkit-backdrop-filter: blur(24px) saturate(140%);
+      border-radius: var(--radius);
+      box-shadow:
+        0 1px 0 0 rgba(255, 255, 255, .35) inset,
+        0 -12px 30px -18px rgba(0, 0, 0, .55) inset,
+        0 24px 70px -26px rgba(0, 0, 0, .7),
+        0 8px 30px -18px rgba(139, 123, 242, .28);
+      isolation: isolate;
+    }
+
+    .glass::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      border-radius: inherit;
+      padding: 1px;
+      pointer-events: none;
+      z-index: 2;
+      background: linear-gradient(135deg, rgba(255, 255, 255, .6), rgba(255, 255, 255, .08) 30%, rgba(255, 255, 255, 0) 55%, rgba(199, 123, 224, .14) 80%, rgba(255, 255, 255, .28));
+      -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+      -webkit-mask-composite: xor;
+      mask-composite: exclude;
+    }
+
+    .glass::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      border-radius: inherit;
+      pointer-events: none;
+      z-index: 1;
+      opacity: 0;
+      transition: opacity .5s;
+      background: radial-gradient(180px 180px at var(--mx, 50%) var(--my, 0%), rgba(255, 255, 255, .18), transparent 65%);
+    }
+
+    .glass.interactive:hover::after {
+      opacity: 1
+    }
+
+    .glass.interactive:hover {
+      box-shadow:
+        0 1px 0 0 rgba(255, 255, 255, .42) inset,
+        0 -12px 30px -18px rgba(0, 0, 0, .55) inset,
+        0 30px 82px -28px rgba(0, 0, 0, .74),
+        0 12px 42px -18px rgba(139, 123, 242, .40);
+    }
+
+    .glass>.sheen {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 46%;
+      border-radius: inherit;
+      z-index: 1;
+      pointer-events: none;
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.14), rgba(255, 255, 255, 0.02) 60%, transparent);
+      -webkit-mask: linear-gradient(180deg, #000, transparent);
+      mask: linear-gradient(180deg, #000, transparent)
+    }
+
+    .glass>* {
+      position: relative;
+      z-index: 3
+    }
+
+    /* ============ BUTTONS ============ */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      border-radius: 999px;
+      font-weight: 600;
+      font-size: 15px;
+      cursor: pointer;
+      transition: transform .3s var(--ease), box-shadow .3s, filter .25s;
+      border: none;
+      white-space: nowrap
+    }
+
+    .btn svg {
+      width: 17px;
+      height: 17px
+    }
+
+    .btn-primary {
+      background: var(--accent);
+      color: #fff;
+      padding: 14px 26px;
+      box-shadow: 0 10px 34px -10px rgba(199, 123, 224, .6), 0 1px 0 rgba(255, 255, 255, .3) inset
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 22px 50px -12px rgba(199, 123, 224, .72), 0 1px 0 rgba(255, 255, 255, .4) inset;
+      filter: brightness(1.07)
+    }
+
+    .btn-glass {
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid var(--hair);
+      color: var(--ink);
+      padding: 14px 26px;
+      backdrop-filter: blur(20px);
+      box-shadow: 0 1px 0 rgba(255, 255, 255, .2) inset
+    }
+
+    .btn-glass:hover {
+      transform: translateY(-2px);
+      background: rgba(255, 255, 255, 0.14)
+    }
+
+    .btn-sm {
+      padding: 11px 20px;
+      font-size: 14px
+    }
+
+    /* ============ WIDE FLOATING GLASS NAV ============ */
+    /* rides the same global container as every section below it:
+       [ brand ]        [ links, centred ]        [ CTA ] */
+    header.nav {
+      position: sticky;
+      top: 18px;
+      z-index: 100;
+      width: min(var(--site-max), calc(100% - var(--site-pad) * 2));
+      margin-inline: auto;
+      padding-top: 18px;
+      pointer-events: none
+    }
+
+    .nav-in {
+      pointer-events: auto;
+      display: grid;
+      /* equal side tracks keep the link group on the true centre line */
+      grid-template-columns: 1fr auto 1fr;
+      align-items: center;
+      gap: 16px;
+      width: 100%;
+      padding: 11px 12px 11px 26px;
+      border-radius: 999px
+    }
+
+    .nav-in .brand {
+      font-weight: 700;
+      font-size: 21px;
+      letter-spacing: -0.04em
+    }
+
+    .nav-in .brand span {
+      color: var(--b3)
+    }
+
+    .menu {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 4px
+    }
+
+    .nav-cta {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      justify-self: end
+    }
+
+    .nav-cta .btn {
+      padding: 12px 22px;
+      font-size: 14.5px
+    }
+
+    .nlink {
+      color: var(--muted);
+      position: relative;
+      transition: color .2s, background .2s;
+      font-size: 15px;
+      font-weight: 500;
+      padding: 10px 17px;
+      border-radius: 999px
+    }
+
+    .nlink:hover {
+      color: var(--ink);
+      background: rgba(255, 255, 255, .07)
+    }
+
+    /* The site's own pages (About, Blog) belong in the nav alongside the section
+       anchors. Six links plus a brand and a CTA need ~980px of pill, so the
+       burger breakpoint sits at 1024px and the panel below it carries the FULL
+       menu — no link is unreachable at any width. */
+
+    /* ---- header dropdowns (Services / Pricing) ----
+       The panel borrows the pill's own surface: same dark translucent ground,
+       same hairline border, same blur, same 15px/500 link type and the same
+       hover wash as .nlink. It is absolutely positioned, so the header keeps its
+       existing height and layout exactly. */
+    .navitem {
+      position: relative;
+      display: flex;
+      align-items: center
+    }
+
+    .navitem>.nlink {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px
+    }
+
+    .navitem>.nlink .caret {
+      display: flex;
+      opacity: .65;
+      transition: transform .28s var(--ease), opacity .2s
+    }
+
+    .navitem>.nlink .caret svg {
+      width: 12px;
+      height: 12px
+    }
+
+    .navitem:hover>.nlink .caret,
+    .navitem.open>.nlink .caret {
+      opacity: 1;
+      transform: rotate(180deg)
+    }
+
+    .dropdown {
+      position: absolute;
+      top: calc(100% + 18px);
+      left: 50%;
+      transform: translateX(-50%) translateY(-6px);
+      min-width: 236px;
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+      padding: 8px;
+      border-radius: 18px;
+      background: linear-gradient(145deg, rgba(255, 255, 255, 0.075), rgba(255, 255, 255, 0.026) 45%, rgba(255, 255, 255, 0.011)), rgba(10, 13, 24, 0.94);
+      border: 1px solid var(--hair);
+      backdrop-filter: blur(24px) saturate(140%);
+      -webkit-backdrop-filter: blur(24px) saturate(140%);
+      box-shadow:
+        0 1px 0 0 rgba(255, 255, 255, .28) inset,
+        0 24px 70px -26px rgba(0, 0, 0, .7),
+        0 8px 30px -18px rgba(139, 123, 242, .28);
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+      transition: opacity .22s var(--ease), transform .22s var(--ease), visibility .22s;
+      z-index: 5
+    }
+
+    /* invisible bridge across the gap, so travelling from the link to the panel
+       does not pass through a non-hovered strip and close it */
+    .dropdown::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: -20px;
+      height: 20px
+    }
+
+    .navitem:hover>.dropdown,
+    .navitem:focus-within>.dropdown,
+    .navitem.open>.dropdown {
+      opacity: 1;
+      visibility: visible;
+      pointer-events: auto;
+      transform: translateX(-50%) translateY(0)
+    }
+
+    .dropdown a {
+      font-size: 15px;
+      font-weight: 500;
+      color: var(--muted);
+      padding: 10px 14px;
+      border-radius: 12px;
+      white-space: nowrap;
+      transition: color .2s, background .2s
+    }
+
+    .dropdown a:hover,
+    .dropdown a:focus-visible {
+      color: var(--ink);
+      background: rgba(255, 255, 255, .07)
+    }
+
+    .burger {
+      display: none;
+      background: rgba(255, 255, 255, .06);
+      border: 1px solid var(--hair);
+      color: var(--ink);
+      cursor: pointer;
+      width: 44px;
+      height: 44px;
+      align-items: center;
+      justify-content: center;
+      border-radius: 14px;
+      transition: background .2s
+    }
+
+    .burger:hover {
+      background: rgba(255, 255, 255, .12)
+    }
+
+    .burger svg {
+      width: 24px;
+      height: 24px
+    }
+
+    .mobile-menu {
+      pointer-events: none;
+      display: flex;
+      position: fixed;
+      top: 112px;
+      left: var(--site-pad);
+      right: var(--site-pad);
+      transform: translateY(-10px);
+      z-index: 99;
+      flex-direction: column;
+      gap: 4px;
+      padding: 16px;
+      border-radius: 24px;
+      /* the panel now carries the full site menu, so on a short phone it must
+         scroll inside itself rather than run off the bottom of the screen */
+      max-height: calc(100vh - 132px);
+      max-height: calc(100dvh - 132px);
+      overflow-y: auto;
+      overscroll-behavior: contain;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity .28s var(--ease), transform .28s var(--ease), visibility .28s
+    }
+
+    .mobile-menu a {
+      padding: 13px 10px;
+      color: var(--ink);
+      border-bottom: 1px solid var(--hairSoft);
+      font-size: 16px
+    }
+
+    .mobile-menu a:last-child {
+      border: none
+    }
+
+    .mobile-menu.open {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+      pointer-events: auto
+    }
+
+    /* the panel only exists below the nav breakpoint */
+    @media (min-width:1024px) {
+      .mobile-menu {
+        display: none
+      }
+    }
+
+    /* ---- nav breakpoint: pill collapses to the burger panel ---- */
+    @media (max-width:1023px) {
+      .nav-in .desk {
+        display: none
+      }
+
+      .burger {
+        display: flex
+      }
+
+      .nav-in {
+        padding: 10px 10px 10px 20px;
+        gap: 12px
+      }
+    }
+
+    .mobile-menu h6 {
+      font-family: 'Space Mono', monospace;
+      font-size: 11px;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      color: var(--muted);
+      font-weight: 400;
+      padding: 12px 10px 6px;
+      border-bottom: 1px solid var(--hairSoft)
+    }
+
+    .mobile-menu h6:first-child {
+      padding-top: 4px
+    }
+
+    /* the same dropdown items, nested under their parent, since the pill's
+       hover panels do not exist below the nav breakpoint */
+    .mobile-menu a.sub {
+      padding-left: 26px;
+      font-size: 15px;
+      color: var(--muted);
+      position: relative
+    }
+
+    .mobile-menu a.sub::before {
+      content: "";
+      position: absolute;
+      left: 10px;
+      top: 50%;
+      width: 8px;
+      height: 1px;
+      background: var(--hair)
+    }
+
+    .progress {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 3px;
+      width: 0;
+      background: var(--accent);
+      z-index: 200;
+      box-shadow: 0 0 14px rgba(199, 123, 224, .9)
+    }
+
+    /* ============ HERO ============ */
+    .hero {
+      padding: clamp(48px, 7vw, 96px) 0 clamp(42px, 5.2vw, 66px);
+      position: relative;
+      z-index: 2;
+      text-align: center
+    }
+
+    .hero .eyebrow {
+      justify-content: center
+    }
+
+    .hero h1 {
+      font-size: clamp(3rem, 8.4vw, 6.6rem);
+      font-weight: 800;
+      margin: 24px auto 0;
+      max-width: 1100px
+    }
+
+    .rot {
+      display: inline-block;
+      position: relative;
+      min-height: 1.05em;
+      vertical-align: top
+    }
+
+    /* phrases share the headline's left edge (every rotator sits in left-aligned
+       copy), so a waiting phrase never hangs past the screen and the outgoing
+       one slides down in place instead of jumping sideways */
+    .rot span {
+      position: absolute;
+      left: 0;
+      top: 0;
+      transform: translate(0, 20px);
+      white-space: nowrap;
+      opacity: 0;
+      transition: opacity .55s var(--ease), transform .55s var(--ease)
+    }
+
+    .rot span.on {
+      opacity: 1;
+      transform: translate(0, 0);
+      position: relative;
+      left: auto
+    }
+
+    .hero p {
+      font-size: clamp(1.05rem, 1.7vw, 1.3rem);
+      color: var(--muted);
+      max-width: 640px;
+      margin: 30px auto 0;
+      line-height: 1.65
+    }
+
+    /* soft dark halo keeps hero type crisp where a lit structure passes behind it */
+    .hero h1,
+    .hero p {
+      text-shadow: 0 1px 26px rgba(4, 4, 12, .55)
+    }
+
+    .hero-cta {
+      display: flex;
+      gap: 14px;
+      margin-top: 38px;
+      flex-wrap: wrap;
+      justify-content: center
+    }
+
+    .hero-cards {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+      margin-top: 56px;
+      text-align: left;
+      align-items: stretch
+    }
+
+    .hcard {
+      padding: 28px 26px
+    }
+
+    .hcard .n {
+      font-size: clamp(2.2rem, 4.5vw, 3.1rem);
+      font-weight: 800;
+      letter-spacing: -0.045em
+    }
+
+    .hcard .l {
+      color: var(--muted);
+      font-size: 14.5px;
+      margin-top: 9px;
+      line-height: 1.5
+    }
+
+    /* ============ MARQUEE ============ */
+    .marquee-wrap {
+      overflow: hidden;
+      padding: 6px 0 4px;
+      position: relative;
+      z-index: 2;
+      -webkit-mask: linear-gradient(90deg, transparent, #000 12%, #000 88%, transparent);
+      mask: linear-gradient(90deg, transparent, #000 12%, #000 88%, transparent)
+    }
+
+    .marquee-lbl {
+      text-align: center;
+      color: var(--muted);
+      font-size: 12.5px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      margin-bottom: 22px
+    }
+
+    .marquee {
+      display: flex;
+      gap: 64px;
+      white-space: nowrap;
+      width: max-content;
+      animation: marquee 32s linear infinite;
+      align-items: center
+    }
+
+    .marquee span {
+      font-size: 18px;
+      font-weight: 600;
+      color: #DADCE8;
+      opacity: .88;
+      display: inline-flex;
+      align-items: center;
+      gap: 11px
+    }
+
+    .marquee span::before {
+      content: "";
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--accent)
+    }
+
+    @keyframes marquee {
+      from {
+        transform: translateX(0)
+      }
+
+      to {
+        transform: translateX(-50%)
+      }
+    }
+
+    /* ============ HEADINGS ============ */
+    .head {
+      margin-bottom: 52px
+    }
+
+    .head h2 {
+      font-size: clamp(2.1rem, 4.8vw, 3.7rem);
+      margin-top: 18px;
+      max-width: 740px
+    }
+
+    .head.center {
+      text-align: center
+    }
+
+    .head.center h2 {
+      margin-left: auto;
+      margin-right: auto
+    }
+
+    .head .sub {
+      color: var(--muted);
+      margin-top: 20px;
+      max-width: 620px;
+      font-size: 16.5px;
+      line-height: 1.68
+    }
+
+    .head.center .sub {
+      margin-left: auto;
+      margin-right: auto
+    }
+
+    /* ============ CARD GRIDS ============ */
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 20px;
+      align-items: stretch
+    }
+
+    /* the [data-reveal] wrappers are the real grid/flex items — stretching them
+       is what keeps every card in a row the same height and every inner CTA
+       on the same baseline */
+    .grid-3>*,
+    .steps>*,
+    .hero-cards>* {
+      display: flex
+    }
+
+    .grid-3>*>*,
+    .steps>*>*,
+    .hero-cards>*>* {
+      width: 100%
+    }
+
+    .card {
+      padding: 34px 32px 30px;
+      display: flex;
+      flex-direction: column
+    }
+
+    .card .ico {
+      display: grid;
+      place-items: center;
+      width: 52px;
+      height: 52px;
+      border-radius: 15px;
+      background: linear-gradient(135deg, rgba(139, 123, 242, .30), rgba(244, 154, 192, .16));
+      border: 1px solid var(--hair);
+      color: #fff;
+      margin-bottom: 22px;
+      box-shadow: 0 1px 0 rgba(255, 255, 255, .25) inset
+    }
+
+    .card .ico svg {
+      width: 24px;
+      height: 24px
+    }
+
+    .card h3 {
+      font-size: 1.38rem;
+      font-weight: 600;
+      line-height: 1.26;
+      margin-bottom: 12px
+    }
+
+    .card p {
+      color: var(--muted);
+      font-size: 15px;
+      line-height: 1.7
+    }
+
+    /* pushed to the card floor so "Learn more" lines up across the row */
+    .card .more {
+      margin-top: auto;
+      padding-top: 22px;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 14px;
+      color: var(--b1-text);
+      font-weight: 600
+    }
+
+    .card .more svg {
+      width: 15px;
+      height: 15px;
+      transition: transform .3s
+    }
+
+    .card:hover .more svg {
+      transform: translateX(4px)
+    }
+
+    .interactive {
+      transition: box-shadow .45s var(--ease), border-color .4s
+    }
+
+    .tilt {
+      transition: transform .3s var(--ease), box-shadow .45s var(--ease), border-color .4s;
+      transform-style: preserve-3d;
+      will-change: transform
+    }
+
+    /* ============ SPLIT ============ */
+    .split {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+      gap: clamp(44px, 4.6vw, 64px);
+      align-items: center
+    }
+
+    /* intentional ratios instead of a flat 50/50 */
+    .split.lean-left {
+      grid-template-columns: minmax(0, 1.05fr) minmax(0, .95fr)
+    }
+
+    .split.lean-right {
+      grid-template-columns: minmax(0, .85fr) minmax(0, 1.15fr)
+    }
+
+    /* paired panels that must share a height and sit on the same baseline */
+    .split.stretch {
+      align-items: stretch
+    }
+
+    .split.stretch>* {
+      display: flex
+    }
+
+    .split.stretch>*>* {
+      width: 100%
+    }
+
+    .split.stretch>*:first-child>* {
+      display: flex;
+      flex-direction: column;
+      justify-content: center
+    }
+
+    /* the two small stat cards under the principles copy */
+    .stat-duo {
+      display: flex;
+      align-items: stretch;
+      gap: 16px;
+      margin-top: 32px
+    }
+
+    .stat-duo>* {
+      flex: 1 1 0;
+      display: flex;
+      min-width: 0
+    }
+
+    .stat-duo>*>* {
+      width: 100%
+    }
+
+    .feat {
+      display: flex;
+      gap: 16px;
+      padding: 22px 0;
+      border-top: 1px solid var(--hair)
+    }
+
+    .feat .fi {
+      display: grid;
+      place-items: center;
+      width: 42px;
+      height: 42px;
+      border-radius: 13px;
+      background: rgba(255, 255, 255, .06);
+      border: 1px solid var(--hair);
+      color: var(--b1-text);
+      flex-shrink: 0;
+      box-shadow: 0 1px 0 rgba(255, 255, 255, .2) inset
+    }
+
+    .feat .fi svg {
+      width: 19px;
+      height: 19px
+    }
+
+    .feat h4 {
+      font-size: 1.12rem;
+      font-weight: 600
+    }
+
+    .feat p {
+      color: var(--muted);
+      font-size: 15px;
+      margin-top: 7px;
+      line-height: 1.65
+    }
+
+    /* ============ STATS ============ */
+    .statgrid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: clamp(28px, 3vw, 36px);
+      padding: clamp(38px, 4.4vw, 56px)
+    }
+
+    .stat .num {
+      font-size: clamp(2.6rem, 5.5vw, 4rem);
+      font-weight: 800;
+      letter-spacing: -0.045em;
+      line-height: 1
+    }
+
+    .stat .num .s {
+      background: var(--accent);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent
+    }
+
+    .stat .lab {
+      color: var(--muted);
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-top: 12px;
+      line-height: 1.4
+    }
+
+    /* ============ PROCESS ============ */
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 18px;
+      align-items: stretch
+    }
+
+    .step {
+      padding: 32px 30px;
+      display: flex;
+      flex-direction: column
+    }
+
+    .step .num {
+      font-size: 2.9rem;
+      line-height: 1;
+      font-weight: 800;
+      letter-spacing: -0.05em;
+      background: var(--accent);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent
+    }
+
+    .step h4 {
+      font-size: 1.22rem;
+      font-weight: 600;
+      line-height: 1.3;
+      margin: 16px 0 9px
+    }
+
+    .step p {
+      color: var(--muted);
+      font-size: 15px;
+      line-height: 1.66
+    }
+
+    /* ============ PRICING ============ */
+    .price-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 20px;
+      align-items: stretch
+    }
+
+    .plan {
+      padding: clamp(30px, 2.5vw, 36px);
+      position: relative;
+      width: 100%;
+      display: flex;
+      flex-direction: column
+    }
+
+    .plan.pop {
+      border: 1px solid rgba(199, 123, 224, .5);
+      box-shadow:
+        0 1px 0 0 rgba(255, 255, 255, .42) inset,
+        0 -12px 30px -18px rgba(0, 0, 0, .55) inset,
+        0 28px 78px -26px rgba(0, 0, 0, .72),
+        0 14px 52px -20px rgba(199, 123, 224, .45)
+    }
+
+    /* the reveal end-state is transform:var(--rest), so the emphasis scale
+       survives the scroll-in animation instead of being reset to none */
+    .plan-wrap.pop-wrap {
+      --rest: scale(1.035)
+    }
+
+    .badge {
+      position: absolute;
+      top: 26px;
+      right: 26px;
+      background: var(--accent);
+      color: #fff;
+      font-size: 11px;
+      font-weight: 700;
+      padding: 5px 12px;
+      border-radius: 999px;
+      letter-spacing: .04em;
+      z-index: 4
+    }
+
+    .plan .save {
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: .08em;
+      color: var(--b4);
+      text-transform: uppercase
+    }
+
+    .plan .tag {
+      font-size: 12.5px;
+      color: var(--muted);
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      margin-top: 6px
+    }
+
+    .plan h3 {
+      font-size: 2rem;
+      font-weight: 700;
+      margin: 14px 0 8px
+    }
+
+    .plan .blurb {
+      color: var(--muted);
+      font-size: 15px;
+      line-height: 1.6;
+      min-height: 72px
+    }
+
+    .plan .amt {
+      display: flex;
+      align-items: baseline;
+      gap: 10px;
+      margin: 22px 0 2px
+    }
+
+    .plan .amt .big {
+      font-size: 3.1rem;
+      font-weight: 800;
+      letter-spacing: -0.045em
+    }
+
+    .plan .amt .was {
+      text-decoration: line-through;
+      color: var(--muted);
+      font-size: 18px
+    }
+
+    .plan .per {
+      font-size: 13.5px;
+      color: var(--muted);
+      margin-bottom: 24px
+    }
+
+    .plan ul {
+      list-style: none;
+      border-top: 1px solid var(--hair);
+      padding-top: 22px;
+      margin-bottom: 22px;
+      flex: 1
+    }
+
+    .plan li {
+      display: flex;
+      gap: 11px;
+      margin-bottom: 14px;
+      font-size: 15px;
+      line-height: 1.5
+    }
+
+    .plan li svg {
+      width: 17px;
+      height: 17px;
+      color: var(--b4);
+      flex-shrink: 0;
+      margin-top: 1px
+    }
+
+    .plan .buy {
+      margin-top: auto;
+      justify-content: center;
+      width: 100%
+    }
+
+    /* ============ TESTIMONIALS ============ */
+    /* ============ TESTIMONIAL CAROUSEL ============ */
+    /* transform-based track: --per cards visible, --i is the current page.
+       step = (trackWidth + gap) / per, so one expression covers every
+       breakpoint without measuring anything in JS. */
+    .slider {
+      position: relative
+    }
+
+    .slider:focus-visible {
+      outline: 2px solid var(--b2);
+      outline-offset: 8px;
+      border-radius: 30px
+    }
+
+    /* clips horizontally at the container edge; the vertical padding (cancelled
+       by the negative margin) leaves room for card shadow and tilt lift */
+    .slider-viewport {
+      overflow: hidden;
+      padding: 14px 0;
+      margin-block: -14px
+    }
+
+    .slider-track {
+      --per: 3;
+      --gap: 20px;
+      --i: 0;
+      --drag: 0px;
+      display: flex;
+      align-items: stretch;
+      gap: var(--gap);
+      touch-action: pan-y;
+      cursor: grab;
+      transform: translate3d(calc(var(--drag) - var(--i) * (100% + var(--gap)) / var(--per)), 0, 0);
+      transition: transform .6s var(--ease);
+      will-change: transform
+    }
+
+    .slider-track.dragging {
+      transition: none;
+      cursor: grabbing
+    }
+
+    .slide {
+      flex: 0 0 calc((100% - (var(--per) - 1) * var(--gap)) / var(--per));
+      display: flex
+    }
+
+    .slide>* {
+      width: 100%
+    }
+
+    .slider-ctrl {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 18px;
+      margin-top: 32px
+    }
+
+    .sbtn {
+      display: grid;
+      place-items: center;
+      width: 46px;
+      height: 46px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, .06);
+      border: 1px solid var(--hair);
+      color: var(--ink);
+      cursor: pointer;
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      box-shadow: 0 1px 0 rgba(255, 255, 255, .2) inset;
+      transition: background .25s, transform .25s var(--ease), opacity .25s
+    }
+
+    .sbtn svg {
+      width: 18px;
+      height: 18px
+    }
+
+    .sbtn:hover:not(:disabled) {
+      background: rgba(255, 255, 255, .13);
+      transform: translateY(-2px)
+    }
+
+    .sbtn:disabled {
+      opacity: .3;
+      cursor: default
+    }
+
+    .sdots {
+      display: flex;
+      align-items: center;
+      gap: 8px
+    }
+
+    .sdot {
+      width: 8px;
+      height: 8px;
+      padding: 0;
+      border: none;
+      border-radius: 999px;
+      background: rgba(236, 234, 243, .24);
+      cursor: pointer;
+      transition: width .35s var(--ease), background .3s
+    }
+
+    .sdot.on {
+      width: 28px;
+      background: var(--accent)
+    }
+
+    .rev {
+      padding: 34px 32px;
+      display: flex;
+      flex-direction: column
+    }
+
+    .rev .stars {
+      display: flex;
+      gap: 3px;
+      margin-bottom: 16px
+    }
+
+    .rev .stars svg {
+      width: 16px;
+      height: 16px;
+      color: #FFC24B;
+      fill: #FFC24B
+    }
+
+    .rev .q {
+      font-size: 16px;
+      line-height: 1.7;
+      flex: 1
+    }
+
+    .rev .who {
+      margin-top: 24px;
+      padding-top: 18px;
+      border-top: 1px solid var(--hair);
+      display: flex;
+      align-items: center;
+      gap: 13px
+    }
+
+    .rev .av {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      background: var(--accent);
+      color: #fff;
+      font-weight: 700;
+      font-size: 17px;
+      box-shadow: 0 1px 0 rgba(255, 255, 255, .3) inset
+    }
+
+    .rev .nm {
+      font-weight: 600;
+      font-size: 15.5px
+    }
+
+    .rev .ro {
+      color: var(--muted);
+      font-size: 13.5px;
+      margin-top: 3px;
+      line-height: 1.4
+    }
+
+    /* ============ FAQ ============ */
+    .faq-shell {
+      border-radius: 30px
+    }
+
+    .faq {
+      padding: 8px clamp(26px, 3.2vw, 42px)
+    }
+
+    .qa {
+      border-bottom: 1px solid var(--hair)
+    }
+
+    .qa:last-child {
+      border-bottom: none
+    }
+
+    .qa button {
+      width: 100%;
+      background: none;
+      border: none;
+      color: var(--ink);
+      cursor: pointer;
+      text-align: left;
+      padding: 25px 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      font-family: inherit
+    }
+
+    .qa .q {
+      font-size: clamp(1.05rem, 2vw, 1.32rem);
+      font-weight: 600;
+      letter-spacing: -0.025em;
+      /* the card is container-wide; the question keeps a readable measure
+         while the plus stays flush to the card's right edge */
+      max-width: 820px;
+      transition: color .2s
+    }
+
+    .qa button:hover .q,
+    .qa.open .q {
+      color: var(--b3)
+    }
+
+    .qa .pl {
+      display: grid;
+      place-items: center;
+      width: 26px;
+      height: 26px;
+      flex-shrink: 0;
+      color: var(--b2);
+      transition: transform .35s var(--ease), color .25s
+    }
+
+    .qa .pl svg {
+      width: 24px;
+      height: 24px
+    }
+
+    .qa.open .pl {
+      transform: rotate(45deg)
+    }
+
+    .qa .a {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height .5s var(--ease)
+    }
+
+    .qa .a .inner {
+      padding-bottom: 28px;
+      color: var(--muted);
+      font-size: 15.5px;
+      line-height: 1.72;
+      max-width: 760px
+    }
+
+    .qa .a .inner p+ul {
+      margin-top: 12px
+    }
+
+    .qa .a .inner strong {
+      color: var(--ink);
+      font-weight: 600
+    }
+
+    .qa .a .inner li {
+      margin: 10px 0 10px 18px;
+      padding-left: 2px
+    }
+
+    .qa .a .inner li::marker {
+      color: var(--b2)
+    }
+
+    /* ============ CTA ============ */
+    /* full-bleed glass panels stop short of the shell edge so they keep a
+       deliberate silhouette instead of stretching to 1320px */
+    .feature-panel {
+      padding: clamp(40px, 5.4vw, 66px) clamp(28px, 5vw, 60px);
+      text-align: center
+    }
+
+    .cta {
+      text-align: center;
+      padding: clamp(48px, 6.2vw, 90px) clamp(28px, 5vw, 68px)
+    }
+
+    .cta h2 {
+      font-size: clamp(2.4rem, 6vw, 4.8rem);
+      font-weight: 800;
+      max-width: 840px;
+      margin: 20px auto 0
+    }
+
+    .cta p {
+      color: var(--muted);
+      max-width: 540px;
+      margin: 22px auto 0;
+      font-size: 17px;
+      line-height: 1.65
+    }
+
+    .cta .row {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      margin-top: 38px;
+      flex-wrap: wrap
+    }
+
+    .cta .tags {
+      display: flex;
+      gap: 22px;
+      justify-content: center;
+      margin-top: 34px;
+      flex-wrap: wrap;
+      color: var(--muted);
+      font-size: 15px
+    }
+
+    .cta .tags span {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px
+    }
+
+    .cta .tags svg {
+      width: 16px;
+      height: 16px;
+      color: var(--b4)
+    }
+
+    /* ============ FOOTER ============ */
+    footer {
+      position: relative;
+      z-index: 2;
+      border-top: 1px solid var(--hairSoft);
+      padding: 68px 0 44px
+    }
+
+    /* five areas: brand | company | services | support | contact. The contact
+       column is the widest link column because it carries a full email address,
+       which should sit on one line rather than break mid-word. */
+    .foot {
+      display: grid;
+      grid-template-columns: minmax(0, 1.35fr) minmax(0, .75fr) minmax(0, 1fr) minmax(0, .9fr) minmax(0, 1.3fr);
+      gap: clamp(28px, 3.2vw, 46px)
+    }
+
+    /* ---- contact: icon + value, no "Phone:" style labels ---- */
+    .foot .fc {
+      font-style: normal;
+      display: flex;
+      flex-direction: column;
+      gap: 13px
+    }
+
+    .foot .fc-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 11px;
+      width: fit-content;
+      max-width: 100%;
+      font-size: 14.5px;
+      line-height: 1.45;
+      color: var(--muted);
+      transition: color .2s
+    }
+
+    .foot .fc-item svg {
+      width: 17px;
+      height: 17px;
+      flex-shrink: 0;
+      margin-top: 1px;
+      color: var(--b1-text)
+    }
+
+    .foot .fc-item span {
+      min-width: 0;
+      overflow-wrap: anywhere
+    }
+
+    .foot a.fc-item:hover {
+      color: var(--ink)
+    }
+
+    /* ---- social ---- */
+    .foot .social {
+      display: flex;
+      gap: 10px;
+      margin-top: 22px
+    }
+
+    .foot .social a {
+      display: grid;
+      place-items: center;
+      width: 42px;
+      height: 42px;
+      border-radius: 13px;
+      color: var(--ink);
+      border: 1px solid var(--hair);
+      background: rgba(255, 255, 255, .05);
+      box-shadow: 0 1px 0 rgba(255, 255, 255, .14) inset;
+      transition: transform .3s var(--ease), background .25s, border-color .25s, box-shadow .3s
+    }
+
+    .foot .social a:hover {
+      transform: translateY(-3px);
+      background: rgba(255, 255, 255, .1);
+      border-color: rgba(199, 123, 224, .45);
+      box-shadow: 0 1px 0 rgba(255, 255, 255, .22) inset, 0 10px 24px -12px rgba(199, 123, 224, .55)
+    }
+
+    .foot .social svg {
+      width: 18px;
+      height: 18px
+    }
+
+    /* ---- contact column order: details, working hours, social ---- */
+    .foot h6 {
+      margin: 24px 0 11px;
+      font-family: 'Space Mono', monospace;
+      font-size: 11px;
+      font-weight: 400;
+      letter-spacing: .16em;
+      line-height: 1.4;
+      text-transform: uppercase;
+      color: var(--muted)
+    }
+
+    .foot h6+.social {
+      margin-top: 0
+    }
+
+    /* working hours: one quiet glass card, icon in a round glass badge */
+    .foot .fh {
+      display: flex;
+      align-items: center;
+      gap: 13px;
+      width: fit-content;
+      max-width: 100%;
+      padding: 10px 18px 10px 10px;
+      border-radius: 16px;
+      border: 1px solid var(--hair);
+      background:
+        linear-gradient(145deg, rgba(139, 123, 242, .12), rgba(255, 255, 255, .02) 60%),
+        rgba(255, 255, 255, .03);
+      box-shadow: 0 1px 0 rgba(255, 255, 255, .12) inset;
+      transition: border-color .3s, box-shadow .3s
+    }
+
+    .foot .fh:hover {
+      border-color: rgba(175, 163, 248, .42);
+      box-shadow: 0 1px 0 rgba(255, 255, 255, .16) inset, 0 10px 26px -14px rgba(139, 123, 242, .6)
+    }
+
+    .foot .fh-ico {
+      display: grid;
+      place-items: center;
+      flex-shrink: 0;
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      color: #C9C0FF;
+      border: 1px solid rgba(175, 163, 248, .38);
+      background:
+        radial-gradient(circle at 35% 30%, rgba(139, 123, 242, .38), rgba(139, 123, 242, .06) 72%),
+        rgba(10, 13, 24, .6);
+      box-shadow: 0 0 18px -6px rgba(139, 123, 242, .75), 0 1px 0 rgba(255, 255, 255, .18) inset
+    }
+
+    .foot .fh-ico svg {
+      width: 20px;
+      height: 20px
+    }
+
+    .foot .fh p {
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+      min-width: 0;
+      font-size: 14.5px;
+      line-height: 1.35;
+      color: var(--muted)
+    }
+
+    .foot .fh b {
+      font-weight: 600;
+      color: var(--ink)
+    }
+
+    /* the X mark fills its box edge to edge, so it sits a touch smaller */
+    .foot .social a.x svg {
+      width: 16px;
+      height: 16px
+    }
+
+    /* laptop: brand gets its own row, the four link columns share the next */
+    @media (max-width:1200px) {
+      .foot {
+        grid-template-columns: minmax(0, .8fr) minmax(0, 1fr) minmax(0, .9fr) minmax(0, 1.3fr)
+      }
+
+      .foot>:first-child {
+        grid-column: 1 / -1
+      }
+
+      /* scoped to beat the base 290px cap, which comes later in the file */
+      .foot>:first-child .d {
+        max-width: 560px
+      }
+    }
+
+    /* the existing 900px (two columns) and 560px (one column) rules below
+       still apply; brand keeps spanning the full row at every width */
+    @media (max-width:560px) {
+      .foot .social a {
+        width: 46px;
+        height: 46px
+      }
+    }
+
+    .foot .brand {
+      display: inline-block;
+      font-size: 24px;
+      margin-bottom: 14px;
+      font-weight: 700;
+      letter-spacing: -0.04em
+    }
+
+    .foot .brand span {
+      color: var(--b3)
+    }
+
+    .foot .d {
+      color: var(--muted);
+      font-size: 14.5px;
+      line-height: 1.7;
+      max-width: 290px
+    }
+
+    .foot .reg {
+      margin-top: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 7px
+    }
+
+    .foot .reg span,
+    .foot .reg a {
+      font-size: 13px;
+      color: var(--muted);
+      font-family: 'Space Mono', monospace;
+      letter-spacing: -0.01em
+    }
+
+    .foot .reg a:hover {
+      color: var(--ink)
+    }
+
+    /* payment / trust row — the live footer's "Powered by" strip */
+    .foot .pay {
+      margin-top: 22px;
+      display: flex;
+      align-items: center;
+      gap: 9px;
+      flex-wrap: wrap
+    }
+
+    .foot .pay .lbl {
+      font-size: 12px;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+      color: var(--muted);
+      font-family: 'Space Mono', monospace;
+      width: 100%;
+      margin-bottom: 3px
+    }
+
+    .foot .pay b {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--ink);
+      padding: 7px 13px;
+      border-radius: 999px;
+      border: 1px solid var(--hair);
+      background: rgba(255, 255, 255, .05);
+      box-shadow: 0 1px 0 rgba(255, 255, 255, .16) inset
+    }
+
+    .foot h5 {
+      font-size: 12.5px;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: var(--ink);
+      margin-bottom: 16px
+    }
+
+    .foot a.fl {
+      display: block;
+      color: var(--muted);
+      font-size: 14.5px;
+      line-height: 1.4;
+      margin-bottom: 12px;
+      width: fit-content;
+      transition: color .2s
+    }
+
+    .foot a.fl:hover {
+      color: var(--ink)
+    }
+
+    .foot-bottom {
+      margin-top: 52px;
+      padding-top: 24px;
+      border-top: 1px solid var(--hairSoft);
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px 24px;
+      color: var(--muted);
+      font-size: 13.5px
+    }
+
+    .foot-bottom .lk {
+      display: flex;
+      gap: 22px;
+      flex-wrap: wrap
+    }
+
+    .foot-bottom .lk a {
+      color: var(--muted);
+      font-size: 13.5px;
+      font-weight: 500
+    }
+
+    .foot-bottom .lk a:hover {
+      color: var(--ink)
+    }
+
+    /* ============ SPATIAL ENVIRONMENT ============ */
+    /* Static, dark, deep-navy base — no moving CSS shapes. It sets the mood and
+       is the graceful fallback if WebGL is unavailable; the moving depth comes
+       from the three.js architectural scene painted on #bg3d above it. */
+    .aurora {
+      position: fixed;
+      inset: 0;
+      z-index: 0;
+      pointer-events: none;
+      background:
+        radial-gradient(120% 85% at 80% 8%, rgba(139, 123, 242, .10), transparent 52%),
+        radial-gradient(120% 90% at 8% 92%, rgba(199, 123, 224, .07), transparent 52%),
+        radial-gradient(120% 120% at 50% 42%, rgba(13, 17, 30, .68), #080A10 86%)
+    }
+
+    /* the three.js digital-architecture scene — foreground slabs, receding light
+       frames and volumetric glow at real depth. Fixed, behind all content. */
+    /* width/height are explicit because a canvas is a replaced element: with
+       `inset:0` alone it falls back to its intrinsic (attribute) size, which is
+       set from window.innerWidth and therefore includes the scrollbar — enough
+       to push the document into horizontal overflow on every desktop browser
+       that reserves scrollbar width. */
+    #bg3d {
+      position: fixed;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 0;
+      pointer-events: none
+    }
+
+    /* per-section atmosphere — one soft localized glow per section, so the
+       background shifts subtly as you scroll (brightest at hero/CTA, quiet at footer) */
+    [data-atmo] {
+      position: relative
+    }
+
+    [data-atmo]::before {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      pointer-events: none;
+      border-radius: 50%;
+      width: min(680px, 82vw);
+      height: 520px;
+      filter: blur(100px);
+      opacity: .5;
+      top: 4%;
+      left: 50%;
+      transform: translateX(-50%)
+    }
+
+    [data-atmo="violet"]::before {
+      background: radial-gradient(circle, rgba(139, 123, 242, .30), transparent 70%)
+    }
+
+    [data-atmo="magenta"]::before {
+      background: radial-gradient(circle, rgba(199, 123, 224, .28), transparent 70%);
+      left: 76%
+    }
+
+    [data-atmo="purple"]::before {
+      background: radial-gradient(circle, rgba(150, 120, 235, .24), transparent 70%);
+      left: 24%
+    }
+
+    [data-atmo="pink"]::before {
+      background: radial-gradient(circle, rgba(244, 154, 192, .24), transparent 70%);
+      left: 70%;
+      top: 8%
+    }
+
+    [data-atmo="blue"]::before {
+      background: radial-gradient(circle, rgba(110, 130, 255, .24), transparent 70%);
+      left: 22%
+    }
+
+    [data-atmo="edge"]::before {
+      background: radial-gradient(circle, rgba(139, 123, 242, .16), transparent 70%);
+      left: 10%;
+      opacity: .42
+    }
+
+    [data-atmo="strong"]::before {
+      width: min(860px, 90vw);
+      height: 640px;
+      opacity: .6;
+      background: radial-gradient(circle, rgba(199, 123, 224, .38), rgba(244, 154, 192, .18) 45%, transparent 72%)
+    }
+
+    /* hero — the strongest, layered atmosphere */
+    .hero::before {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      pointer-events: none;
+      width: min(900px, 94vw);
+      height: 720px;
+      top: -8%;
+      left: 62%;
+      transform: translateX(-50%);
+      border-radius: 50%;
+      filter: blur(90px);
+      opacity: .6;
+      background: radial-gradient(circle, rgba(139, 123, 242, .4), rgba(199, 123, 224, .2) 46%, transparent 72%);
+      animation: heroGlow 26s ease-in-out infinite
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      pointer-events: none;
+      width: min(620px, 82vw);
+      height: 520px;
+      top: 24%;
+      left: 16%;
+      transform: translateX(-50%);
+      border-radius: 50%;
+      filter: blur(100px);
+      opacity: .42;
+      background: radial-gradient(circle, rgba(110, 130, 255, .34), transparent 70%);
+      animation: heroGlow2 32s ease-in-out infinite
+    }
+
+    @keyframes heroGlow {
+      0%, 100% { transform: translateX(-50%) translateY(0) scale(1) }
+      50% { transform: translateX(-50%) translateY(3%) scale(1.06) }
+    }
+
+    @keyframes heroGlow2 {
+      0%, 100% { transform: translateX(-50%) translateY(0) scale(1) }
+      50% { transform: translateX(-50%) translateY(-4%) scale(1.08) }
+    }
+
+    /* Reading scrim. Sits above #bg3d and below all content, so the 3D scene keeps
+       its depth but can never brighten the ground under a paragraph. The flat
+       layer is the readability floor; the two gradients are the mood. */
+    .vignette {
+      position: fixed;
+      inset: 0;
+      z-index: 1;
+      pointer-events: none;
+      background:
+        linear-gradient(0deg, rgba(4, 5, 11, .26), rgba(4, 5, 11, .26)),
+        radial-gradient(120% 120% at 50% 42%, transparent 48%, rgba(3, 3, 7, .6) 100%),
+        linear-gradient(180deg, rgba(6, 6, 11, .5), transparent 16%, transparent 84%, rgba(4, 4, 9, .72))
+    }
+
+    .grain {
+      position: fixed;
+      inset: 0;
+      z-index: 1;
+      pointer-events: none;
+      opacity: .03;
+      mix-blend-mode: overlay;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")
+    }
+
+    /* ============ SCROLL REVEAL VARIANTS ============ */
+    [data-reveal] {
+      --rest: none;
+      opacity: 0;
+      transition: opacity 1s var(--ease), transform 1.05s var(--ease), filter 1s var(--ease);
+      will-change: opacity, transform
+    }
+
+    [data-reveal="up"] {
+      transform: translateY(46px)
+    }
+
+    [data-reveal="scale"] {
+      transform: scale(.92) translateY(24px)
+    }
+
+    [data-reveal="left"] {
+      transform: translateX(-54px)
+    }
+
+    [data-reveal="right"] {
+      transform: translateX(54px)
+    }
+
+    [data-reveal="blur"] {
+      filter: blur(16px);
+      transform: translateY(30px)
+    }
+
+    [data-reveal].in {
+      opacity: 1;
+      transform: var(--rest);
+      filter: none
+    }
+
+    a:focus-visible,
+    button:focus-visible {
+      outline: 2px solid var(--b2);
+      outline-offset: 3px;
+      border-radius: 10px
+    }
+
+    /* ============ ABOUT PAGE ============ */
+    /* Built entirely from the tokens above — same container, same rhythm, same
+       glass, same accent ramp. Nothing here restyles a homepage component; these
+       are the pieces the About page needs that the homepage never had. */
+
+    /* flex, not inline-flex: as an inline box it shared a line with the eyebrow
+       that follows it */
+    .crumb {
+      display: flex;
+      width: fit-content;
+      align-items: center;
+      gap: 9px;
+      font-family: 'Space Mono', monospace;
+      font-size: 12.5px;
+      color: var(--muted);
+      margin-bottom: 22px
+    }
+
+    .crumb a:hover {
+      color: var(--ink)
+    }
+
+    .crumb span {
+      opacity: .5
+    }
+
+    .crumb b {
+      color: var(--b3);
+      font-weight: 400
+    }
+
+    .about-hero {
+      padding: clamp(34px, 4.4vw, 60px) 0 clamp(40px, 5vw, 64px);
+      position: relative;
+      z-index: 2
+    }
+
+    .about-hero .ah-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.02fr) minmax(0, .98fr);
+      gap: clamp(40px, 4.4vw, 68px);
+      align-items: center
+    }
+
+    .about-hero h1 {
+      font-size: clamp(2.6rem, 6.4vw, 4.6rem);
+      font-weight: 800;
+      margin-top: 18px
+    }
+
+    .about-hero .lede {
+      color: var(--muted);
+      font-size: clamp(1.02rem, 1.5vw, 1.2rem);
+      line-height: 1.7;
+      margin-top: 22px;
+      max-width: 560px
+    }
+
+    .about-hero h1,
+    .about-hero .lede {
+      text-shadow: 0 1px 26px rgba(4, 4, 12, .55)
+    }
+
+    .about-hero .row {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-top: 34px
+    }
+
+    /* the hero's own figure: a flat, drawn echo of the 3D scene behind it —
+       receding frames and layered panels, no photography, no stock imagery */
+    .ah-visual {
+      padding: clamp(20px, 2.2vw, 28px);
+      border-radius: 30px
+    }
+
+    .ah-visual svg {
+      display: block;
+      width: 100%;
+      height: auto
+    }
+
+    .ah-visual .cap {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-top: 20px;
+      padding-top: 18px;
+      border-top: 1px solid var(--hair)
+    }
+
+    .ah-visual .cap b {
+      font-family: 'Space Mono', monospace;
+      font-size: 11.5px;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+      color: var(--muted);
+      font-weight: 400
+    }
+
+    .ah-visual .cap i {
+      font-style: normal;
+      font-size: 13.5px;
+      color: var(--ink);
+      font-weight: 600
+    }
+
+    /* ---- stats strip ---- */
+    .stat-strip {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 18px;
+      align-items: stretch
+    }
+
+    .stat-strip>* {
+      display: flex
+    }
+
+    .stat-strip>*>* {
+      width: 100%
+    }
+
+    .scard {
+      padding: 30px 28px
+    }
+
+    .scard .n {
+      font-size: clamp(2.3rem, 4.4vw, 3.2rem);
+      font-weight: 800;
+      letter-spacing: -0.045em;
+      line-height: 1
+    }
+
+    .scard .l {
+      color: var(--muted);
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: .1em;
+      margin-top: 12px;
+      line-height: 1.45
+    }
+
+    /* ---- outcome chips (the five clauses of the source's Why-us sentence) ---- */
+    .chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 30px
+    }
+
+    .chips span {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      padding: 12px 20px;
+      border-radius: 999px;
+      border: 1px solid var(--hair);
+      background: rgba(255, 255, 255, .055);
+      box-shadow: 0 1px 0 rgba(255, 255, 255, .18) inset;
+      font-size: 14.5px;
+      font-weight: 500;
+      color: var(--ink)
+    }
+
+    .chips svg {
+      width: 15px;
+      height: 15px;
+      color: var(--b4);
+      flex-shrink: 0
+    }
+
+    /* ---- timeline ---- */
+    .tl {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 20px;
+      align-items: stretch;
+      position: relative
+    }
+
+    .tl>* {
+      display: flex
+    }
+
+    .tl>*>* {
+      width: 100%
+    }
+
+    .tl-item {
+      padding: 34px 32px 30px;
+      display: flex;
+      flex-direction: column;
+      position: relative
+    }
+
+    .tl-item .step-n {
+      display: inline-flex;
+      align-items: baseline;
+      gap: 3px;
+      font-family: 'Space Mono', monospace;
+      font-size: 13px;
+      letter-spacing: .1em;
+      color: var(--b3);
+      margin-bottom: 20px
+    }
+
+    .tl-item .dot {
+      display: block;
+      width: 100%;
+      height: 2px;
+      border-radius: 2px;
+      background: linear-gradient(90deg, var(--b1), var(--b2) 55%, transparent);
+      margin-bottom: 22px;
+      opacity: .75
+    }
+
+    .tl-item h3 {
+      font-size: 1.32rem;
+      font-weight: 600;
+      line-height: 1.28;
+      margin-bottom: 12px
+    }
+
+    .tl-item p {
+      color: var(--muted);
+      font-size: 15px;
+      line-height: 1.7
+    }
+
+    /* ---- trust band ---- */
+    .trust {
+      padding: clamp(40px, 5vw, 62px) clamp(28px, 5vw, 60px);
+      text-align: center
+    }
+
+    .trust h2 {
+      font-size: clamp(1.8rem, 4vw, 2.9rem);
+      font-weight: 800;
+      max-width: 780px;
+      margin: 18px auto 0
+    }
+
+    .trust .row {
+      display: flex;
+      gap: 14px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 30px
+    }
+
+    /* ---- team ---- */
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 20px;
+      align-items: stretch
+    }
+
+    .team-grid>* {
+      display: flex
+    }
+
+    .team-grid>*>* {
+      width: 100%
+    }
+
+    .member {
+      padding: 32px 30px;
+      display: flex;
+      flex-direction: column
+    }
+
+    .member .top {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 20px
+    }
+
+    .member .mono {
+      width: 56px;
+      height: 56px;
+      flex-shrink: 0;
+      border-radius: 18px;
+      display: grid;
+      place-items: center;
+      font-family: 'Sora', sans-serif;
+      font-size: 17px;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      color: #fff;
+      background: var(--accent);
+      box-shadow: 0 1px 0 rgba(255, 255, 255, .32) inset, 0 10px 28px -12px rgba(199, 123, 224, .5)
+    }
+
+    .member h3 {
+      font-size: 1.16rem;
+      font-weight: 600;
+      letter-spacing: -0.02em
+    }
+
+    .member .role {
+      margin-top: 5px;
+      font-family: 'Space Mono', monospace;
+      font-size: 11.5px;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      color: var(--b3)
+    }
+
+    .member p {
+      color: var(--muted);
+      font-size: 15px;
+      line-height: 1.7;
+      padding-top: 20px;
+      border-top: 1px solid var(--hair);
+      margin-top: auto
+    }
+
+    /* ---- advantage ---- */
+    .adv-list {
+      display: flex;
+      gap: 14px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 32px
+    }
+
+    /* ---- FAQ numbering ---- */
+    .qa .qn {
+      font-family: 'Space Mono', monospace;
+      font-size: 13px;
+      color: var(--b2);
+      margin-right: 14px;
+      flex-shrink: 0
+    }
+
+    .qa button>.qwrap {
+      display: flex;
+      align-items: baseline;
+      gap: 0;
+      min-width: 0
+    }
+
+    /* ---- About responsive ---- */
+    @media (max-width:1024px) {
+      .stat-strip {
+        grid-template-columns: repeat(2, minmax(0, 1fr))
+      }
+
+      .team-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr))
+      }
+
+      .tl {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 16px
+      }
+    }
+
+    @media (max-width:900px) {
+      .about-hero .ah-grid {
+        grid-template-columns: minmax(0, 1fr);
+        gap: clamp(34px, 6vw, 48px)
+      }
+
+      .about-hero .lede {
+        max-width: none
+      }
+    }
+
+    @media (max-width:680px) {
+
+      .stat-strip,
+      .team-grid {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 16px
+      }
+
+      .about-hero .row .btn {
+        flex: 1 1 auto;
+        justify-content: center
+      }
+
+      .chips span {
+        font-size: 14px;
+        padding: 11px 17px
+      }
+    }
+
+    @media (max-width:430px) {
+
+      .scard,
+      .member,
+      .tl-item {
+        padding: 26px 24px
+      }
+
+      .about-hero .row {
+        flex-direction: column
+      }
+
+      .about-hero .row .btn {
+        width: 100%
+      }
+
+      .qa .qn {
+        margin-right: 10px
+      }
+    }
+
+    /* ============ SERVICE PAGES ============ */
+    /* Additions only — every colour, radius, shadow and spacing value below
+       resolves through the same tokens the homepage uses. */
+
+    /* the three dedicated services, called out above the full catalogue */
+    .hl-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 20px;
+      align-items: stretch
+    }
+
+    .hl-grid>*,
+    .svc-grid>* {
+      display: flex
+    }
+
+    .hl-grid>*>*,
+    .svc-grid>*>* {
+      width: 100%
+    }
+
+    .hl {
+      padding: 36px 32px 30px;
+      display: flex;
+      flex-direction: column;
+      border: 1px solid rgba(199, 123, 224, .28)
+    }
+
+    .hl .badge-n {
+      font-family: 'Space Mono', monospace;
+      font-size: 12.5px;
+      letter-spacing: .14em;
+      color: var(--b3);
+      margin-bottom: 18px
+    }
+
+    .hl .ico {
+      display: grid;
+      place-items: center;
+      width: 54px;
+      height: 54px;
+      border-radius: 16px;
+      background: linear-gradient(135deg, rgba(139, 123, 242, .32), rgba(244, 154, 192, .18));
+      border: 1px solid var(--hair);
+      color: #fff;
+      margin-bottom: 22px;
+      box-shadow: 0 1px 0 rgba(255, 255, 255, .25) inset
+    }
+
+    .hl .ico svg {
+      width: 25px;
+      height: 25px
+    }
+
+    .hl h3 {
+      font-size: 1.42rem;
+      font-weight: 600;
+      line-height: 1.26;
+      margin-bottom: 12px
+    }
+
+    .hl p {
+      color: var(--muted);
+      font-size: 15px;
+      line-height: 1.7
+    }
+
+    .hl .btn {
+      margin-top: 26px;
+      justify-content: center;
+      width: 100%
+    }
+
+    /* the full service catalogue — same card as the homepage, in a grid that
+       also handles the SEO page's twelve disciplines */
+    .svc-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 20px;
+      align-items: stretch
+    }
+
+    /* five-step process: three up top, two centred beneath, so the row never
+       reads as a leftover */
+    .tl.five {
+      grid-template-columns: repeat(6, minmax(0, 1fr))
+    }
+
+    .tl.five>* {
+      grid-column: span 2
+    }
+
+    .tl.five>*:nth-child(4) {
+      grid-column: 2 / span 2
+    }
+
+    .tl.five>*:nth-child(5) {
+      grid-column: 4 / span 2
+    }
+
+    /* four-step process */
+    .tl.four {
+      grid-template-columns: repeat(4, minmax(0, 1fr))
+    }
+
+    /* pricing note that replaces a mis-stated discount badge */
+    .price-note {
+      margin-top: 22px;
+      text-align: center;
+      font-size: 14px;
+      color: var(--muted)
+    }
+
+    /* capability list used on the web-development plans */
+    .plan .caps {
+      list-style: none;
+      border-top: 1px solid var(--hair);
+      padding-top: 22px;
+      margin-bottom: 22px;
+      flex: 1
+    }
+
+    @media (max-width:1120px) {
+      .tl.four {
+        grid-template-columns: repeat(2, minmax(0, 1fr))
+      }
+    }
+
+    @media (max-width:1024px) {
+
+      .hl-grid,
+      .svc-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr))
+      }
+
+      .tl.five,
+      .tl.five>*,
+      .tl.five>*:nth-child(4),
+      .tl.five>*:nth-child(5) {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-column: auto
+      }
+
+      .tl.five {
+        grid-template-columns: repeat(2, minmax(0, 1fr))
+      }
+    }
+
+    @media (max-width:680px) {
+
+      .hl-grid,
+      .svc-grid,
+      .tl.four,
+      .tl.five {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 16px
+      }
+    }
+
+    @media (max-width:430px) {
+      .hl {
+        padding: 28px 24px
+      }
+    }
+
+    /* ============ LOGO MARK ============ */
+    /* The live webinfoys.com header lockup, reproduced: the round Webinfoys
+       mark beside the "webinfoys." wordmark, rolling on its Y axis like a coin
+       inside a 700px perspective stage — same asset, same 11s linear roll,
+       same blue drop-shadow. The stage is a fixed box, so the 3D turn never
+       moves anything around it. */
+    .nav-in .brand,
+    .foot .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      white-space: nowrap
+    }
+
+    /* hug the lockup rather than filling the 1fr grid track */
+    .nav-in .brand {
+      justify-self: start
+    }
+
+    /* the wordmark is one unit so the flex gap never splits "webinfoys" from its dot */
+    .nav-in .brand .wm,
+    .foot .brand .wm {
+      color: inherit
+    }
+
+    .logo-stage {
+      display: inline-block;
+      flex-shrink: 0;
+      line-height: 0;
+      perspective: 700px
+    }
+
+    .logo-3d {
+      display: block;
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      transform-style: preserve-3d;
+      backface-visibility: visible;
+      /* the mark is drawn in black on a transparent ground; this light disc
+         sits inside the navy ring so the laptop and check read as designed
+         instead of vanishing into the dark header */
+      background: radial-gradient(circle closest-side, #F4F4FA 0 87%, transparent 88%);
+      filter: drop-shadow(0 4px 10px rgba(110, 139, 255, .45));
+      animation: wfy-roll 11s linear infinite;
+      will-change: transform
+    }
+
+    @keyframes wfy-roll {
+      from {
+        transform: rotateY(0deg)
+      }
+
+      to {
+        transform: rotateY(360deg)
+      }
+    }
+
+    /* footer: same mark, same roll, a touch smaller and slower */
+    .foot .logo-3d {
+      width: 32px;
+      height: 32px;
+      animation-duration: 16s;
+      filter: drop-shadow(0 3px 8px rgba(110, 139, 255, .35))
+    }
+
+    @media (max-width:560px) {
+      .nav-in .logo-3d {
+        width: 30px;
+        height: 30px
+      }
+
+      .nav-in .brand {
+        gap: 9px
+      }
+    }
+
+    @media (prefers-reduced-motion:reduce) {
+      .logo-3d {
+        animation: none
+      }
+    }
+
+    /* ============ HERO VISUAL SYSTEM ============ */
+    /* One engine for every inner-page hero figure: a core, three to six named
+       satellites, the paths between them, and a travelling light packet that
+       shows which way value moves. Pages differ only in their config (HV in
+       the script). Paths and nodes share one 520x380 space, so a line always
+       meets its node at any size without measuring anything. */
+    .hv {
+      position: relative;
+      width: 100%;
+      /* sizes below are in cqi (fractions of the stage width), so the figure
+         scales like a drawing while its labels stay real text */
+      container-type: inline-size;
+      aspect-ratio: 520 / 380;
+      perspective: 1100px;
+      perspective-origin: 50% 45%
+    }
+
+    /* the only background geometry: a faint grid, fading out at the edges */
+    .hv::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      background-image:
+        linear-gradient(rgba(236, 234, 243, .05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(236, 234, 243, .05) 1px, transparent 1px);
+      background-size: 10% 13.16%;
+      background-position: center;
+      -webkit-mask: radial-gradient(ellipse 70% 65% at 50% 50%, #000 30%, transparent 100%);
+      mask: radial-gradient(ellipse 70% 65% at 50% 50%, #000 30%, transparent 100%)
+    }
+
+    .hv .hv-stage {
+      position: absolute;
+      inset: 0;
+      transform-style: preserve-3d;
+      will-change: transform
+    }
+
+    .hv .hv-svg {
+      position: absolute;
+      inset: 0;
+      display: block;
+      width: 100%;
+      height: 100%;
+      overflow: visible
+    }
+
+    .hv .hv-ring {
+      fill: none;
+      stroke: rgba(139, 123, 242, .12);
+      stroke-width: 1
+    }
+
+    .hv .hv-orbit {
+      fill: none;
+      stroke: rgba(139, 123, 242, .3);
+      stroke-width: 1.2;
+      stroke-dasharray: 1.2 1.8;
+      animation: hvOrbit 60s linear infinite
+    }
+
+    .hv .hv-link {
+      fill: none;
+      stroke: rgba(236, 234, 243, .17);
+      stroke-width: 1.4
+    }
+
+    /* the packet: one short dash travelling from source to destination */
+    .hv .hv-pkt {
+      fill: none;
+      stroke-width: 2.4;
+      stroke-linecap: round;
+      stroke-dasharray: 7 93;
+      animation: hvFlow 3.8s linear infinite
+    }
+
+    .hv .hv-base {
+      stroke: rgba(236, 234, 243, .14);
+      stroke-width: 1.2
+    }
+
+    @keyframes hvFlow {
+      from {
+        stroke-dashoffset: 100
+      }
+
+      to {
+        stroke-dashoffset: 0
+      }
+    }
+
+    @keyframes hvOrbit {
+      to {
+        stroke-dashoffset: -100
+      }
+    }
+
+    /* ---- nodes ---- */
+    .hv .hv-node {
+      position: absolute;
+      z-index: 2;
+      transform: translate(-50%, -50%) translateZ(var(--z, 12px))
+    }
+
+    .hv .hv-card {
+      display: flex;
+      align-items: center;
+      gap: 1.731cqi;
+      padding: 1.731cqi 2.5cqi 1.731cqi 1.923cqi;
+      border-radius: 2.692cqi;
+      border: 1px solid var(--hair);
+      background:
+        linear-gradient(160deg, rgba(255, 255, 255, .08), rgba(255, 255, 255, .015) 55%),
+        rgba(10, 13, 24, .92);
+      box-shadow:
+        0 1px 0 rgba(255, 255, 255, .16) inset,
+        0 16px 34px -20px rgba(0, 0, 0, .85);
+      white-space: nowrap;
+      animation: hvFloat 9s ease-in-out infinite;
+      animation-delay: var(--d, 0s)
+    }
+
+    .hv .hv-node.hl .hv-card {
+      border-color: rgba(199, 123, 224, .5);
+      box-shadow:
+        0 1px 0 rgba(255, 255, 255, .2) inset,
+        0 16px 34px -20px rgba(0, 0, 0, .85),
+        0 8px 24px -14px rgba(199, 123, 224, .5)
+    }
+
+    .hv .hv-ico {
+      display: grid;
+      place-items: center;
+      flex-shrink: 0;
+      width: 5cqi;
+      height: 5cqi;
+      border-radius: 1.731cqi;
+      color: #fff;
+      border: 1px solid var(--hair);
+      background: linear-gradient(135deg, rgba(110, 130, 255, .34), rgba(199, 123, 224, .2))
+    }
+
+    .hv .hv-ico svg {
+      display: block;
+      width: 2.692cqi;
+      height: 2.692cqi
+    }
+
+    .hv .hv-t {
+      display: flex;
+      flex-direction: column;
+      gap: 0.962cqi;
+      min-width: 0
+    }
+
+    .hv .hv-t b {
+      font-size: max(11px, 2.404cqi);
+      font-weight: 600;
+      line-height: 1.2;
+      letter-spacing: -.005em;
+      color: var(--ink)
+    }
+
+    .hv .l-short {
+      display: none
+    }
+
+    @keyframes hvFloat {
+
+      0%,
+      100% {
+        transform: translateY(0)
+      }
+
+      50% {
+        transform: translateY(-3px)
+      }
+    }
+
+    /* tiny indicators — only where they add meaning */
+    .hv .hv-pills {
+      display: flex;
+      gap: 0.577cqi
+    }
+
+    .hv .hv-pills s {
+      display: block;
+      height: 0.962cqi;
+      border-radius: 0.577cqi;
+      background: rgba(143, 162, 255, .55)
+    }
+
+    .hv .hv-pills s:nth-child(1) {
+      width: 2.885cqi
+    }
+
+    .hv .hv-pills s:nth-child(2) {
+      width: 4.231cqi
+    }
+
+    .hv .hv-pills s:nth-child(3) {
+      width: 2.115cqi
+    }
+
+    .hv .hv-spark {
+      display: block;
+      width: 8.077cqi;
+      height: 2.308cqi;
+      overflow: visible
+    }
+
+    .hv .hv-spark path {
+      fill: none;
+      stroke: #C77BE0;
+      stroke-width: 1.8;
+      stroke-linecap: round;
+      stroke-linejoin: round
+    }
+
+    .hv .hv-post {
+      display: grid;
+      grid-template-columns: 2.5cqi 1fr;
+      gap: 0.577cqi 0.962cqi;
+      width: 10.385cqi
+    }
+
+    .hv .hv-post s {
+      display: block;
+      height: 0.769cqi;
+      border-radius: 0.385cqi;
+      background: rgba(236, 234, 243, .2)
+    }
+
+    .hv .hv-post s:first-child {
+      grid-row: span 2;
+      height: 2.5cqi;
+      border-radius: 0.769cqi;
+      background: linear-gradient(135deg, rgba(110, 130, 255, .6), rgba(244, 154, 192, .5))
+    }
+
+    /* ---- core ---- */
+    .hv .hv-cw {
+      z-index: 3
+    }
+
+    .hv .hv-core {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1.538cqi;
+      padding: 2.885cqi 3.462cqi 2.692cqi;
+      border-radius: 3.846cqi;
+      text-align: center;
+      border: 1px solid rgba(199, 123, 224, .55);
+      background:
+        linear-gradient(160deg, rgba(255, 255, 255, .1), rgba(255, 255, 255, .02) 55%),
+        rgba(10, 13, 24, .94);
+      box-shadow:
+        0 1px 0 rgba(255, 255, 255, .42) inset,
+        0 26px 60px -28px rgba(0, 0, 0, .9),
+        0 12px 40px -18px rgba(199, 123, 224, .5)
+    }
+
+    /* the core's slow light pulse */
+    .hv .hv-core::before {
+      content: "";
+      position: absolute;
+      inset: -30%;
+      z-index: -1;
+      border-radius: 50%;
+      pointer-events: none;
+      background: radial-gradient(circle, rgba(139, 123, 242, .32), transparent 65%);
+      animation: hvPulse 5.5s ease-in-out infinite
+    }
+
+    @keyframes hvPulse {
+
+      0%,
+      100% {
+        opacity: .45;
+        transform: scale(.94)
+      }
+
+      50% {
+        opacity: .9;
+        transform: scale(1.04)
+      }
+    }
+
+    .hv .hv-core>b {
+      max-width: 28.846cqi;
+      font-family: 'Sora', sans-serif;
+      font-size: max(11px, 2.404cqi);
+      font-weight: 800;
+      line-height: 1.2;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      color: var(--ink);
+      white-space: normal
+    }
+
+    .hv .hv-core>i {
+      font-style: normal;
+      font-size: max(11px, 2.115cqi);
+      line-height: 1.3;
+      color: var(--muted)
+    }
+
+    /* core visuals, one per concept */
+    .hv .hv-orb {
+      display: block;
+      width: 6.538cqi;
+      height: 6.538cqi;
+      border-radius: 50%;
+      background: radial-gradient(circle at 34% 30%, #fff 0%, #CFC0FF 20%, #8B7BF2 56%, #6E82FF 100%);
+      box-shadow: 0 0 26px -4px rgba(139, 123, 242, .85)
+    }
+
+    .hv .hv-logo {
+      display: block;
+      width: 8.077cqi;
+      height: 8.077cqi;
+      border-radius: 50%;
+      background: radial-gradient(circle closest-side, #F4F4FA 0 87%, transparent 88%);
+      filter: drop-shadow(0 4px 10px rgba(110, 139, 255, .45))
+    }
+
+    .hv .hv-logo img {
+      display: block;
+      width: 100%;
+      height: 100%
+    }
+
+    .hv .hv-rank {
+      display: grid;
+      gap: 0.769cqi;
+      width: 22.692cqi
+    }
+
+    .hv .hv-rank em {
+      display: flex;
+      align-items: center;
+      gap: 1.154cqi;
+      font-style: normal
+    }
+
+    .hv .hv-rank u {
+      width: max(16px, 2.692cqi);
+      font-family: 'Space Mono', monospace;
+      font-size: max(11px, 1.827cqi);
+      text-decoration: none;
+      color: var(--muted)
+    }
+
+    .hv .hv-rank s {
+      display: block;
+      flex: 1;
+      height: 1.154cqi;
+      border-radius: 0.577cqi;
+      background: rgba(236, 234, 243, .14)
+    }
+
+    .hv .hv-rank em:nth-child(2) s {
+      margin-right: 18%
+    }
+
+    .hv .hv-rank em:nth-child(3) s {
+      margin-right: 34%
+    }
+
+    .hv .hv-rank em.on u {
+      color: var(--b3)
+    }
+
+    .hv .hv-rank em.on s {
+      background: var(--accent)
+    }
+
+    .hv .hv-browser {
+      display: block;
+      width: 23.846cqi;
+      overflow: hidden;
+      border-radius: 1.731cqi;
+      border: 1px solid rgba(143, 162, 255, .4);
+      background: rgba(8, 10, 18, .9)
+    }
+
+    .hv .hv-chrome {
+      display: flex;
+      gap: 0.577cqi;
+      padding: 0.962cqi 1.154cqi;
+      border-bottom: 1px solid var(--hair)
+    }
+
+    .hv .hv-chrome s {
+      display: block;
+      width: 0.962cqi;
+      height: 0.962cqi;
+      border-radius: 50%;
+      background: rgba(236, 234, 243, .3)
+    }
+
+    .hv .hv-page {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.769cqi;
+      padding: 1.154cqi
+    }
+
+    .hv .hv-page s {
+      display: block;
+      height: 1.731cqi;
+      border-radius: 0.577cqi;
+      background: rgba(236, 234, 243, .12)
+    }
+
+    .hv .hv-page .a {
+      grid-column: 1 / -1;
+      height: 2.5cqi;
+      background: linear-gradient(90deg, rgba(110, 130, 255, .45), rgba(199, 123, 224, .35))
+    }
+
+    .hv .hv-page .d {
+      grid-column: 1 / -1;
+      width: 55%;
+      height: 1.154cqi
+    }
+
+    .hv .hv-stack {
+      display: grid;
+      gap: 0.769cqi;
+      width: 25.385cqi
+    }
+
+    .hv .hv-stack em {
+      padding: 0.962cqi 1.731cqi;
+      border-radius: 1.538cqi;
+      border: 1px solid var(--hair);
+      background: rgba(255, 255, 255, .04);
+      font-style: normal;
+      font-size: max(11px, 2.019cqi);
+      font-weight: 600;
+      text-align: left;
+      color: var(--muted);
+      white-space: nowrap
+    }
+
+    /* offset layers read as a stack of plans */
+    .hv .hv-stack em:nth-child(1) {
+      margin-right: 2.692cqi
+    }
+
+    .hv .hv-stack em:nth-child(2) {
+      margin: 0 1.346cqi
+    }
+
+    .hv .hv-stack em:nth-child(3) {
+      margin-left: 2.692cqi
+    }
+
+    .hv .hv-stack em.on {
+      color: var(--ink);
+      border-color: rgba(199, 123, 224, .55);
+      background: linear-gradient(90deg, rgba(139, 123, 242, .22), rgba(199, 123, 224, .12))
+    }
+
+    /* three more core visuals, built like .hv-orb and .hv-browser above:
+       container-relative sizing with a pixel floor, so they stay legible when
+       the stage shrinks and need no separate compact rules */
+    .hv .hv-mark {
+      position: relative;
+      display: block;
+      width: max(30px, 9.231cqi);
+      height: max(30px, 9.231cqi);
+      border-radius: max(9px, 2.692cqi);
+      background: linear-gradient(135deg, #CFC0FF, #C77BE0 55%, #F49AC0);
+      box-shadow: 0 0 26px -6px rgba(199, 123, 224, .85)
+    }
+
+    .hv .hv-mark::before,
+    .hv .hv-mark::after {
+      content: "";
+      position: absolute;
+      background: rgba(10, 13, 24, .86)
+    }
+
+    .hv .hv-mark::before {
+      left: 22%;
+      top: 26%;
+      width: 28%;
+      height: 28%;
+      border-radius: 50%
+    }
+
+    .hv .hv-mark::after {
+      right: 22%;
+      bottom: 26%;
+      width: 34%;
+      height: 20%;
+      border-radius: max(2px, .577cqi)
+    }
+
+    .hv .hv-msgs {
+      display: grid;
+      gap: max(3px, .769cqi);
+      width: max(58px, 17.692cqi)
+    }
+
+    .hv .hv-msgs s {
+      display: block;
+      height: max(7px, 2.115cqi);
+      border-radius: max(4px, 1.058cqi);
+      border: 1px solid var(--hair);
+      background: rgba(236, 234, 243, .14)
+    }
+
+    .hv .hv-msgs s:first-child {
+      background: linear-gradient(90deg, rgba(110, 130, 255, .55), rgba(199, 123, 224, .4));
+      border-color: rgba(143, 162, 255, .45)
+    }
+
+    .hv .hv-msgs s:last-child {
+      width: 62%;
+      justify-self: end
+    }
+
+    .hv .hv-map {
+      position: relative;
+      display: block;
+      width: max(60px, 18.462cqi);
+      height: max(38px, 11.538cqi);
+      overflow: hidden;
+      border-radius: max(6px, 1.731cqi);
+      border: 1px solid rgba(143, 162, 255, .4);
+      background:
+        linear-gradient(118deg, transparent 45%, rgba(143, 162, 255, .45) 45%, rgba(143, 162, 255, .45) 49%, transparent 49%),
+        linear-gradient(0deg, transparent 68%, rgba(236, 234, 243, .13) 68%, rgba(236, 234, 243, .13) 71%, transparent 71%),
+        linear-gradient(90deg, transparent 26%, rgba(236, 234, 243, .11) 26%, rgba(236, 234, 243, .11) 29%, transparent 29%),
+        rgba(8, 10, 18, .9)
+    }
+
+    .hv .hv-map::after {
+      content: "";
+      position: absolute;
+      left: 50%;
+      top: 44%;
+      width: max(9px, 2.692cqi);
+      height: max(9px, 2.692cqi);
+      transform: translate(-50%, -50%) rotate(-45deg);
+      border-radius: 50% 50% 50% 0;
+      background: linear-gradient(135deg, #C77BE0, #F49AC0);
+      box-shadow: 0 0 14px -2px rgba(244, 154, 192, .9)
+    }
+    /* layered article panels â€” the journal core, built like the other core
+       visuals above: container-relative sizing with a pixel floor */
+    .hv .hv-panels {
+      position: relative;
+      display: block;
+      width: max(56px, 17.308cqi);
+      height: max(38px, 11.538cqi)
+    }
+
+    .hv .hv-panels s {
+      position: absolute;
+      left: 0;
+      right: 0;
+      height: 46%;
+      border-radius: max(4px, 1.154cqi);
+      border: 1px solid rgba(143, 162, 255, .4);
+      background: linear-gradient(135deg, rgba(255, 255, 255, .12), rgba(255, 255, 255, .03))
+    }
+
+    .hv .hv-panels s:nth-child(1) {
+      top: 0;
+      transform: translateX(-9%) scale(.88);
+      opacity: .5
+    }
+
+    .hv .hv-panels s:nth-child(2) {
+      top: 27%;
+      transform: translateX(5%) scale(.95);
+      opacity: .75
+    }
+
+    .hv .hv-panels s:nth-child(3) {
+      top: 54%;
+      border-color: rgba(199, 123, 224, .6);
+      background: linear-gradient(135deg, rgba(110, 130, 255, .55), rgba(199, 123, 224, .4))
+    }
+    /* off-screen: stop painting */
+    .hv.hv-off * {
+      animation-play-state: paused !important
+    }
+
+    /* ---- compact: below a 440px stage, fixed readable sizes + short labels ---- */
+    @container (max-width:440px) {
+      .hv .hv-card {
+        gap: 6px;
+        padding: 6px 8px 6px 6px;
+        border-radius: 11px
+      }
+
+      .hv .hv-ico {
+        width: 20px;
+        height: 20px;
+        border-radius: 7px
+      }
+
+      .hv .hv-ico svg {
+        width: 11px;
+        height: 11px
+      }
+
+      .hv .hv-t b {
+        font-size: 11px
+      }
+
+      .hv .l-full {
+        display: none
+      }
+
+      .hv .l-short {
+        display: inline
+      }
+
+      .hv .hv-pills,
+      .hv .hv-spark,
+      .hv .hv-post,
+      .hv .hv-core>i {
+        display: none
+      }
+
+      .hv .hv-core {
+        gap: 6px;
+        padding: 10px 11px;
+        border-radius: 15px
+      }
+
+      .hv .hv-core>b {
+        max-width: 112px;
+        font-size: 11px
+      }
+
+      .hv .hv-orb {
+        width: 24px;
+        height: 24px
+      }
+
+      .hv .hv-logo {
+        width: 30px;
+        height: 30px
+      }
+
+      .hv .hv-rank u {
+        width: 16px;
+        font-size: 11px
+      }
+
+      .hv .hv-rank {
+        width: 96px;
+        gap: 3px
+      }
+
+      .hv .hv-browser {
+        width: 86px
+      }
+
+      .hv .hv-page {
+        padding: 4px;
+        gap: 3px
+      }
+
+      .hv .hv-page s {
+        height: 6px
+      }
+
+      .hv .hv-page .a {
+        height: 9px
+      }
+
+      .hv .hv-stack {
+        width: 118px;
+        gap: 3px
+      }
+
+      .hv .hv-stack em {
+        padding: 3px 7px;
+        font-size: 11px
+      }
+    }
+
+    /* ---- phone: below a 340px stage, labels carry the meaning on their own ---- */
+    @container (max-width:340px) {
+      .hv .hv-ico {
+        display: none
+      }
+
+      .hv .hv-card {
+        padding: 6px 9px
+      }
+
+      .hv .hv-core {
+        padding: 8px 9px;
+        gap: 5px
+      }
+
+      .hv .hv-core>b {
+        max-width: 100px;
+        font-size: 11px
+      }
+
+      .hv .hv-rank {
+        width: 80px
+      }
+
+      .hv .hv-browser {
+        width: 66px
+      }
+
+      .hv .hv-stack {
+        width: 104px
+      }
+
+      .hv .hv-stack em {
+        padding: 2px 6px;
+        font-size: 11px
+      }
+
+      .hv .hv-logo {
+        width: 26px;
+        height: 26px
+      }
+
+      .hv .hv-orb {
+        width: 20px;
+        height: 20px
+      }
+    }
+    /* ---- smallest phones: below a 260px stage, the core keeps only its name ---- */
+    @container (max-width:260px) {
+
+      .hv .hv-core>span,
+      .hv .hv-core>i {
+        display: none
+      }
+
+      .hv .hv-core {
+        padding: 7px 8px
+      }
+
+      .hv .hv-core>b {
+        max-width: 100px;
+        font-size: 11px
+      }
+
+      .hv .hv-card {
+        padding: 5px 7px
+      }
+
+      .hv .hv-t b {
+        font-size: 11px
+      }
+    }
+    /* counters: equal-width digits, so a running number never jitters */
+    [data-n] {
+      font-variant-numeric: tabular-nums
+    }
+
+    /* ============ UTILITIES ============ */
+    /* announced by screen readers, never painted */
+    .sr {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0 0 0 0);
+      clip-path: inset(50%);
+      white-space: nowrap;
+      border: 0
+    }
+
+    .skip {
+      position: absolute;
+      left: 50%;
+      top: 8px;
+      transform: translate(-50%, -200%);
+      z-index: 300;
+      background: var(--accent);
+      color: #fff;
+      font-weight: 600;
+      padding: 12px 22px;
+      border-radius: 999px;
+      transition: transform .2s var(--ease)
+    }
+
+    .skip:focus {
+      transform: translate(-50%, 0)
+    }
+
+    /* long words (URLs, GSTIN strings, compound headings) must break rather than
+       push a card wider than the viewport */
+    h1, h2, h3, h4, h5, p, li, .q, .lab, .l, .ro, .blurb {
+      overflow-wrap: break-word
+    }
+
+    /* without JS the reveal system would leave the page blank, so the
+       end-state is applied unconditionally */
+    .no-js [data-reveal] {
+      opacity: 1 !important;
+      transform: none !important;
+      filter: none !important
+    }
+
+    /* ============ RESPONSIVE SYSTEM ============ */
+    /* Gutters and vertical rhythm are tokens, so breakpoints retune the whole
+       page from :root instead of repeating padding rules section by section.
+       Column counts are always explicit — the browser never decides how many
+       cards fit a row. */
+
+    /* ---- Laptop: 4-up process grid would get cramped before 1024 ---- */
+    @media (max-width:1120px) {
+      .steps {
+        grid-template-columns: repeat(2, minmax(0, 1fr))
+      }
+    }
+
+    /* ---- Small laptop / landscape tablet: 3-up grids become 2-up ---- */
+    @media (max-width:1024px) {
+      :root {
+        --sy: clamp(80px, 9vw, 110px);
+        --sy-lg: clamp(88px, 10vw, 118px);
+        --sy-sm: clamp(64px, 7vw, 92px)
+      }
+
+      .hero h1 {
+        font-size: clamp(3rem, 7.8vw, 5rem)
+      }
+
+      .grid-3 {
+        grid-template-columns: repeat(2, minmax(0, 1fr))
+      }
+
+      .slider-track {
+        --per: 2
+      }
+
+      .price-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr))
+      }
+
+      /* three plans across two columns: the third is centred beneath the pair
+         at the same width, so it never reads as a leftover */
+      .price-grid>:nth-child(3) {
+        grid-column: 1 / -1;
+        max-width: calc(50% - 10px);
+        margin-inline: auto
+      }
+
+      .plan-wrap.pop-wrap {
+        --rest: none
+      }
+
+      .split,
+      .split.lean-left,
+      .split.lean-right {
+        grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+        gap: clamp(34px, 4vw, 48px)
+      }
+    }
+
+    /* ---- Tablet: split sections stack, footer halves ---- */
+    @media (max-width:900px) {
+
+      .split,
+      .split.lean-left,
+      .split.lean-right {
+        grid-template-columns: minmax(0, 1fr);
+        gap: clamp(32px, 6vw, 48px)
+      }
+
+      .split.stretch>*:first-child>* {
+        justify-content: flex-start
+      }
+
+      .head {
+        margin-bottom: 42px
+      }
+
+      .foot {
+        grid-template-columns: 1fr 1fr;
+        gap: 36px
+      }
+    }
+
+    /* ---- Mobile: hamburger nav, roomier touch targets ---- */
+    @media (max-width:768px) {
+      :root {
+        --site-pad: 20px;
+        --sy: clamp(70px, 11vw, 96px);
+        --sy-lg: clamp(78px, 12vw, 104px);
+        --sy-sm: clamp(56px, 9vw, 78px)
+      }
+
+      .btn {
+        padding: 15px 24px;
+        min-height: 48px
+      }
+
+      .btn-sm {
+        padding: 12px 18px;
+        min-height: 44px
+      }
+
+      .head {
+        margin-bottom: 36px
+      }
+
+      .head h2 {
+        font-size: clamp(1.95rem, 6.6vw, 2.5rem)
+      }
+
+      .head .sub {
+        font-size: 15.5px;
+        margin-top: 16px
+      }
+
+      .hero {
+        padding: clamp(36px, 9vw, 64px) 0 44px
+      }
+
+      .hero p {
+        font-size: 1.05rem;
+        margin-top: 22px;
+        max-width: none
+      }
+
+      .hero-cta {
+        margin-top: 32px
+      }
+
+      .card {
+        padding: 28px 26px 26px
+      }
+
+      .card h3 {
+        font-size: 1.3rem
+      }
+
+      .step {
+        padding: 28px 26px
+      }
+
+      .plan {
+        padding: 30px
+      }
+
+      .rev {
+        padding: 30px 28px
+      }
+
+      .statgrid {
+        padding: 34px 30px
+      }
+
+      .qa button {
+        padding: 22px 0
+      }
+
+      .cta {
+        padding: clamp(44px, 9vw, 68px) clamp(24px, 5vw, 40px)
+      }
+
+      .feature-panel {
+        padding: clamp(38px, 8vw, 56px) clamp(24px, 5vw, 40px)
+      }
+
+      footer {
+        padding: 54px 0 40px
+      }
+
+      .foot-bottom {
+        margin-top: 40px
+      }
+    }
+
+    /* ---- Small tablets / large phones: every card grid goes single column ---- */
+    @media (max-width:680px) {
+
+      .grid-3,
+      .steps {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 16px
+      }
+
+      .slider-track {
+        --per: 1;
+        --gap: 16px
+      }
+
+      .slider-ctrl {
+        margin-top: 26px
+      }
+
+      .price-grid {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 16px
+      }
+
+      .price-grid>:nth-child(3) {
+        grid-column: auto;
+        max-width: none;
+        margin-inline: 0
+      }
+    }
+
+    /* ---- Phones ---- */
+    @media (max-width:560px) {
+      .hero h1 {
+        font-size: clamp(2.25rem, 9vw, 3rem);
+        margin-top: 20px
+      }
+
+      .rot span {
+        font-size: .82em
+      }
+
+      .hero p {
+        font-size: 1.02rem
+      }
+
+      .hero-cta {
+        gap: 12px
+      }
+
+      .hero-cta .btn {
+        flex: 1 1 auto;
+        justify-content: center
+      }
+
+      .hero-cards {
+        grid-template-columns: minmax(0, 1fr);
+        margin-top: 34px;
+        gap: 14px
+      }
+
+      .hcard {
+        padding: 26px 24px
+      }
+
+      .hcard .n {
+        font-size: 2.6rem
+      }
+
+      .stat-duo {
+        gap: 14px;
+        margin-top: 28px
+      }
+
+      .foot {
+        grid-template-columns: 1fr;
+        gap: 32px
+      }
+
+      .foot .d {
+        max-width: none
+      }
+
+      .cta h2 {
+        font-size: clamp(2.2rem, 9vw, 3rem)
+      }
+
+      .cta .row {
+        flex-direction: column;
+        align-items: stretch
+      }
+
+      .cta .row .btn {
+        width: 100%;
+        justify-content: center
+      }
+    }
+
+    /* ---- Small phones ---- */
+    @media (max-width:430px) {
+      :root {
+        --site-pad: 18px
+      }
+
+      .hero-cta {
+        flex-direction: column
+      }
+
+      .hero-cta .btn {
+        width: 100%
+      }
+
+      .card,
+      .rev,
+      .step {
+        padding: 26px 24px
+      }
+
+      .plan {
+        padding: 26px
+      }
+
+      .statgrid {
+        padding: 30px 24px;
+        gap: 24px
+      }
+
+      .stat-duo {
+        gap: 12px
+      }
+
+      .faq {
+        padding: 4px 20px
+      }
+    }
+
+    /* ---- Mobile atmosphere: tighten the section glows so they stay subtle ---- */
+    @media (max-width:768px) {
+
+      [data-atmo]::before,
+      .hero::before,
+      .hero::after {
+        filter: blur(70px);
+        width: min(520px, 90vw);
+        height: 420px;
+        opacity: .34
+      }
+    }
+
+    @media (prefers-reduced-motion:reduce) {
+      * {
+        animation: none !important
+      }
+
+      [data-reveal] {
+        opacity: 1 !important;
+        transform: none !important;
+        filter: none !important
+      }
+
+      .slider-track,
+      .mobile-menu {
+        transition: none !important
+      }
+    }
+  </style>
+</head>
+
+<body class="no-js">
+
+  <a class="skip" href="#main">Skip to content</a>
+  <div class="aurora" aria-hidden="true"></div>
+  <canvas id="bg3d" aria-hidden="true"></canvas>
+  <div class="vignette"></div>
+  <div class="grain"></div>
+  <div class="progress" id="progress"></div>
+
+  <!-- NAV (centered floating pill) -->
+  <header class="nav">
+    <div class="nav-in glass">
+      <div class="sheen"></div>
+      <a class="brand" href="webinfoys-home-2.html"><span class="logo-stage"><img class="logo-3d" src="webinfoys-logo.png" alt="Webinfoys logo" width="34" height="34" decoding="async"></span><span class="wm">webinfoys<span>.</span></span></a>
+      <nav class="menu" aria-label="Primary">
+        <a class="nlink desk" href="webinfoys-about.html">About</a>
+        <div class="navitem desk">
+          <a class="nlink" href="webinfoys-services.html" aria-haspopup="true" aria-expanded="false"
+            aria-controls="dd-services">Service <span class="caret" data-i="chevD"></span></a>
+          <div class="dropdown" id="dd-services">
+            <a href="webinfoys-seo.html">Search Engine Optimization</a>
+            <a href="webinfoys-web-development.html">Website Development</a>
+            <a href="webinfoys-social-media-marketing.html">SMO &amp; SMM Services</a>
+            <a href="webinfoys-logo-design.html">Logo Design</a>
+            <a href="webinfoys-email-sms-marketing.html">Email &amp; SMS Marketing</a>
+            <a href="webinfoys-google-listing.html">Google Listing</a>
+          </div>
+
+        </div>
+        <div class="navitem desk">
+          <a class="nlink" href="webinfoys-home-2.html#pricing" aria-haspopup="true" aria-expanded="false"
+            aria-controls="dd-pricing">Pricing <span class="caret" data-i="chevD"></span></a>
+          <div class="dropdown" id="dd-pricing">
+            <a href="webinfoys-pricing-seo.html">SEO Pricing</a>
+            <a href="webinfoys-pricing-web-development.html">Website Development Pricing</a>
+            <a href="webinfoys-pricing-smo-smm.html">SMO &amp; SMM Pricing</a>
+            <a href="webinfoys-pricing-logo-design.html">Logo Design Pricing</a>
+            <a href="webinfoys-pricing-email-sms-marketing.html">Email &amp; SMS Marketing Pricing</a>
+            <a href="webinfoys-pricing-google-listing.html">Google Listing Pricing</a>
+          </div>
+
+        </div>
+        <a class="nlink desk" href="webinfoys-blog.html">Blog</a>
+        <a class="nlink desk" href="webinfoys-contact.html">Contact</a>
+      </nav>      <div class="nav-cta">
+        <a class="btn btn-primary btn-sm desk" href="https://wa.me/17373537774"><i data-i="msg"></i> Get a quote</a>
+        <button class="burger" id="burger" type="button" aria-label="Open menu" aria-expanded="false"
+          aria-controls="mobileMenu"><i data-i="menu"></i></button>
+      </div>
+    </div>
+  </header>
+  <nav class="mobile-menu glass" id="mobileMenu" aria-label="Mobile">
+    <div class="sheen"></div>
+    <a href="webinfoys-about.html">About</a>
+    <a href="webinfoys-services.html">Service</a>
+    <a class="sub" href="webinfoys-seo.html">Search Engine Optimization</a>
+    <a class="sub" href="webinfoys-web-development.html">Website Development</a>
+    <a class="sub" href="webinfoys-social-media-marketing.html">SMO &amp; SMM Services</a>
+    <a class="sub" href="webinfoys-logo-design.html">Logo Design</a>
+    <a class="sub" href="webinfoys-email-sms-marketing.html">Email &amp; SMS Marketing</a>
+    <a class="sub" href="webinfoys-google-listing.html">Google Listing</a>
+
+    <a href="webinfoys-home-2.html#pricing">Pricing</a>
+    <a class="sub" href="webinfoys-pricing-seo.html">SEO Pricing</a>
+    <a class="sub" href="webinfoys-pricing-web-development.html">Website Development Pricing</a>
+    <a class="sub" href="webinfoys-pricing-smo-smm.html">SMO &amp; SMM Pricing</a>
+    <a class="sub" href="webinfoys-pricing-logo-design.html">Logo Design Pricing</a>
+    <a class="sub" href="webinfoys-pricing-email-sms-marketing.html">Email &amp; SMS Marketing Pricing</a>
+    <a class="sub" href="webinfoys-pricing-google-listing.html">Google Listing Pricing</a>
+
+    <a href="webinfoys-blog.html">Blog</a>
+    <a href="webinfoys-contact.html">Contact</a>
+    <a class="btn btn-primary" style="justify-content:center;margin-top:12px"
+      href="https://wa.me/17373537774">Get a quote</a>
+  </nav>
+  <!-- HERO -->
+  <section class="about-hero" id="main">
+    <div class="ah-grid">
+      <div data-reveal="left">
+        <nav class="crumb" aria-label="Breadcrumb">
+          <a href="webinfoys-home-2.html">Home</a><span>»</span><a href="webinfoys-services.html">Services</a><span>»</span><b
+            aria-current="page">Email &amp; SMS Marketing</b>
+        </nav>
+        <div class="eyebrow"><i data-i="spark"></i> Welcome to Webinfoys</div>
+        <h1>Messages that <span class="serif gt">reach people</span></h1>
+        <p class="lede">We craft personalized email and SMS campaigns that strengthen customer relationships, increase
+          engagement and drive conversions through targeted, well-timed messaging.</p>
+        <div class="row">
+          <a class="btn btn-primary" href="https://wa.me/17373537774">Get a quote <i data-i="arrow"></i></a>
+          <a class="btn btn-glass" href="webinfoys-pricing-email-sms-marketing.html">See pricing</a>
+        </div>
+      </div>
+      <div data-reveal="right">
+        <div class="glass ah-visual interactive tilt" data-tilt data-glow>
+          <div class="sheen"></div>
+          <div class="hv" data-hv="email"></div>
+          <div class="cap">
+            <b>Email · SMS · Reporting</b>
+            <i>Central City, NY</i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRINCIPLES -->
+  <section class="section sy-sm" id="principles" data-atmo="violet">
+    <div class="split lean-left">
+      <div data-reveal="left">
+        <div class="eyebrow"><i data-i="spark"></i> Our work principles</div>
+        <h2 style="font-size:clamp(2rem,4.6vw,3.4rem);margin-top:18px">The channel you <span class="serif gt">actually
+            own</span></h2>
+        <p class="muted" style="margin-top:22px;font-size:16.5px;line-height:1.75;max-width:560px">Our work is driven
+          by a strong set of principles that define our approach to every project. Search rankings and social reach
+          are rented — an algorithm change can move them overnight. Your email list and your phone contacts are
+          yours. We treat them that way: relevant messages, a sensible frequency, clear consent, and reporting that
+          tells you what the last send actually did.</p>
+        <div class="chips">
+          <span><i data-i="check"></i> Permission-based lists</span>
+          <span><i data-i="check"></i> Segmented, not blanket sends</span>
+          <span><i data-i="check"></i> Written for the channel</span>
+          <span><i data-i="check"></i> Measured after every campaign</span>
+        </div>
+      </div>
+      <div data-reveal="right">
+        <div class="glass interactive tilt" data-tilt data-glow style="padding:clamp(32px,3.6vw,44px)">
+          <div class="sheen"></div>
+          <div class="eyebrow"><i data-i="compass"></i> Two channels, one plan</div>
+          <h3 style="font-size:1.5rem;font-weight:600;line-height:1.3;margin-top:16px">Email for the detail, SMS for
+            the moment</h3>
+          <p class="muted" style="font-size:15.5px;line-height:1.72;margin-top:16px">Email carries the story — the
+            offer, the images, the links, the longer explanation. SMS carries the short, time-sensitive prompt that
+            gets opened within minutes. Run separately they compete; planned together they cover the same campaign at
+            two different speeds.</p>
+          <div style="height:1px;background:var(--hair);margin:26px 0"></div>
+          <a class="btn btn-primary" href="https://wa.me/17373537774">Plan a campaign <i data-i="arrow"></i></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHAT WE OFFER -->
+  <section class="section sy-lg" id="offer" data-atmo="purple">
+    <div class="head" data-reveal="up">
+      <div class="eyebrow"><i data-i="spark"></i> What we offer</div>
+      <h2>Where strategy meets <span class="serif gt">customer communication</span></h2>
+      <p class="sub">At Webinfoys, we blend strategic thinking with innovative digital solutions to help brands thrive.
+        Your journey to success starts here.</p>
+    </div>
+    <div class="svc-grid" id="svc-grid" data-stagger></div>
+  </section>
+
+  <!-- PROCESS -->
+  <section class="section sy-lg" id="process" data-atmo="magenta">
+    <div class="head" data-reveal="up">
+      <div class="eyebrow"><i data-i="spark"></i> How we work</div>
+      <h2>Incredible results in <span class="serif gt">five easy steps</span></h2>
+      <p class="sub">From the list you already have to the report that follows the send — a clear sequence you can
+        follow at every stage.</p>
+    </div>
+    <div class="tl five" data-stagger>
+      <div data-reveal="up">
+        <div class="glass tl-item interactive tilt" data-tilt data-glow>
+          <div class="sheen"></div>
+          <div class="step-n">01 <span class="muted">/ 05</span></div><span class="dot"></span>
+          <h3>Audience &amp; List Review</h3>
+          <p>We look at the contacts you already hold, how they were collected and how they are stored, before anything
+            is sent.</p>
+        </div>
+      </div>
+      <div data-reveal="up">
+        <div class="glass tl-item interactive tilt" data-tilt data-glow>
+          <div class="sheen"></div>
+          <div class="step-n">02 <span class="muted">/ 05</span></div><span class="dot"></span>
+          <h3>Segmentation &amp; Planning</h3>
+          <p>Contacts are grouped by what makes them different, and each group is matched to a message and a sending
+            schedule.</p>
+        </div>
+      </div>
+      <div data-reveal="up">
+        <div class="glass tl-item interactive tilt" data-tilt data-glow>
+          <div class="sheen"></div>
+          <div class="step-n">03 <span class="muted">/ 05</span></div><span class="dot"></span>
+          <h3>Content &amp; Creative</h3>
+          <p>Subject lines, copy and layout are written for the channel — long enough to explain in email, short enough
+            to land in SMS.</p>
+        </div>
+      </div>
+      <div data-reveal="up">
+        <div class="glass tl-item interactive tilt" data-tilt data-glow>
+          <div class="sheen"></div>
+          <div class="step-n">04 <span class="muted">/ 05</span></div><span class="dot"></span>
+          <h3>Setup, Testing &amp; Send</h3>
+          <p>Campaigns are built in your platform, tested across inboxes and devices, then scheduled or triggered as
+            agreed.</p>
+        </div>
+      </div>
+      <div data-reveal="up">
+        <div class="glass tl-item interactive tilt" data-tilt data-glow>
+          <div class="sheen"></div>
+          <div class="step-n">05 <span class="muted">/ 05</span></div><span class="dot"></span>
+          <h3>Reporting &amp; Optimization</h3>
+          <p>Results from each send inform the next one — what was opened, what was clicked, and what we change because
+            of it.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHERE IT FITS -->
+  <section class="section sy-sm" id="applied" data-atmo="pink">
+    <div class="split lean-right">
+      <div data-reveal="left">
+        <div class="glass interactive tilt" data-tilt data-glow style="padding:clamp(32px,3.6vw,44px)">
+          <div class="sheen"></div>
+          <div class="eyebrow"><i data-i="layers"></i> Part of the wider picture</div>
+          <h3 style="font-size:1.5rem;font-weight:600;line-height:1.3;margin-top:16px">Where your contacts come from</h3>
+          <p class="muted" style="font-size:15.5px;line-height:1.72;margin-top:16px">A campaign is only as good as the
+            list behind it. The website captures sign-ups, social builds the audience that sign up in the first place,
+            and search brings new people to both. Because the same team handles all of it, the contacts flowing into
+            your campaigns are the ones the rest of the work is already producing.</p>
+          <div style="height:1px;background:var(--hair);margin:26px 0"></div>
+          <div class="chips">
+            <span><i data-i="code"></i> <a href="webinfoys-web-development.html"
+                style="color:var(--b1-text);font-weight:600">Website Development</a></span>
+            <span><i data-i="share"></i> <a href="webinfoys-social-media-marketing.html"
+                style="color:var(--b1-text);font-weight:600">SMO &amp; SMM Services</a></span>
+          </div>
+        </div>
+      </div>
+      <div data-reveal="right">
+        <div class="eyebrow"><i data-i="spark"></i> Why it matters</div>
+        <h2 style="font-size:clamp(2rem,4.6vw,3.4rem);margin-top:18px">A direct line to people who already <span
+            class="serif gt">know you</span></h2>
+        <p class="muted" style="margin-top:22px;font-size:16.5px;line-height:1.75;max-width:560px">Everyone on your
+          list has already chosen to hear from you. That makes email and SMS the most direct channels you have — no
+          bidding, no feed placement, no intermediary deciding who sees the message. The work is in keeping that
+          permission: sending things worth opening, at a frequency people accept, and making it easy to stop.</p>
+        <div class="chips">
+          <span><i data-i="check"></i> Promotions and offers</span>
+          <span><i data-i="check"></i> Newsletters and updates</span>
+          <span><i data-i="check"></i> Order and booking notifications</span>
+          <span><i data-i="check"></i> Re-engagement campaigns</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ADVANTAGE -->
+  <section class="section sy-sm" id="advantage" data-atmo="blue">
+    <div data-reveal="scale">
+      <div class="glass feature-panel interactive tilt" data-tilt data-glow>
+        <div class="sheen"></div>
+        <div class="eyebrow" style="justify-content:center"><i data-i="spark"></i> The advantage</div>
+        <h2 style="font-size:clamp(2rem,5vw,3.6rem);font-weight:800;margin:18px auto 0;max-width:760px">Experience the
+          <span class="serif gt">Webinfoys advantage</span></h2>
+        <p class="muted" style="max-width:560px;margin:20px auto 0;font-size:16.5px;line-height:1.7">Maximize your
+          digital impact with Webinfoys — where innovation meets excellence for unmatched results.</p>
+        <div class="adv-list">
+          <span class="btn btn-glass" style="cursor:default"><i data-i="check"></i> Grow your business</span>
+          <span class="btn btn-glass" style="cursor:default"><i data-i="check"></i> Expert Team</span>
+          <span class="btn btn-glass" style="cursor:default"><i data-i="check"></i> Work Reporting</span>
+        </div>
+        <div style="margin-top:32px">
+          <a class="btn btn-primary" href="webinfoys-home-2.html#work">View achievements <i data-i="arrow"></i></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section" id="faqs" data-atmo="edge">
+    <div class="head center" data-reveal="up">
+      <div class="eyebrow" style="justify-content:center"><i data-i="spark"></i> FAQs</div>
+      <h2>Still have <span class="serif gt">Qs?</span></h2>
+      <p class="sub">Find answers to the questions clients ask most about email and SMS campaigns.</p>
+      <div style="margin-top:26px">
+        <a class="btn btn-glass btn-sm" href="https://webinfoys.com/faqs/">View Help Center <i data-i="arrow"></i></a>
+      </div>
+    </div>
+    <div data-reveal="up">
+      <div class="glass faq-shell">
+        <div class="sheen"></div>
+        <div class="faq" id="faq"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section no-top" id="contact" data-atmo="strong">
+    <div data-reveal="scale">
+      <div class="glass cta interactive" data-glow>
+        <div class="sheen"></div>
+        <div class="eyebrow" style="justify-content:center"><i data-i="spark"></i> Hello! We're listening</div>
+        <h2>Let's plan your <span class="serif gt">campaigns</span></h2>
+        <p>Tell us who is on your list and what you want them to do, and we'll put an email and SMS plan in front of
+          you.</p>
+        <div class="row">
+          <a class="btn btn-primary" href="https://wa.me/17373537774">Sounds good? Let's connect <i
+              data-i="arrow"></i></a>
+          <a class="btn btn-glass" href="tel:+17373537774">Call us</a>
+        </div>
+        <div class="tags">
+          <span><i data-i="check"></i> Grow your business</span>
+          <span><i data-i="check"></i> Expert team</span>
+          <span><i data-i="check"></i> Free consultation</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="foot" data-stagger>
+      <div data-reveal="up">
+        <a class="brand" href="webinfoys-home-2.html"><span class="logo-stage"><img class="logo-3d" src="webinfoys-logo.png" alt="Webinfoys logo" width="32" height="32" loading="lazy" decoding="async"></span><span class="wm">webinfoys<span>.</span></span></a>
+        <p class="d">Your trusted partner in innovation, growth, and digital success — data-driven marketing and
+          advanced web development. Central City, NY, United States.</p>
+        <div class="pay">
+          <span class="lbl">Pay securely</span>
+          <b>PayPal</b>
+          <b>Debit &amp; Credit Cards</b>
+        </div>
+      </div>
+      <div data-reveal="up">
+        <h5>Company</h5>
+        <a class="fl" href="webinfoys-home-2.html">Home</a>
+        <a class="fl" href="webinfoys-about.html">About</a>
+        <a class="fl" href="webinfoys-services.html">Services</a>
+        <a class="fl" href="webinfoys-blog.html">Blog</a>
+      </div>
+      <div data-reveal="up">
+        <h5>All Services</h5>
+        <!-- kept in step with the header Service dropdown: same six pages, same names -->
+        <a class="fl" href="webinfoys-seo.html">Search Engine Optimization</a>
+        <a class="fl" href="webinfoys-web-development.html">Website Development</a>
+        <a class="fl" href="webinfoys-social-media-marketing.html">SMO &amp; SMM Services</a>
+        <a class="fl" href="webinfoys-logo-design.html">Logo Design</a>
+        <a class="fl" href="webinfoys-email-sms-marketing.html">Email &amp; SMS Marketing</a>
+        <a class="fl" href="webinfoys-google-listing.html">Google Listing</a>
+
+      </div>
+      <div data-reveal="up">
+        <h5>Support</h5>
+        <a class="fl" href="https://webinfoys.com/faqs/">Help Center</a>
+        <a class="fl" href="https://wa.me/17373537774">Get Live Support</a>
+        <a class="fl" href="https://webinfoys.com/faqs/">View Documentation</a>
+      </div>
+      <div data-reveal="up">
+        <h5>Contact</h5>
+        <address class="fc">
+          <span class="fc-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" />
+              <circle cx="12" cy="10" r="3" /></svg>
+            <span>123 Maple Street<br>Central City, NY 10001<br>United States</span>
+          </span>
+          <a class="fc-item" href="tel:+17373537774">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round" aria-hidden="true"><path
+                d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.6A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 2 .7 2.9a2 2 0 0 1-.4 2.1L8.1 9.9a16 16 0 0 0 6 6l1.2-1.3a2 2 0 0 1 2.1-.4c1 .3 1.9.6 2.9.7a2 2 0 0 1 1.7 2Z" /></svg>
+            <span>+17373537774</span>
+          </a>
+          <a class="fc-item" href="mailto:info@webinfoys.com">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2" />
+              <path d="m2 7 10 6 10-6" /></svg>
+            <span>info@webinfoys.com</span>
+          </a>
+        </address>
+        <h6 id="fh-label">Working hours</h6>
+        <div class="fh" role="group" aria-labelledby="fh-label">
+          <span class="fh-ico" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round"><g transform="matrix(-1 0 0 1 24 0)"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8" />
+                <path d="M3 3v5h5" /></g><path d="M12 7v5l3 2" /></svg>
+          </span>
+          <p><b>Monday - Friday</b><span>07am - 09pm</span></p>
+        </div>
+        <h6>Social</h6>
+        <div class="social">
+          <a href="https://www.facebook.com/webinfoys/" target="_blank" rel="noopener noreferrer"
+            aria-label="Webinfoys on Facebook">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path
+                d="M13.5 21v-7.6h2.6l.4-3h-3V8.5c0-.9.25-1.5 1.5-1.5h1.6V4.3c-.3 0-1.2-.1-2.3-.1-2.3 0-3.8 1.4-3.8 3.9v2.3H7.9v3h2.6V21z" /></svg>
+          </a>
+          <a href="https://www.instagram.com/webinfoys/" target="_blank" rel="noopener noreferrer"
+            aria-label="Webinfoys on Instagram">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" />
+              <circle cx="12" cy="12" r="4" /><circle cx="17.5" cy="6.5" r=".9" fill="currentColor" stroke="none" /></svg>
+          </a>
+          <a href="https://in.linkedin.com/company/webinfoys-infotech" target="_blank" rel="noopener noreferrer"
+            aria-label="Webinfoys on LinkedIn">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path
+                d="M6.94 8.5H3.56V20h3.38zM5.25 3a1.96 1.96 0 1 0 0 3.92 1.96 1.96 0 0 0 0-3.92zM20.44 13.4c0-3.1-1.66-4.9-4.3-4.9-1.43 0-2.4.78-2.8 1.45V8.5H10V20h3.38v-6.04c0-1.5.72-2.4 1.95-2.4 1.17 0 1.73.83 1.73 2.4V20h3.38z" /></svg>
+          </a>
+          <a class="x" href="https://x.com/webinfoys?s=11" target="_blank" rel="noopener noreferrer"
+            aria-label="Webinfoys on X">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path
+                d="M18.24 2.25h3.31l-7.23 8.26 8.5 11.24h-6.65l-5.21-6.82-5.97 6.82H1.68l7.73-8.84L1.25 2.25h6.83l4.71 6.23zm-1.16 17.52h1.83L7.08 4.13H5.12z" /></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>Copyright © 2020–2025 Webinfoys. All rights reserved.</span>
+      <span class="lk">
+        <a href="webinfoys-terms-of-use.html">Term Of Use</a>
+        <a href="webinfoys-privacy-policy.html">Privacy Policy</a>
+        <a href="webinfoys-refund-policy.html">Refund Policy</a>
+      </span>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script>
+    "use strict";
+    document.body.classList.remove("no-js");
+    const WA = "https://wa.me/17373537774";
+    const reduced = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+    const IC = {
+      msg: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg>',
+      menu: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h16"/></svg>',
+      arrow: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>',
+      spark: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9.9 2.6 7.6 7.6 2.6 9.9l5 2.3 2.3 5 2.3-5 5-2.3-5-2.3z"/><path d="M19 4v4M17 6h4"/></svg>',
+      check: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>',
+      plus: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg>',
+      star: '<svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg>',
+      search: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>',
+      code: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m18 16 4-4-4-4M6 8l-4 4 4 4M14.5 4l-5 16"/></svg>',
+      share: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="M8.6 13.5l6.8 4M15.4 6.5l-6.8 4"/></svg>',
+      compass: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m16.2 7.8-2.9 6.4-6.4 2.9 2.9-6.4z"/></svg>',
+      pin: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>',
+      target: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>',
+      bulb: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6M10 22h4M12 2a7 7 0 0 0-4 12.7c.6.5 1 1.3 1 2.1h6c0-.8.4-1.6 1-2.1A7 7 0 0 0 12 2Z"/></svg>',
+      heart: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 5c-1.5-1.5-4-1.5-5.5 0L12 6.5 10.5 5C9-.5 4 1 4 5c0 3 3 5.5 8 9.5C17 10.5 20 8 20 5Z"/></svg>',
+      shield: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 4 5v6c0 5 3.5 8.5 8 11 4.5-2.5 8-6 8-11V5Z"/><path d="m9 12 2 2 4-4"/></svg>',
+      chat: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2Z"/></svg>',
+      mail: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 6 10-6"/></svg>',
+      layers: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 2 9 5-9 5-9-5Z"/><path d="m3 12 9 5 9-5M3 17l9 5 9-5"/></svg>',
+      phone: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.6A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 2 .7 2.9a2 2 0 0 1-.4 2.1L8.1 9.9a16 16 0 0 0 6 6l1.2-1.3a2 2 0 0 1 2.1-.4c1 .3 1.9.6 2.9.7a2 2 0 0 1 1.7 2Z"/></svg>',
+      doc: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 8h8M8 12h8M8 16h5"/></svg>',
+      tag: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.6 13.4 13.4 20.6a2 2 0 0 1-2.8 0L3 13V3h10l7.6 7.6a2 2 0 0 1 0 2.8Z"/><circle cx="7.5" cy="7.5" r="1.5"/></svg>',
+      users: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>',
+      trend: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 17 6-6 4 4 8-8"/><path d="M15 7h6v6"/></svg>',
+      bolt: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 3 14h9l-1 8 10-12h-9l1-8Z"/></svg>',      chevL: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 5-7 7 7 7"/></svg>',
+      chevR: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 5 7 7-7 7"/></svg>',
+      chevD: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>'
+    };
+    function ico(n) { return IC[n] || ""; }
+    document.querySelectorAll("[data-i]").forEach(function (el) { el.innerHTML = ico(el.getAttribute("data-i")); });
+
+    function el(id) { return document.getElementById(id); }
+
+    /* The offerings below describe what a Webinfoys email and SMS engagement
+       covers. The email marketing description is the live site's own wording.
+       No open rates, delivery figures or guaranteed results are claimed. */
+    const pageServices = [
+      { t: "Email Marketing", d: "We craft personalized email campaigns that enhance customer relationships, increase engagement, and drive conversions through targeted messaging.", i: "mail" },
+      { t: "SMS Marketing", d: "Short, time-sensitive messages for offers, reminders and updates — written for a channel where you have very few words and they get read quickly.", i: "phone" },
+      { t: "Campaign Planning", d: "A schedule that says what goes out, to whom and when, so sends support each other instead of arriving on top of one another.", i: "compass" },
+      { t: "List &amp; Segmentation", d: "Your contacts organised into groups that actually differ, so each message is relevant to the people receiving it.", i: "users" },
+      { t: "Automation &amp; Triggers", d: "Welcome sequences, follow-ups and reminders that send themselves when someone takes an action, without manual work each time.", i: "bolt" },
+      { t: "Reporting &amp; Optimization", d: "Clear reporting after each campaign — what was delivered, opened and clicked — used to shape what we send next.", i: "trend" }
+    ];
+
+    const faqs = [
+      { q: "What does Webinfoys handle in an email and SMS engagement?", a: "<p>We review and organise your contact list, plan the campaign schedule, write and build the messages, set up the sending platform, run the send and report on what happened afterwards. How much of that you want us to take on is agreed at the start.</p>" },
+      { q: "Do you provide contact lists?", a: "<p>No. We work with contacts your business has collected with permission — sign-ups, enquiries, customers and bookings. Purchased or scraped lists damage sender reputation and we do not use them.</p>" },
+      { q: "Which email and SMS platforms do you work with?", a: "<p>We work within the platform your business already uses where possible, so your data and history stay in one place. If you don't have one yet, we'll recommend an option that fits your list size, your budget and the way you want to send.</p>" },
+      { q: "How often should we be sending?", a: "<p>It depends on what you have to say and how your audience responds. We agree a starting frequency during planning and adjust it based on what the reporting shows, rather than fixing a number before the first campaign has gone out.</p>" },
+      { q: "What is the difference between email and SMS in a campaign?", a: "<p>Email carries the detail — images, links, longer explanation and the full offer. SMS carries a short, time-sensitive prompt that tends to be read within minutes. Planned together they cover the same campaign at two different speeds rather than competing.</p>" },
+      { q: "Can campaigns be automated?", a: "<p>Yes. Welcome sequences, follow-ups, reminders and re-engagement messages can be set to send when someone takes a specific action, so they continue running without manual work for each contact.</p>" },
+      { q: "What reporting do we receive?", a: "<p>After each campaign you receive a clear summary of what was delivered, opened and clicked, along with what we recommend changing for the next send. We report what the platform records — we don't project or guarantee figures in advance.</p>" },
+      { q: "How do you handle consent and opt-outs?", a: "<p>Every campaign we run is sent to contacts who have opted in, and every message includes a clear way to stop receiving them. Opt-outs are honoured immediately and removed from future sends.</p>" },
+      { q: "How can I get started with Webinfoys?", a: "<p>Simply contact us through our website, schedule a free consultation, or use our live chat to discuss your needs.</p>" }
+    ];
+
+    el("svc-grid").innerHTML = pageServices.map(function (s) {
+      return '<div data-reveal="scale"><a href="' + (s.href || WA) + '" class="glass card interactive tilt" data-tilt data-glow>' +
+        '<div class="sheen"></div><span class="ico">' + ico(s.i) + '</span><h3>' + s.t + '</h3><p>' + s.d + '</p>' +
+        '<span class="more">Learn more ' + ico("arrow") + '</span></a></div>';
+    }).join("");
+
+    el("faq").innerHTML = faqs.map(function (f, i) {
+      var n = (i + 1 < 10 ? "0" : "") + (i + 1);
+      return '<div class="qa' + (i === 0 ? " open" : "") + '"><button type="button" aria-expanded="' + (i === 0) +
+        '"><span class="qwrap"><span class="qn">' + n + '</span><span class="q">' + f.q + '</span></span>' +
+        '<span class="pl">' + ico("plus") + '</span></button><div class="a"><div class="inner">' + f.a +
+        '</div></div></div>';
+    }).join("");
+    /* FAQ accordion. aria-expanded tracks the real state (it used to be written
+       once at render and never updated), and the open panel is re-measured on
+       resize and on font load so a long answer can never end up clipped. */
+    (function () {
+      function setOpen(qa, open) {
+        qa.classList.toggle("open", open);
+        var btn = qa.querySelector("button"), a = qa.querySelector(".a");
+        btn.setAttribute("aria-expanded", open ? "true" : "false");
+        a.style.maxHeight = open ? a.scrollHeight + "px" : "0px";
+      }
+      function remeasure() {
+        var open = document.querySelector(".qa.open .a");
+        if (open) open.style.maxHeight = open.scrollHeight + "px";
+      }
+      document.querySelectorAll(".qa button").forEach(function (btn) {
+        btn.addEventListener("click", function () {
+          var qa = btn.parentElement, wasOpen = qa.classList.contains("open");
+          document.querySelectorAll(".qa").forEach(function (x) { setOpen(x, false); });
+          if (!wasOpen) setOpen(qa, true);
+        });
+      });
+      var first = document.querySelector(".qa.open");
+      if (first) setOpen(first, true);
+
+      var t;
+      addEventListener("resize", function () { clearTimeout(t); t = setTimeout(remeasure, 120); }, { passive: true });
+      if (document.fonts && document.fonts.ready) document.fonts.ready.then(remeasure);
+    })();
+
+    /* ---- header dropdowns (Services / Pricing) ----
+       CSS already opens the panel on :hover and :focus-within, so keyboard and
+       mouse work with no script. This keeps aria-expanded honest, and on a
+       device with no hover it makes the first tap open the panel instead of
+       jumping to the section — the second tap follows the link. */
+    (function () {
+      var items = [].slice.call(document.querySelectorAll(".navitem"));
+      if (!items.length) return;
+      var canHover = !(window.matchMedia && window.matchMedia("(hover: none)").matches);
+
+      function setOpen(item, open) {
+        item.classList.toggle("open", open);
+        var t = item.querySelector(".nlink");
+        if (t) t.setAttribute("aria-expanded", open ? "true" : "false");
+      }
+      function closeAll(except) {
+        items.forEach(function (i) { if (i !== except) setOpen(i, false); });
+      }
+
+      items.forEach(function (item) {
+        var trigger = item.querySelector(".nlink");
+        if (canHover) {
+          item.addEventListener("mouseenter", function () { closeAll(item); setOpen(item, true); });
+          item.addEventListener("mouseleave", function () { setOpen(item, false); });
+          item.addEventListener("focusin", function () { closeAll(item); setOpen(item, true); });
+          item.addEventListener("focusout", function (e) {
+            if (!item.contains(e.relatedTarget)) setOpen(item, false);
+          });
+        } else if (trigger) {
+          trigger.addEventListener("click", function (e) {
+            if (!item.classList.contains("open")) { e.preventDefault(); closeAll(item); setOpen(item, true); }
+          });
+        }
+        /* choosing an item closes the panel behind it */
+        item.querySelectorAll(".dropdown a").forEach(function (a) {
+          a.addEventListener("click", function () { setOpen(item, false); });
+        });
+      });
+
+      addEventListener("keydown", function (e) { if (e.key === "Escape") closeAll(null); });
+      document.addEventListener("click", function (e) {
+        if (!e.target.closest || !e.target.closest(".navitem")) closeAll(null);
+      });
+    })();
+
+    /* ---- logo mark: speed the roll up on hover, as the live header does ----
+       The live site does this by swapping animation-duration (11s -> 1.4s),
+       which makes the mark snap to a different angle on hover-in and again on
+       hover-out. Changing the playback rate instead keeps the mark exactly
+       where it is and only changes its speed, so there is no jump. 4x is a
+       calmer version of the live site's ~8x. */
+    (function () {
+      if (reduced) return;
+      function wire(trigger, img, rate) {
+        if (!trigger || !img || !img.getAnimations) return;
+        function set(r) {
+          var a = img.getAnimations()[0];
+          if (!a) return;
+          if (a.updatePlaybackRate) a.updatePlaybackRate(r); else a.playbackRate = r;
+        }
+        trigger.addEventListener("mouseenter", function () { set(rate); });
+        trigger.addEventListener("mouseleave", function () { set(1); });
+      }
+      wire(document.querySelector(".nav-in"), document.querySelector(".nav-in .logo-3d"), 4);
+      wire(document.querySelector(".foot .brand"), document.querySelector(".foot .logo-3d"), 3);
+    })();
+
+    /* ============ HERO VISUAL SYSTEM ============
+       One engine, one config per page. Each config names a core, the
+       satellites around it (x/y in % of a 520x380 stage, z = depth in px),
+       and the links between them — a link runs FROM its first id TO its
+       second, and the light packet travels that way. Every label is a term
+       the page itself already uses; no figures, prices or claims appear. */
+    (function () {
+      var hv = document.querySelector(".hv[data-hv]");
+      if (!hv) return;
+
+      var ICON = {
+        search: '<circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/>',
+        code: '<path d="m16 18 6-6-6-6M8 6l-6 6 6 6"/>',
+        share: '<circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="m8.6 13.5 6.8 4M15.4 6.5l-6.8 4"/>',
+        compass: '<circle cx="12" cy="12" r="10"/><path d="m16.2 7.8-2.9 6.4-6.4 2.9 2.9-6.4z"/>',
+        pin: '<path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/>',
+        target: '<circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/>',
+        trend: '<path d="m3 17 6-6 4 4 8-8"/><path d="M15 7h6v6"/>',
+        users: '<path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/>',
+        layers: '<path d="m12 2 9 5-9 5-9-5Z"/><path d="m3 12 9 5 9-5M3 17l9 5 9-5"/>',
+        check: '<path d="M20 6 9 17l-5-5"/>',
+        heart: '<path d="M19 14c1.5-1.5 3-3.2 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.8 0-3 .5-4.5 2-1.5-1.5-2.7-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4 3 5.5l7 7Z"/>',
+        doc: '<rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 8h8M8 12h8M8 16h5"/>',
+        link: '<path d="M10 13a5 5 0 0 0 7.5.5l3-3a5 5 0 0 0-7-7l-1.7 1.7"/><path d="M14 11a5 5 0 0 0-7.5-.5l-3 3a5 5 0 0 0 7 7l1.7-1.7"/>',
+        db: '<ellipse cx="12" cy="5" rx="8" ry="3"/><path d="M4 5v14c0 1.7 3.6 3 8 3s8-1.3 8-3V5"/><path d="M4 12c0 1.7 3.6 3 8 3s8-1.3 8-3"/>',
+        gauge: '<path d="m12 14 4-4"/><path d="M3.3 19a10 10 0 1 1 17.4 0"/>',
+        tag: '<path d="M20.6 13.4 13.4 20.6a2 2 0 0 1-2.8 0L3 13V3h10l7.6 7.6a2 2 0 0 1 0 2.8Z"/><circle cx="7.5" cy="7.5" r="1.5"/>',
+        podium: '<path d="M3 21h18M5 21v-8h4v8M10 21V6h4v15M15 21v-5h4v5"/>',
+        coin: '<circle cx="12" cy="12" r="9"/><path d="M14.5 9.5c-.5-1-1.5-1.5-2.5-1.5-1.4 0-2.5.8-2.5 2s1 1.7 2.5 2 2.5.8 2.5 2-1.1 2-2.5 2c-1 0-2-.5-2.5-1.5M12 6.5V8M12 16v1.5"/>',
+        bolt: '<path d="M13 2 3 14h9l-1 8 10-12h-9l1-8Z"/>',
+        mail: '<rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 6 10-6"/>',
+        phone: '<rect x="6" y="2" width="12" height="20" rx="3"/><path d="M11 18h2"/>',
+        star: '<path d="m12 3 2.6 5.3 5.9.9-4.3 4.1 1 5.8L12 16.4 6.8 19.1l1-5.8-4.3-4.1 5.9-.9z"/>',
+        bulb: '<path d="M9 18h6M10 22h4M12 2a7 7 0 0 0-4 12.7c.6.5 1 1.3 1 2.1h6c0-.8.4-1.6 1-2.1A7 7 0 0 0 12 2Z"/>'
+      };
+
+      var HV = {
+        about: {
+          aria: "Webinfoys at the centre, connecting strategy, technology, people and growth as one system",
+          core: { x: 50, y: 50, v: "logo", t: "Webinfoys", s: "Digital intelligence" },
+          orbit: true,
+          nodes: [
+            { id: "st", x: 18, y: 20, i: "compass", l: "Strategy", z: 14 },
+            { id: "te", x: 82, y: 20, i: "code", l: "Technology", z: 18 },
+            { id: "pe", x: 18, y: 80, i: "users", l: "People", z: 18 },
+            { id: "gr", x: 82, y: 80, i: "trend", l: "Growth", z: 14, hl: true }
+          ],
+          links: [["core", "st"], ["core", "te"], ["core", "pe"], ["core", "gr"]]
+        },
+        services: {
+          aria: "The Webinfoys hub connecting six services: SEO, website development, SMO and SMM, logo design, email and SMS marketing, and Google listing",
+          core: { x: 50, y: 50, v: "orb", t: "Webinfoys", s: "Digital strategy" },
+          nodes: [
+            { id: "seo", x: 19, y: 17, i: "search", l: "SEO", z: 16, hl: true },
+            { id: "web", x: 17, y: 50, i: "code", l: "Web Development", s: "Web Dev", z: 22, hl: true },
+            { id: "smm", x: 19, y: 83, i: "share", l: "SMO & SMM", s: "Social", z: 16, hl: true },
+            { id: "lgo", x: 81, y: 17, i: "bulb", l: "Logo Design", s: "Logo", z: 16, hl: true },
+            { id: "eml", x: 84, y: 50, i: "mail", l: "Email & SMS", s: "Email", z: 22, hl: true },
+            { id: "gmb", x: 81, y: 83, i: "pin", l: "Google Listing", s: "Listing", z: 16, hl: true }
+          ],
+          links: [["core", "seo"], ["core", "web"], ["core", "smm"], ["core", "lgo"], ["core", "eml"], ["core", "gmb"]]
+        },
+        seo: {
+          aria: "Search and keywords flow into search visibility, which drives ranking, traffic and conversions",
+          core: { x: 50, y: 50, v: "rank", t: "Search visibility" },
+          nodes: [
+            { id: "se", x: 17, y: 25, i: "search", l: "Search", z: 14 },
+            { id: "kw", x: 17, y: 75, i: "tag", l: "Keywords", z: 18, viz: "pills" },
+            { id: "rk", x: 83, y: 18, i: "podium", l: "Ranking", z: 16 },
+            { id: "tr", x: 83, y: 50, i: "users", l: "Traffic", z: 22, viz: "spark" },
+            { id: "cv", x: 83, y: 82, i: "check", l: "Conversions", z: 16, hl: true }
+          ],
+          links: [["se", "core"], ["kw", "core"], ["core", "rk"], ["core", "tr"], ["core", "cv"]]
+        },
+        web: {
+          aria: "UI design and code feed web development, which connects to APIs and databases and resolves into performance",
+          core: { x: 50, y: 42, v: "browser", t: "Web development" },
+          nodes: [
+            { id: "ui", x: 16, y: 20, i: "layers", l: "UI design", s: "UI", z: 16 },
+            { id: "cd", x: 16, y: 64, i: "code", l: "Code", z: 20 },
+            { id: "api", x: 84, y: 20, i: "link", l: "API", z: 16 },
+            { id: "db", x: 84, y: 64, i: "db", l: "Database", s: "Data", z: 20 },
+            { id: "pf", x: 50, y: 90, i: "gauge", l: "Performance", z: 14, hl: true }
+          ],
+          links: [["ui", "core"], ["cd", "core"], ["core", "api"], ["core", "db"], ["api", "pf"], ["db", "pf"]]
+        },
+        smm: {
+          aria: "Content flows into social growth and out to audience, engagement and reach, and reach turns into growth",
+          core: { x: 50, y: 46, v: "orb", t: "Social growth" },
+          nodes: [
+            { id: "ct", x: 16, y: 46, i: "doc", l: "Content", z: 20, viz: "post" },
+            { id: "au", x: 84, y: 16, i: "users", l: "Audience", z: 16 },
+            { id: "en", x: 84, y: 46, i: "heart", l: "Engagement", s: "Engage", z: 22 },
+            { id: "re", x: 84, y: 76, i: "share", l: "Reach", z: 16, viz: "spark" },
+            { id: "gw", x: 50, y: 88, i: "trend", l: "Growth", z: 14, hl: true }
+          ],
+          links: [["ct", "core"], ["core", "au"], ["core", "en"], ["core", "re"], ["re", "gw"]]
+        },
+        logo: {
+          aria: "A brief and concept directions feed a brand identity, which resolves into typography, colour and a finished file suite",
+          core: { x: 50, y: 46, v: "mark", t: "Brand identity", s: "Logo system" },
+          nodes: [
+            { id: "br", x: 16, y: 18, i: "compass", l: "Brief", z: 14 },
+            { id: "cn", x: 16, y: 74, i: "layers", l: "Concepts", z: 20, viz: "post" },
+            { id: "ty", x: 84, y: 16, i: "doc", l: "Typography", s: "Type", z: 16 },
+            { id: "cl", x: 84, y: 46, i: "tag", l: "Colour", z: 22, viz: "pills" },
+            { id: "fs", x: 84, y: 76, i: "check", l: "File suite", s: "Files", z: 16, hl: true }
+          ],
+          links: [["br", "core"], ["cn", "core"], ["core", "ty"], ["core", "cl"], ["core", "fs"]]
+        },
+        email: {
+          aria: "An audience list and its segments feed a campaign, which goes out by email and SMS and comes back as responses",
+          core: { x: 50, y: 46, v: "msgs", t: "Campaign", s: "Email & SMS" },
+          nodes: [
+            { id: "au", x: 16, y: 20, i: "users", l: "Audience", z: 16 },
+            { id: "sg", x: 16, y: 72, i: "layers", l: "Segments", z: 20, viz: "pills" },
+            { id: "em", x: 84, y: 18, i: "mail", l: "Email", z: 16 },
+            { id: "sm", x: 84, y: 50, i: "phone", l: "SMS", z: 22, viz: "post" },
+            { id: "rs", x: 84, y: 80, i: "check", l: "Responses", s: "Replies", z: 16, hl: true }
+          ],
+          links: [["au", "core"], ["sg", "core"], ["core", "em"], ["core", "sm"], ["core", "rs"]]
+        },
+        gmb: {
+          aria: "Business information and reviews build a Google business profile, which appears in Maps and local search and brings calls and visits",
+          core: { x: 50, y: 46, v: "map", t: "Business profile", s: "Google listing" },
+          nodes: [
+            { id: "inf", x: 16, y: 20, i: "doc", l: "Business info", s: "Info", z: 16 },
+            { id: "rv", x: 16, y: 72, i: "star", l: "Reviews", z: 20, viz: "pills" },
+            { id: "mp", x: 84, y: 18, i: "pin", l: "Maps", z: 16 },
+            { id: "lc", x: 84, y: 50, i: "search", l: "Local search", s: "Local", z: 22, viz: "spark" },
+            { id: "ca", x: 84, y: 80, i: "phone", l: "Calls & visits", s: "Calls", z: 16, hl: true }
+          ],
+          links: [["inf", "core"], ["rv", "core"], ["core", "mp"], ["core", "lc"], ["core", "ca"]]
+        },        prSeo: {
+          aria: "An SEO retainer broken down into monthly hours, target keywords and the reporting that follows",
+          core: { x: 30, y: 50, v: "stack", t: "SEO retainer", tabs: ["Foundation", "Growth", "Authority"], on: 1 },
+          nodes: [
+            { id: "hr", x: 78, y: 18, i: "gauge", l: "Hours a month", s: "Hours", z: 16 },
+            { id: "kw", x: 78, y: 50, i: "tag", l: "Target keywords", s: "Keywords", z: 20, viz: "pills" },
+            { id: "rp", x: 78, y: 82, i: "trend", l: "Reporting", z: 16, hl: true }
+          ],
+          links: [["core", "hr"], ["hr", "kw"], ["kw", "rp"]]
+        },
+        prWeb: {
+          aria: "A website build package broken down into pages, interface design and delivery",
+          core: { x: 30, y: 50, v: "stack", t: "Build package", tabs: ["Starter", "Business", "Enterprise"], on: 1 },
+          nodes: [
+            { id: "pg", x: 78, y: 18, i: "doc", l: "Pages", z: 16 },
+            { id: "ui", x: 78, y: 50, i: "layers", l: "Custom UI", s: "UI", z: 20 },
+            { id: "dl", x: 78, y: 82, i: "check", l: "Delivery", z: 16, hl: true }
+          ],
+          links: [["core", "pg"], ["pg", "ui"], ["ui", "dl"]]
+        },
+        prSmo: {
+          aria: "A social package broken down into profiles optimized, optimization cycles and reporting",
+          core: { x: 30, y: 50, v: "stack", t: "Social package", tabs: ["Foundation", "Growth", "Authority"], on: 1 },
+          nodes: [
+            { id: "pf", x: 78, y: 18, i: "users", l: "Profiles", z: 16 },
+            { id: "cy", x: 78, y: 50, i: "layers", l: "Cycles a month", s: "Cycles", z: 20 },
+            { id: "rp", x: 78, y: 82, i: "trend", l: "Reporting", z: 16, hl: true }
+          ],
+          links: [["core", "pf"], ["pf", "cy"], ["cy", "rp"]]
+        },
+        prLogo: {
+          aria: "A logo package broken down into concepts, revision rounds and the files handed over",
+          core: { x: 30, y: 50, v: "stack", t: "Logo package", tabs: ["Startups", "Growing", "Complete"], on: 1 },
+          nodes: [
+            { id: "cn", x: 78, y: 18, i: "layers", l: "Concepts", z: 16, viz: "post" },
+            { id: "rv", x: 78, y: 50, i: "check", l: "Revisions", z: 20 },
+            { id: "fl", x: 78, y: 82, i: "doc", l: "Files", z: 16, hl: true }
+          ],
+          links: [["core", "cn"], ["cn", "rv"], ["rv", "fl"]]
+        },
+        prMail: {
+          aria: "A campaign package broken down into campaigns a month, automation flows and reporting",
+          core: { x: 30, y: 50, v: "stack", t: "Campaigns", tabs: ["Starter", "Business", "Enterprise"], on: 1 },
+          nodes: [
+            { id: "cm", x: 78, y: 18, i: "mail", l: "Campaigns", z: 16 },
+            { id: "au", x: 78, y: 50, i: "bolt", l: "Automation", s: "Flows", z: 20 },
+            { id: "rp", x: 78, y: 82, i: "trend", l: "Reporting", z: 16, hl: true }
+          ],
+          links: [["core", "cm"], ["cm", "au"], ["au", "rp"]]
+        },
+        prGmb: {
+          aria: "A Google listing package broken down into profile optimization, local keywords and insights",
+          core: { x: 30, y: 50, v: "stack", t: "Listing package", tabs: ["Starter", "Business", "Enterprise"], on: 1 },
+          nodes: [
+            { id: "pd", x: 78, y: 18, i: "pin", l: "Profile depth", s: "Profile", z: 16 },
+            { id: "lk", x: 78, y: 50, i: "search", l: "Local keywords", s: "Keywords", z: 20, viz: "pills" },
+            { id: "in", x: 78, y: 82, i: "trend", l: "Insights", z: 16, hl: true }
+          ],
+          links: [["core", "pd"], ["pd", "lk"], ["lk", "in"]]
+        },        blog: {
+          aria: "Research and data feed a body of insight, which becomes strategy, content and growth",
+          core: { x: 50, y: 46, v: "panels", t: "Insight", s: "Webinfoys journal" },
+          nodes: [
+            { id: "rs", x: 16, y: 20, i: "search", l: "Research", z: 16 },
+            { id: "dt", x: 16, y: 72, i: "db", l: "Data", z: 20, viz: "pills" },
+            { id: "st", x: 84, y: 18, i: "compass", l: "Strategy", z: 16 },
+            { id: "ct", x: 84, y: 50, i: "doc", l: "Content", z: 22, viz: "post" },
+            { id: "gw", x: 84, y: 80, i: "trend", l: "Growth", z: 16, hl: true }
+          ],
+          links: [["rs", "core"], ["dt", "core"], ["core", "st"], ["core", "ct"], ["core", "gw"]]
+        },        p01: {
+          aria: "A monthly retainer plan, broken down into services, then features, then business value",
+          core: { x: 30, y: 50, v: "stack", t: "Monthly retainer", tabs: ["SMO", "360°", "SEO"], on: 1 },
+          nodes: [
+            { id: "sv", x: 78, y: 18, i: "layers", l: "Services", z: 16 },
+            { id: "ft", x: 78, y: 50, i: "check", l: "Features", z: 20 },
+            { id: "bv", x: 78, y: 82, i: "trend", l: "Business value", s: "Value", z: 16, hl: true }
+          ],
+          links: [["core", "sv"], ["sv", "ft"], ["ft", "bv"]]
+        },
+        p02: {
+          aria: "A website build package providing service coverage, features and growth support",
+          core: { x: 50, y: 52, v: "stack", t: "Build package", tabs: ["WordPress", "Shopify", "Custom Code"], on: 1 },
+          nodes: [
+            { id: "cov", x: 50, y: 11, i: "layers", l: "Service coverage", s: "Coverage", z: 16 },
+            { id: "ft", x: 17, y: 86, i: "check", l: "Features", z: 18 },
+            { id: "gs", x: 83, y: 86, i: "trend", l: "Growth support", s: "Support", z: 18, hl: true }
+          ],
+          links: [["core", "cov"], ["core", "ft"], ["core", "gs"]]
+        },
+        p03: {
+          aria: "An upward progression from investment, to strategy, to execution, to growth",
+          core: null,
+          steps: true,
+          nodes: [
+            { id: "iv", x: 17, y: 80, i: "coin", l: "Investment", s: "Invest", z: 10 },
+            { id: "sg", x: 39, y: 60, i: "compass", l: "Strategy", z: 16 },
+            { id: "ex", x: 61, y: 40, i: "bolt", l: "Execution", s: "Execute", z: 22 },
+            { id: "gw", x: 83, y: 20, i: "trend", l: "Growth", z: 28, hl: true }
+          ],
+          links: [["iv", "sg"], ["sg", "ex"], ["ex", "gw"]]
+        }
+      };
+
+      var key = hv.getAttribute("data-hv"), c = HV[key];
+      if (!c) return;
+
+      var W = 520, H = 380, G = "hvg-" + key;
+      var byId = {};
+      c.nodes.forEach(function (n) { byId[n.id] = n; });
+      if (c.core) byId.core = c.core;
+
+      function P(n) { return [n.x * W / 100, n.y * H / 100]; }
+      function icon(n) {
+        return '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">' + (ICON[n] || "") + "</svg>";
+      }
+      /* horizontal-ish links leave and arrive level; vertical-ish ones leave
+         and arrive upright, so every path reads as a deliberate route */
+      function curve(a, b) {
+        var p = P(a), q = P(b), dx = q[0] - p[0], dy = q[1] - p[1];
+        if (Math.abs(dx) >= Math.abs(dy) * 0.6)
+          return "M" + p[0] + " " + p[1] + " C" + (p[0] + dx / 2) + " " + p[1] + " " + (q[0] - dx / 2) + " " + q[1] + " " + q[0] + " " + q[1];
+        return "M" + p[0] + " " + p[1] + " C" + p[0] + " " + (p[1] + dy / 2) + " " + q[0] + " " + (q[1] - dy / 2) + " " + q[0] + " " + q[1];
+      }
+
+      var s = '<svg class="hv-svg" viewBox="0 0 520 380" aria-hidden="true"><defs>' +
+        '<linearGradient id="' + G + '" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="520" y2="380">' +
+        '<stop offset="0" stop-color="#6E82FF"/><stop offset=".5" stop-color="#8B7BF2"/><stop offset="1" stop-color="#F49AC0"/></linearGradient>' +
+        '<linearGradient id="' + G + 'c" x1="0" y1="0" x2="0" y2="1">' +
+        '<stop offset="0" stop-color="#8B7BF2" stop-opacity=".26"/><stop offset="1" stop-color="#8B7BF2" stop-opacity="0"/></linearGradient></defs>';
+
+      if (c.core) {
+        var cp = P(c.core);
+        s += '<circle class="hv-ring" cx="' + cp[0] + '" cy="' + cp[1] + '" r="70"/>' +
+          '<circle class="hv-ring" cx="' + cp[0] + '" cy="' + cp[1] + '" r="118"/>';
+        if (c.orbit) {
+          var n0 = P(c.nodes[0]);
+          s += '<ellipse class="hv-orbit" pathLength="100" cx="' + cp[0] + '" cy="' + cp[1] +
+            '" rx="' + (Math.abs(n0[0] - cp[0]) * 1.4142).toFixed(1) + '" ry="' + (Math.abs(n0[1] - cp[1]) * 1.4142).toFixed(1) + '"/>';
+        }
+      }
+      if (c.steps) {
+        c.nodes.forEach(function (n) {
+          var p = P(n);
+          s += '<rect x="' + (p[0] - 30) + '" y="' + p[1] + '" width="60" height="' + (362 - p[1]) + '" rx="12" fill="url(#' + G + 'c)"/>';
+        });
+        s += '<path class="hv-base" d="M24 362H496"/>';
+      }
+      c.links.forEach(function (l, i) {
+        var d = curve(byId[l[0]], byId[l[1]]);
+        s += '<path class="hv-link" d="' + d + '"/>' +
+          '<path class="hv-pkt" pathLength="100" d="' + d + '" stroke="url(#' + G + ')" style="animation-delay:' + (-(i * 0.75)).toFixed(2) + 's"/>';
+      });
+      s += "</svg>";
+
+      function viz(v) {
+        if (v === "pills") return '<span class="hv-pills"><s></s><s></s><s></s></span>';
+        if (v === "spark") return '<svg class="hv-spark" viewBox="0 0 42 12" aria-hidden="true"><path d="M1 11 10 8l7 1 9-5 15-3"/></svg>';
+        if (v === "post") return '<span class="hv-post"><s></s><s></s><s></s></span>';
+        return "";
+      }
+      c.nodes.forEach(function (n, i) {
+        s += '<div class="hv-node' + (n.hl ? " hl" : "") + '" style="left:' + n.x + "%;top:" + n.y + "%;--z:" + (n.z || 12) + 'px">' +
+          '<div class="hv-card" style="--d:' + (-i * 1.9).toFixed(1) + 's"><span class="hv-ico">' + icon(n.i) + "</span>" +
+          '<span class="hv-t"><b><span class="l-full">' + n.l + '</span><span class="l-short">' + (n.s || n.l) + "</span></b>" + viz(n.viz) + "</span></div></div>";
+      });
+
+      if (c.core) {
+        var k = c.core, vis = "";
+        if (k.v === "logo") vis = '<span class="hv-logo"><img src="webinfoys-logo.png" alt="" width="42" height="42" decoding="async"></span>';
+        else if (k.v === "orb") vis = '<span class="hv-orb"></span>';
+        else if (k.v === "rank") vis = '<span class="hv-rank"><em class="on"><u>01</u><s></s></em><em><u>02</u><s></s></em><em><u>03</u><s></s></em></span>';
+        else if (k.v === "browser") vis = '<span class="hv-browser"><span class="hv-chrome"><s></s><s></s><s></s></span><span class="hv-page"><s class="a"></s><s></s><s></s><s class="d"></s></span></span>';
+        else if (k.v === "panels") vis = '<span class="hv-panels"><s></s><s></s><s></s></span>';
+        else if (k.v === "mark") vis = '<span class="hv-mark"></span>';
+        else if (k.v === "msgs") vis = '<span class="hv-msgs"><s></s><s></s><s></s></span>';
+        else if (k.v === "map") vis = '<span class="hv-map"></span>';
+        else if (k.v === "stack") vis = '<span class="hv-stack">' + k.tabs.map(function (t, i) { return "<em" + (i === k.on ? ' class="on"' : "") + ">" + t + "</em>"; }).join("") + "</span>";
+        s += '<div class="hv-node hv-cw" style="left:' + k.x + "%;top:" + k.y + '%;--z:28px"><div class="hv-core">' + vis +
+          "<b>" + k.t + "</b>" + (k.s ? "<i>" + k.s + "</i>" : "") + "</div></div>";
+      }
+
+      hv.innerHTML = '<div class="hv-stage" aria-hidden="true">' + s + "</div>";
+      hv.setAttribute("role", "img");
+      hv.setAttribute("aria-label", c.aria);
+
+      /* stop painting the figure while it is off-screen */
+      if ("IntersectionObserver" in window) {
+        new IntersectionObserver(function (es) {
+          es.forEach(function (e) { hv.classList.toggle("hv-off", !e.isIntersecting); });
+        }).observe(hv);
+      }
+
+      /* desktop depth: the stage leans a few degrees toward the pointer and
+         eases back, and nodes at different depths separate slightly. The
+         loop runs only while easing, then stops — no permanent rAF. */
+      if (reduced || (window.matchMedia && window.matchMedia("(hover: none)").matches)) return;
+      var stage = hv.querySelector(".hv-stage"), host = hv.closest(".ah-visual") || hv;
+      var tx = 0, ty = 0, cx = 0, cy = 0, raf = 0;
+      function tick() {
+        cx += (tx - cx) * 0.07; cy += (ty - cy) * 0.07;
+        stage.style.transform = "rotateX(" + (-cy * 3).toFixed(3) + "deg) rotateY(" + (cx * 4).toFixed(3) + "deg)";
+        raf = (Math.abs(tx - cx) > 0.0015 || Math.abs(ty - cy) > 0.0015) ? requestAnimationFrame(tick) : 0;
+      }
+      function kick() { if (!raf) raf = requestAnimationFrame(tick); }
+      host.addEventListener("pointermove", function (e) {
+        if (e.pointerType === "touch") return;
+        var r = hv.getBoundingClientRect();
+        tx = Math.max(-1, Math.min(1, ((e.clientX - r.left) / r.width - 0.5) * 2));
+        ty = Math.max(-1, Math.min(1, ((e.clientY - r.top) / r.height - 0.5) * 2));
+        kick();
+      }, { passive: true });
+      host.addEventListener("pointerleave", function () { tx = 0; ty = 0; kick(); });
+    })();
+
+    var burger = el("burger"), mm = el("mobileMenu");
+    function setMenu(open) {
+      if (!mm) return;
+      mm.classList.toggle("open", open);
+      if (burger) {
+        burger.setAttribute("aria-expanded", open ? "true" : "false");
+        burger.setAttribute("aria-label", open ? "Close menu" : "Open menu");
+      }
+    }
+    if (burger && mm) burger.addEventListener("click", function () { setMenu(!mm.classList.contains("open")); });
+    if (mm) mm.querySelectorAll("a").forEach(function (a) { a.addEventListener("click", function () { setMenu(false); }); });
+    addEventListener("keydown", function (e) { if (e.key === "Escape" && mm && mm.classList.contains("open")) { setMenu(false); if (burger) burger.focus(); } });
+    /* the panel is display:none above the nav breakpoint — make sure it is not
+       left in the "open" state if the viewport grows while it is showing */
+    addEventListener("resize", function () { if (innerWidth >= 1024) setMenu(false); }, { passive: true });
+
+    (function () {
+      if (reduced) return;
+      var wrap = el("rot"); if (!wrap) return;
+      var items = wrap.querySelectorAll("span"), idx = 0;
+      setInterval(function () { items[idx].classList.remove("on"); idx = (idx + 1) % items.length; items[idx].classList.add("on"); }, 2600);
+    })();
+
+    document.querySelectorAll("[data-stagger]").forEach(function (group) {
+      Array.prototype.forEach.call(group.children, function (child, i) {
+        var tgt = child.matches("[data-reveal]") ? child : null;
+        if (tgt) tgt.style.transitionDelay = (i * 0.09) + "s";
+      });
+    });
+
+    var rObs = new IntersectionObserver(function (es) { es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add("in"); rObs.unobserve(e.target); } }); }, { threshold: .14, rootMargin: "0px 0px -8% 0px" });
+    document.querySelectorAll("[data-reveal]").forEach(function (x) { rObs.observe(x); });
+
+    /* ---- counters ----
+       Every [data-n] element counts up once, when it is itself in view (not
+       when some other section appears), then its observer lets go.
+       data-n: target · data-dec: decimals · data-suf / data-pre: text after /
+       before. Formatting is fixed to en-US grouping so "5,422" always ends as
+       "5,422" whatever the visitor's locale. Screen readers get the final value
+       from a hidden copy; the moving digits are hidden from them. An inline
+       counter holds its final width while it runs, so a sentence never
+       reflows as the digits grow. Reduced motion: final values, no animation. */
+    (function () {
+      var els = [].slice.call(document.querySelectorAll("[data-n]"));
+      if (!els.length) return;
+      function fmt(el, v) {
+        var dec = parseInt(el.dataset.dec || "0", 10);
+        return (el.dataset.pre || "") + (dec ? v.toFixed(dec) : Math.round(v).toLocaleString("en-US")) + (el.dataset.suf || "");
+      }
+      els.forEach(function (el) {
+        el.textContent = fmt(el, parseFloat(el.dataset.n));
+        el.setAttribute("aria-hidden", "true");
+        var sr = document.createElement("span");
+        sr.className = "sr";
+        sr.textContent = el.textContent;
+        el.parentNode.insertBefore(sr, el.nextSibling);
+      });
+      if (reduced || !("IntersectionObserver" in window)) return;
+
+      function run(el) {
+        var target = parseFloat(el.dataset.n), start = null, dur = 1700;
+        var inline = getComputedStyle(el).display === "inline";
+        if (inline) {
+          /* measured now, with the final text and the loaded font */
+          el.textContent = fmt(el, target);
+          el.style.display = "inline-block";
+          el.style.minWidth = el.getBoundingClientRect().width + "px";
+        }
+        el.textContent = fmt(el, 0);
+        function tick(t) {
+          if (start === null) start = t;
+          var p = Math.min((t - start) / dur, 1);
+          el.textContent = fmt(el, p < 1 ? target * (1 - Math.pow(1 - p, 3)) : target);
+          if (p < 1) requestAnimationFrame(tick);
+          else if (inline) { el.style.display = ""; el.style.minWidth = ""; }
+        }
+        requestAnimationFrame(tick);
+      }
+      var io = new IntersectionObserver(function (es) {
+        es.forEach(function (e) {
+          if (!e.isIntersecting) return;
+          io.unobserve(e.target);
+          run(e.target);
+        });
+      }, { threshold: 0.5, rootMargin: "0px 0px -8% 0px" });
+      els.forEach(function (el) {
+        el.textContent = fmt(el, 0);
+        io.observe(el);
+      });
+    })();
+
+    document.querySelectorAll("[data-glow]").forEach(function (card) {
+      card.addEventListener("mousemove", function (e) {
+        var r = card.getBoundingClientRect();
+        card.style.setProperty("--mx", ((e.clientX - r.left) / r.width * 100) + "%");
+        card.style.setProperty("--my", ((e.clientY - r.top) / r.height * 100) + "%");
+      });
+    });
+
+    if (!reduced && !('ontouchstart' in window)) {
+      document.querySelectorAll("[data-tilt]").forEach(function (card) {
+        var raf = null;
+        card.addEventListener("mousemove", function (e) {
+          var r = card.getBoundingClientRect();
+          var rx = (0.5 - (e.clientY - r.top) / r.height) * 3.4;
+          var ry = ((e.clientX - r.left) / r.width - 0.5) * 3.4;
+          if (raf) cancelAnimationFrame(raf);
+          raf = requestAnimationFrame(function () { card.style.transform = "perspective(1100px) rotateX(" + rx + "deg) rotateY(" + ry + "deg) translateY(-5px) scale(1.015)"; });
+        });
+        card.addEventListener("mouseleave", function () { card.style.transform = ""; });
+      });
+    }
+
+    (function () {
+      function plain(h) { var d = document.createElement("div"); d.innerHTML = h.replace(/<\/(p|li)>/g, " "); return (d.textContent || "").replace(/\s+/g, " ").trim(); }
+      function strip(s) { return s.replace(/&amp;/g, "&"); }
+      var ld = {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Service",
+            "@id": "https://webinfoys.com/email-sms-marketing/#service",
+            name: "Email & SMS Marketing",
+            serviceType: "Email and SMS marketing",
+            url: "https://webinfoys.com/email-sms-marketing/",
+            description: "Personalized email and SMS campaigns — list segmentation, campaign planning, content, automation and reporting for customer communication that drives engagement.",
+            areaServed: { "@type": "City", name: "Kolkata" },
+            provider: { "@type": "ProfessionalService", name: "Webinfoys", url: "https://webinfoys.com/", telephone: "+17373537774" },
+            hasOfferCatalog: {
+              "@type": "OfferCatalog", name: "Email and SMS offerings",
+              itemListElement: pageServices.map(function (s) {
+                return { "@type": "Offer", itemOffered: { "@type": "Service", name: strip(s.t), description: strip(s.d) } };
+              })
+            }
+          },
+          {
+            "@type": "BreadcrumbList",
+            itemListElement: [
+              { "@type": "ListItem", position: 1, name: "Home", item: "https://webinfoys.com/" },
+              { "@type": "ListItem", position: 2, name: "Services", item: "https://webinfoys.com/services/" },
+              { "@type": "ListItem", position: 3, name: "Email & SMS Marketing", item: "https://webinfoys.com/email-sms-marketing/" }
+            ]
+          },
+          {
+            "@type": "FAQPage",
+            mainEntity: faqs.map(function (f) {
+              return { "@type": "Question", name: f.q, acceptedAnswer: { "@type": "Answer", text: plain(f.a) } };
+            })
+          }
+        ]
+      };
+      var tag = document.createElement("script");
+      tag.type = "application/ld+json";
+      tag.textContent = JSON.stringify(ld);
+      document.head.appendChild(tag);
+    })();
+    var prog = el("progress");
+    function onScroll() {
+      var st = window.scrollY || document.documentElement.scrollTop;
+      var max = document.documentElement.scrollHeight - innerHeight;
+      if (prog) prog.style.width = (max > 0 ? (st / max * 100) : 0) + "%";
+    }
+    var ticking = false;
+    addEventListener("scroll", function () { if (!ticking) { requestAnimationFrame(function () { onScroll(); ticking = false; }); ticking = true; } }, { passive: true });
+    onScroll();
+
+    /* ============================================================
+       3D DIGITAL ARCHITECTURE (three.js)
+       A dark spatial environment: floating glass slabs in the foreground,
+       a receding corridor of luminous frames for obvious perspective, and
+       soft volumetric glow near violet / magenta lights. Real geometry at
+       real depth with fog. The camera parallaxes gently to the pointer and
+       flies slowly forward as you scroll. One renderer, paused when the tab
+       is hidden, reduced to a calm static frame under prefers-reduced-motion.
+       Centre stays open and dark so content always reads clearly.
+       ============================================================ */
+    (function () {
+      var canvas = document.getElementById("bg3d");
+      if (!canvas || !window.THREE) return;
+
+      var mobile = window.matchMedia("(max-width:768px)").matches;
+      var renderer;
+      try {
+        renderer = new THREE.WebGLRenderer({ canvas: canvas, alpha: true, antialias: !mobile, powerPreference: "high-performance" });
+      } catch (e) { return; }
+      if (!renderer) return;
+
+      renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, mobile ? 1.25 : 1.75));
+      renderer.setClearColor(0x000000, 0);
+
+      var BG = 0x080A10;
+      var scene = new THREE.Scene();
+      scene.fog = new THREE.Fog(BG, 16, 92);
+      var camera = new THREE.PerspectiveCamera(50, 1, 0.1, 220);
+      camera.position.set(0, 0, 16);
+
+      /* ---- lighting: violet key, magenta fill, cool ambient, blue rim ---- */
+      scene.add(new THREE.AmbientLight(0x2a2c46, 1.15));
+      var key = new THREE.DirectionalLight(0x8B7BF2, 1.5); key.position.set(-8, 10, 14); scene.add(key);
+      var fill = new THREE.PointLight(0xC77BE0, 2.2, 90); fill.position.set(14, -6, 6); scene.add(fill);
+      var rim = new THREE.DirectionalLight(0x6E82FF, 0.6); rim.position.set(9, -8, -12); scene.add(rim);
+
+      var group = new THREE.Group(); scene.add(group);
+      var rnd = function (a, b) { return a + Math.random() * (b - a); };
+
+      /* Readability tuning: the slabs and edges are dimmer than a purely
+         decorative scene would want, because content has priority over the
+         background. Depth, perspective and parallax are unchanged — only
+         luminance came down, so nothing bright can drift behind a paragraph. */
+      function panelMat() {
+        return new THREE.MeshStandardMaterial({
+          color: 0x0d1120, metalness: 0.18, roughness: 0.55,
+          transparent: true, opacity: 0.5, side: THREE.DoubleSide
+        });
+      }
+      var edgeV = new THREE.LineBasicMaterial({ color: 0x9A8CF5, transparent: true, opacity: 0.36 });
+      var edgeM = new THREE.LineBasicMaterial({ color: 0xC77BE0, transparent: true, opacity: 0.27 });
+
+      /* a thin glass slab wearing a lit edge frame */
+      function slab(w, h, d, x, y, z, ry, rx) {
+        var g = new THREE.BoxGeometry(w, h, d);
+        var m = new THREE.Mesh(g, panelMat());
+        m.position.set(x, y, z); m.rotation.set(rx || 0, ry || 0, 0);
+        m.add(new THREE.LineSegments(new THREE.EdgesGeometry(g), Math.random() > 0.5 ? edgeV : edgeM));
+        group.add(m);
+      }
+
+      /* a hollow rectangular frame — the architectural "portals" */
+      function frame(w, h, x, y, z, ry) {
+        var g = new THREE.BoxGeometry(w, h, 0.25);
+        var e = new THREE.LineSegments(new THREE.EdgesGeometry(g), edgeV.clone());
+        e.material.opacity = 0.4;
+        e.position.set(x, y, z); e.rotation.y = ry || 0;
+        group.add(e);
+      }
+
+      /* receding corridor of frames → perspective the eye reads instantly;
+         the centre band is kept open so hero text sits over quiet dark space */
+      var fz = [5, -6, -18, -31, -45, -60, -76];
+      for (var i = 0; i < fz.length; i++) {
+        frame(15 + i * 3.4, 9 + i * 2.2, (i % 2 ? -1 : 1) * (1.5 + i * 0.5), rnd(-1, 1), fz[i], (i % 2 ? 1 : -1) * 0.04);
+      }
+
+      /* foreground / mid glass slabs, biased to the sides (middle reading column
+         stays dark); nearer ones are larger — a clear depth cue */
+      var N = mobile ? 12 : 24;
+      for (var s = 0; s < N; s++) {
+        var z = rnd(-66, 3);
+        var ds = 0.55 + (z + 66) / 69 * 1.15;             /* far → small, near → large */
+        var side = Math.random() > 0.5 ? 1 : -1;
+        slab(rnd(2.2, 5.4) * ds, rnd(1.5, 3.8) * ds, rnd(0.14, 0.5),
+          side * rnd(3.4, 17), rnd(-9, 9), z, rnd(-0.35, 0.35), rnd(-0.16, 0.16));
+      }
+
+      /* soft volumetric glow (dim additive sprites near the lights — fake bloom) */
+      var gt = (function () {
+        var c = document.createElement("canvas"); c.width = c.height = 128;
+        var g = c.getContext("2d"); var rg = g.createRadialGradient(64, 64, 0, 64, 64, 64);
+        rg.addColorStop(0, "rgba(255,255,255,1)"); rg.addColorStop(0.4, "rgba(255,255,255,0.32)"); rg.addColorStop(1, "rgba(255,255,255,0)");
+        g.fillStyle = rg; g.fillRect(0, 0, 128, 128);
+        return new THREE.CanvasTexture(c);
+      })();
+      function glow(color, x, y, z, sc, op) {
+        var sp = new THREE.Sprite(new THREE.SpriteMaterial({ map: gt, color: color, transparent: true, opacity: op, blending: THREE.AdditiveBlending, depthWrite: false }));
+        sp.position.set(x, y, z); sp.scale.set(sc, sc, 1); group.add(sp);
+      }
+      /* pushed outward and dimmed: the glows frame the reading column instead of
+         sitting behind it */
+      glow(0x8B7BF2, -9, 6, 1, 30, 0.22);
+      glow(0xC77BE0, 14, -5, -6, 34, 0.17);
+      glow(0x6E82FF, 0, 1, -46, 46, 0.13);
+
+      /* clientWidth, not innerWidth: innerWidth includes the scrollbar, which
+         would leave the drawing buffer wider than the painted canvas and skew
+         the aspect ratio. */
+      var lastW = 0, lastH = 0, sizeQueued = false;
+      var touch = window.matchMedia("(hover: none)").matches;
+      function resize() {
+        sizeQueued = false;
+        var w = document.documentElement.clientWidth, h = window.innerHeight;
+        if (w === lastW && h === lastH) return;
+        /* phones: the address bar sliding in and out changes only the height
+           while scrolling; reallocating the drawing buffer then would hitch the
+           scroll, and the fixed canvas stretches imperceptibly instead */
+        if (touch && lastW && w === lastW && Math.abs(h - lastH) < 140) return;
+        lastW = w; lastH = h;
+        renderer.setSize(w, h, false);
+        camera.aspect = w / h; camera.updateProjectionMatrix();
+        if (running === false) render(false); /* static modes redraw at the new size */
+      }
+      resize();
+      /* one resize per frame at most, however many events arrive */
+      addEventListener("resize", function () { if (!sizeQueued) { sizeQueued = true; requestAnimationFrame(resize); } }, { passive: true });
+
+      var mx = 0, my = 0, cx = 0, cy = 0, cz = 16, sp01 = 0;
+      if (!mobile && !reduced) {
+        addEventListener("pointermove", function (e) {
+          if (e.pointerType === "touch") return;
+          mx = e.clientX / document.documentElement.clientWidth - 0.5;
+          my = e.clientY / window.innerHeight - 0.5;
+        }, { passive: true });
+      }
+      function readScroll() {
+        var max = document.documentElement.scrollHeight - window.innerHeight;
+        sp01 = max > 0 ? (window.scrollY || 0) / max : 0;
+      }
+      addEventListener("scroll", readScroll, { passive: true });
+      readScroll();
+
+      var clock = new THREE.Clock();
+      document.body.classList.add("gl");
+
+      function render(anim) {
+        if (anim) {
+          var t = clock.getElapsedTime();
+          cx += (mx * 2.6 - cx) * 0.045;
+          cy += (-my * 1.8 - cy) * 0.045;
+          cz += ((16 - sp01 * 42) - cz) * 0.06;    /* fly gently through the corridor on scroll */
+          camera.position.set(cx, cy, cz + Math.sin(t * 0.18) * 0.5);
+          camera.lookAt(cx * 0.35, cy * 0.35, cz - 20);
+          group.rotation.y = Math.sin(t * 0.045) * 0.06;
+          group.rotation.x = Math.cos(t * 0.035) * 0.03;
+        } else {
+          cz = 16 - sp01 * 42;
+          camera.position.set(0, 0, cz);
+          camera.lookAt(0, 0, cz - 20);
+        }
+        renderer.render(scene, camera);
+      }
+
+      var raf = null, running = false;
+      /* the motion is a slow drift, so phones draw every other frame (~30fps):
+         visually identical, half the GPU work and battery */
+      var skip = false;
+      function loop() { if (!mobile || (skip = !skip)) render(true); raf = requestAnimationFrame(loop); }
+      function start() { if (running) return; running = true; loop(); }
+      function stop() { running = false; if (raf) cancelAnimationFrame(raf); raf = null; }
+
+      document.addEventListener("visibilitychange", function () {
+        if (document.hidden) stop(); else if (!reduced) start();
+      });
+
+      if (reduced) {
+        render(false);                              /* static spatial depth, no motion */
+        addEventListener("scroll", function () { readScroll(); render(false); }, { passive: true });
+      } else {
+        start();
+      }
+    })();
+  </script>
+</body>
