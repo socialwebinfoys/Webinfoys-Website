@@ -1,0 +1,9 @@
+# OS / editor cruft that must never reach public_html
+.DS_Store
+Thumbs.db
+desktop.ini
+*.swp
+*~
+
+# local tooling, not part of the site
+.claude/

@@ -1,0 +1,91 @@
+# Webinfoys — static site configuration for Hostinger (Apache / LiteSpeed).
+# Upload the contents of this folder directly into public_html, not inside a
+# subfolder. This file must sit next to index.html.
+
+DirectoryIndex index.html
+
+# ---------------------------------------------------------------------------
+# Pretty URLs
+#
+# Every page carries a <link rel="canonical"> pointing at a clean URL such as
+# /about/ rather than /webinfoys-about.html. The rules below serve the real
+# file for those clean URLs, so the canonical a page declares is an address
+# that actually resolves. These are internal rewrites, not redirects: the
+# .html filenames keep working exactly as before, which is what every internal
+# link on the site uses.
+#
+# They also preserve the URLs the previous WordPress site used, so existing
+# search rankings and inbound links land on the matching new page.
+# ---------------------------------------------------------------------------
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+
+  # never rewrite something that already exists on disk
+  RewriteCond %{REQUEST_FILENAME} -f [OR]
+  RewriteCond %{REQUEST_FILENAME} -d
+  RewriteRule ^ - [L]
+
+  RewriteRule ^about/?$                                    webinfoys-about.html            [L]
+  RewriteRule ^services/?$                                 webinfoys-services.html         [L]
+  RewriteRule ^contact/?$                                  webinfoys-contact.html          [L]
+  RewriteRule ^journal/?$                                  webinfoys-blog.html             [L]
+
+  RewriteRule ^best-seo-service-company-in-kolkata/?$       webinfoys-seo.html                       [L]
+  RewriteRule ^best-web-development-company-in-kolkata/?$   webinfoys-web-development.html           [L]
+  RewriteRule ^social-media-marketing/?$                    webinfoys-social-media-marketing.html    [L]
+  RewriteRule ^logo-design/?$                               webinfoys-logo-design.html               [L]
+  RewriteRule ^email-sms-marketing/?$                       webinfoys-email-sms-marketing.html       [L]
+  RewriteRule ^google-listing/?$                            webinfoys-google-listing.html            [L]
+
+  RewriteRule ^pricing-seo/?$                    webinfoys-pricing-seo.html                  [L]
+  RewriteRule ^pricing-web-development/?$        webinfoys-pricing-web-development.html      [L]
+  RewriteRule ^pricing-smo-smm/?$                webinfoys-pricing-smo-smm.html              [L]
+  RewriteRule ^pricing-logo-design/?$            webinfoys-pricing-logo-design.html          [L]
+  RewriteRule ^pricing-email-sms-marketing/?$    webinfoys-pricing-email-sms-marketing.html  [L]
+  RewriteRule ^pricing-google-listing/?$         webinfoys-pricing-google-listing.html       [L]
+
+  RewriteRule ^privacy-policy/?$     webinfoys-privacy-policy.html   [L]
+  RewriteRule ^terms-of-use/?$       webinfoys-terms-of-use.html     [L]
+  RewriteRule ^refund_returns/?$     webinfoys-refund-policy.html    [L]
+
+  # the old WordPress blog archive now lives at /journal/
+  RewriteRule ^blog-archive/?$  /journal/  [R=301,L]
+</IfModule>
+
+# ---------------------------------------------------------------------------
+# Compression — the pages are large single files, so this matters a lot
+# ---------------------------------------------------------------------------
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/plain text/css text/javascript
+  AddOutputFilterByType DEFLATE application/javascript application/json
+  AddOutputFilterByType DEFLATE image/svg+xml
+</IfModule>
+
+# ---------------------------------------------------------------------------
+# Caching — assets are versioned by filename changes only, so HTML stays short
+# ---------------------------------------------------------------------------
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType text/html                 "access plus 1 hour"
+  ExpiresByType text/css                  "access plus 1 year"
+  ExpiresByType application/javascript    "access plus 1 year"
+  ExpiresByType image/png                 "access plus 1 year"
+  ExpiresByType image/jpeg                "access plus 1 year"
+  ExpiresByType image/svg+xml             "access plus 1 year"
+  ExpiresByType font/woff2                "access plus 1 year"
+</IfModule>
+
+# ---------------------------------------------------------------------------
+# Basic hardening
+# ---------------------------------------------------------------------------
+<IfModule mod_headers.c>
+  Header set X-Content-Type-Options "nosniff"
+  Header set Referrer-Policy "strict-origin-when-cross-origin"
+</IfModule>
+
+# the config file itself must never be served
+<Files ".ht*">
+  Require all denied
+</Files>
+
+Options -Indexes
