@@ -1,0 +1,18 @@
+{
+  // Every .html file in this project opens as HTML, with syntax highlighting,
+  // tag support and Emmet. This pins the language so a stray per-file
+  // "Plain Text" override can never stick again.
+  "files.associations": {
+    "*.html": "html"
+  },
+
+  // Open .html with the normal text editor rather than any custom editor an
+  // extension may register (that is what the "Text Editor" picker was for).
+  "workbench.editorAssociations": {
+    "*.html": "default"
+  },
+
+  // VS Code ships this OFF by default, which is why "!" + Tab stopped
+  // producing the HTML5 boilerplate. Turning it on restores that behaviour.
+  "emmet.triggerExpansionOnTab": true
+}
