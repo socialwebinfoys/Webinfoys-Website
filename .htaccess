@@ -20,6 +20,53 @@ DirectoryIndex index.html
 <IfModule mod_rewrite.c>
   RewriteEngine On
 
+  # ---- old .html addresses redirect once to their clean URL ----------------
+  # THE_REQUEST is the literal browser request line and is NOT rewritten by the
+  # internal rules further down, so each of these fires only on a genuine
+  # request for a .html address. A redirect loop is therefore impossible.
+  # Query strings are carried over automatically.
+  RewriteCond %{THE_REQUEST} \s/+index\.html[\s?] [NC]
+  RewriteRule ^ / [R=301,L]
+  RewriteCond %{THE_REQUEST} \s/+webinfoys-about\.html[\s?] [NC]
+  RewriteRule ^ /about/ [R=301,L]
+  RewriteCond %{THE_REQUEST} \s/+webinfoys-services\.html[\s?] [NC]
+  RewriteRule ^ /services/ [R=301,L]
+  RewriteCond %{THE_REQUEST} \s/+webinfoys-blog\.html[\s?] [NC]
+  RewriteRule ^ /blog/ [R=301,L]
+  RewriteCond %{THE_REQUEST} \s/+webinfoys-contact\.html[\s?] [NC]
+  RewriteRule ^ /contact/ [R=301,L]
+  RewriteCond %{THE_REQUEST} \s/+webinfoys-seo\.html[\s?] [NC]
+  RewriteRule ^ /best-seo-service-company-in-kolkata/ [R=301,L]
+  RewriteCond %{THE_REQUEST} \s/+webinfoys-web-development\.html[\s?] [NC]
+  RewriteRule ^ /best-web-development-company-in-kolkata/ [R=301,L]
+  RewriteCond %{THE_REQUEST} \s/+webinfoys-social-media-marketing\.html[\s?] [NC]
+  RewriteRule ^ /social-media-marketing/ [R=301,L]
+  RewriteCond %{THE_REQUEST} \s/+webinfoys-logo-design\.html[\s?] [NC]
+  RewriteRule ^ /logo-design/ [R=301,L]
+  RewriteCond %{THE_REQUEST} \s/+webinfoys-email-sms-marketing\.html[\s?] [NC]
+  RewriteRule ^ /email-sms-marketing/ [R=301,L]
+  RewriteCond %{THE_REQUEST} \s/+webinfoys-google-listing\.html[\s?] [NC]
+  RewriteRule ^ /google-listing/ [R=301,L]
+  RewriteCond %{THE_REQUEST} \s/+webinfoys-pricing-seo\.html[\s?] [NC]
+  RewriteRule ^ /pricing-seo/ [R=301,L]
+  RewriteCond %{THE_REQUEST} \s/+webinfoys-pricing-web-development\.html[\s?] [NC]
+  RewriteRule ^ /pricing-web-development/ [R=301,L]
+  RewriteCond %{THE_REQUEST} \s/+webinfoys-pricing-smo-smm\.html[\s?] [NC]
+  RewriteRule ^ /pricing-smo-smm/ [R=301,L]
+  RewriteCond %{THE_REQUEST} \s/+webinfoys-pricing-logo-design\.html[\s?] [NC]
+  RewriteRule ^ /pricing-logo-design/ [R=301,L]
+  RewriteCond %{THE_REQUEST} \s/+webinfoys-pricing-email-sms-marketing\.html[\s?] [NC]
+  RewriteRule ^ /pricing-email-sms-marketing/ [R=301,L]
+  RewriteCond %{THE_REQUEST} \s/+webinfoys-pricing-google-listing\.html[\s?] [NC]
+  RewriteRule ^ /pricing-google-listing/ [R=301,L]
+  RewriteCond %{THE_REQUEST} \s/+webinfoys-privacy-policy\.html[\s?] [NC]
+  RewriteRule ^ /privacy-policy/ [R=301,L]
+  RewriteCond %{THE_REQUEST} \s/+webinfoys-terms-of-use\.html[\s?] [NC]
+  RewriteRule ^ /terms-of-use/ [R=301,L]
+  RewriteCond %{THE_REQUEST} \s/+webinfoys-refund-policy\.html[\s?] [NC]
+  RewriteRule ^ /refund_returns/ [R=301,L]
+
+
   # never rewrite something that already exists on disk
   RewriteCond %{REQUEST_FILENAME} -f [OR]
   RewriteCond %{REQUEST_FILENAME} -d
@@ -28,7 +75,7 @@ DirectoryIndex index.html
   RewriteRule ^about/?$                                    webinfoys-about.html            [L]
   RewriteRule ^services/?$                                 webinfoys-services.html         [L]
   RewriteRule ^contact/?$                                  webinfoys-contact.html          [L]
-  RewriteRule ^journal/?$                                  webinfoys-blog.html             [L]
+  RewriteRule ^blog/?$                                     webinfoys-blog.html             [L]
 
   RewriteRule ^best-seo-service-company-in-kolkata/?$       webinfoys-seo.html                       [L]
   RewriteRule ^best-web-development-company-in-kolkata/?$   webinfoys-web-development.html           [L]
@@ -48,8 +95,8 @@ DirectoryIndex index.html
   RewriteRule ^terms-of-use/?$       webinfoys-terms-of-use.html     [L]
   RewriteRule ^refund_returns/?$     webinfoys-refund-policy.html    [L]
 
-  # the old WordPress blog archive now lives at /journal/
-  RewriteRule ^blog-archive/?$  /journal/  [R=301,L]
+  # the old WordPress blog archive now lives at /blog/
+  RewriteRule ^blog-archive/?$  /blog/  [R=301,L]
 </IfModule>
 
 # ---------------------------------------------------------------------------
