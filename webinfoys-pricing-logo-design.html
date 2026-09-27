@@ -4432,7 +4432,7 @@
        states them. These are one-off project prices. */
     const plans = [
       {
-        name: "Logo for Startups", tier: "Starter", tag: "1 concept", price: "149", per: "/ one-off project",
+        name: "Logo for Startups", tier: "Starter", tag: "1 concept", price: "149", pay: "https://www.paypal.com/ncp/payment/JFFPHHKJ9D9KC", per: "/ one-off project",
         blurb: "One considered mark for a new business, in the colour and mono versions you need day to day.",
         feats: [
           "1 custom logo concept",
@@ -4446,7 +4446,7 @@
         ]
       },
       {
-        name: "Logo for Growing Brands", tier: "Most popular", tag: "3 concepts", price: "295", per: "/ one-off project", pop: true,
+        name: "Logo for Growing Brands", tier: "Most popular", tag: "3 concepts", price: "295", pay: "https://www.paypal.com/ncp/payment/NT97GWWLN7TWE", per: "/ one-off project", pop: true,
         blurb: "Three real directions, then the type, colour and source files that turn the chosen one into a system.",
         feats: [
           "3 custom logo concepts",
@@ -4460,7 +4460,7 @@
         ]
       },
       {
-        name: "Complete Brand Identity", tier: "Best value", tag: "5+ concepts", price: "525", per: "/ one-off project",
+        name: "Complete Brand Identity", tier: "Best value", tag: "5+ concepts", price: "525", pay: "https://www.paypal.com/ncp/payment/DDFAKG6VLT5XG", per: "/ one-off project",
         blurb: "The full identity: logo system, typography, colour, icons and written guidelines to keep it consistent.",
         feats: [
           "5+ premium logo concepts",
@@ -4513,8 +4513,8 @@
         '<div class="per">' + p.per + '</div>' +
         '<div class="incl">Includes</div>' +
         '<ul class="feats">' + p.feats.map(function (f) { return '<li>' + ico("check") + '<span>' + f + '</span></li>'; }).join("") + '</ul>' +
-        '<a class="btn ' + (p.pop ? "btn-primary" : "btn-glass") + ' buy" href="' + WA + '">' +
-        (p.custom ? "Request a quote" : "Get quotation") + '</a></div></div>';
+        '<a class="btn ' + (p.pop ? "btn-primary" : "btn-glass") + ' buy" href="' + p.pay +
+        '" target="_blank" rel="noopener noreferrer">Buy Now</a></div></div>';
     }).join("");
 
     /* the comparison table is built from the same plans array as the cards, so

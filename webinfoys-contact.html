@@ -4279,7 +4279,10 @@
     .trust-grid {
       display: grid;
       grid-template-columns: repeat(4, minmax(0, 1fr));
-      gap: 18px
+      gap: 18px;
+      /* every row the same height, so a description that wraps onto a second
+         line cannot leave the row below it shorter */
+      grid-auto-rows: 1fr
     }
 
     .trust-grid>* {
@@ -4320,6 +4323,36 @@
       font-size: 13.5px;
       color: var(--muted);
       line-height: 1.55
+    }
+
+    /* the four listing cards are links: the arrow line is pushed to the foot
+       so all four stay level whatever the length of their text */
+    a.tcard {
+      display: flex;
+      flex-direction: column;
+      text-decoration: none
+    }
+
+    .tcard .tlink {
+      margin-top: auto;
+      padding-top: 16px;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-style: normal;
+      font-size: 13.5px;
+      font-weight: 600;
+      color: var(--b1-text)
+    }
+
+    .tcard .tlink svg {
+      width: 14px;
+      height: 14px;
+      transition: transform .3s
+    }
+
+    a.tcard:hover .tlink svg {
+      transform: translateX(4px)
     }
 
     /* ---- FAQ → contact prompt ---- */
@@ -5344,36 +5377,44 @@
   <section class="section sy-sm" id="details" data-atmo="magenta">
     <div class="head center" data-reveal="up">
       <div class="eyebrow" style="justify-content:center"><i data-i="shield"></i> Company details</div>
-      <h2>A registered studio you can <span class="serif gt">check</span></h2>
+      <h2>Find Webinfoys across <span class="serif gt">trusted platforms</span></h2>
     </div>
     <div class="trust-grid" data-stagger>
       <div data-reveal="scale">
-        <div class="glass tcard interactive tilt" data-tilt data-glow>
+        <a class="glass tcard interactive tilt" href="https://www.crunchbase.com/organization/webinfoys"
+          target="_blank" rel="noopener noreferrer" data-tilt data-glow>
           <div class="sheen"></div>
-          <b>Studio</b><span>Webinfoys</span>
-          <small>Digital marketing &amp; web development, operating since 2020.</small>
-        </div>
+          <b>Crunchbase</b><span>Company Overview</span>
+          <small>Webinfoys in the Crunchbase organisation directory.</small>
+          <em class="tlink">View profile <i data-i="arrow"></i></em>
+        </a>
       </div>
       <div data-reveal="scale">
-        <div class="glass tcard interactive tilt" data-tilt data-glow>
+        <a class="glass tcard interactive tilt" href="https://www.goodfirms.co/company/webinfoys"
+          target="_blank" rel="noopener noreferrer" data-tilt data-glow>
           <div class="sheen"></div>
-          <b>Based in</b><span>Central City, NY, United States</span>
-          <small>Working with clients in Kolkata and across India.</small>
-        </div>
+          <b>GoodFirms</b><span>Agency Profile</span>
+          <small>Listed as an India-based agency in the GoodFirms directory.</small>
+          <em class="tlink">View profile <i data-i="arrow"></i></em>
+        </a>
       </div>
       <div data-reveal="scale">
-        <div class="glass tcard interactive tilt" data-tilt data-glow>
+        <a class="glass tcard interactive tilt" href="https://rocketreach.co/webinfoys-management_b75b4d0ac53e5079"
+          target="_blank" rel="noopener noreferrer" data-tilt data-glow>
           <div class="sheen"></div>
-          <b>GSTIN</b><span>19AAFFW0322A1ZP</span>
-          <small>Registered for GST in West Bengal.</small>
-        </div>
+          <b>RocketReach</b><span>Company Information</span>
+          <small>Team listed in Kolkata, West Bengal, India.</small>
+          <em class="tlink">View profile <i data-i="arrow"></i></em>
+        </a>
       </div>
       <div data-reveal="scale">
-        <div class="glass tcard interactive tilt" data-tilt data-glow>
+        <a class="glass tcard interactive tilt" href="https://www.trustpilot.com/review/webinfoys.com"
+          target="_blank" rel="noopener noreferrer" data-tilt data-glow>
           <div class="sheen"></div>
-          <b>MSME</b><span>UDYAM-WB-15-0036384</span>
-          <small>Registered under the Udyam MSME scheme.</small>
-        </div>
+          <b>Trustpilot</b><span>Customer Reviews</span>
+          <small>Worked with us? Share your experience.</small>
+          <em class="tlink">Write a review <i data-i="arrow"></i></em>
+        </a>
       </div>
     </div>
     <p class="price-note" data-reveal="up" style="margin-top:26px">Payments are accepted through PayPal and major

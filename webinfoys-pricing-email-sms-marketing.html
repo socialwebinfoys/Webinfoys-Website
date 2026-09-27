@@ -4434,7 +4434,7 @@
        what make these monthly packages, and the note under the grid says so. */
     const plans = [
       {
-        name: "Starter", tier: "Starter", tag: "Up to 2 campaigns a month", price: "249", per: "/ per month",
+        name: "Starter", tier: "Starter", tag: "Up to 2 campaigns a month", price: "249", pay: "https://www.paypal.com/ncp/payment/H7LM9U34ZLNXW", per: "/ per month",
         blurb: "One channel, set up properly: the account, a clean list, a template and a first automation flow.",
         feats: [
           "Email and SMS setup and account configuration",
@@ -4448,7 +4448,7 @@
         ]
       },
       {
-        name: "Business", tier: "Most popular", tag: "4 email + 4 SMS a month", price: "499", per: "/ per month", pop: true,
+        name: "Business", tier: "Most popular", tag: "4 email + 4 SMS a month", price: "499", pay: "https://www.paypal.com/ncp/payment/7WMD4586UVNR8", per: "/ per month", pop: true,
         blurb: "Both channels running together, with segmentation and the automation flows that do the repeat work.",
         feats: [
           "Email and SMS running together",
@@ -4462,7 +4462,7 @@
         ]
       },
       {
-        name: "Enterprise", tier: "Best value", tag: "Unlimited campaigns", price: "Custom", custom: true, per: "/ quoted to scope",
+        name: "Enterprise", tier: "Best value", tag: "Unlimited campaigns", price: "Custom", pay: "https://www.paypal.com/ncp/payment/T4XQ3MP45N5FC", custom: true, per: "/ quoted to scope",
         blurb: "A full lifecycle programme across both channels, integrated with the systems your business already runs.",
         feats: [
           "Unlimited email and SMS campaigns (fair use)",
@@ -4515,8 +4515,8 @@
         '<div class="per">' + p.per + '</div>' +
         '<div class="incl">Includes</div>' +
         '<ul class="feats">' + p.feats.map(function (f) { return '<li>' + ico("check") + '<span>' + f + '</span></li>'; }).join("") + '</ul>' +
-        '<a class="btn ' + (p.pop ? "btn-primary" : "btn-glass") + ' buy" href="' + WA + '">' +
-        (p.custom ? "Request a quote" : "Get quotation") + '</a></div></div>';
+        '<a class="btn ' + (p.pop ? "btn-primary" : "btn-glass") + ' buy" href="' + p.pay +
+        '" target="_blank" rel="noopener noreferrer">Buy Now</a></div></div>';
     }).join("");
 
     /* the comparison table is built from the same plans array as the cards, so

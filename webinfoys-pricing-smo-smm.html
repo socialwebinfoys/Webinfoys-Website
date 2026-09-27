@@ -4434,7 +4434,7 @@
        grid says so plainly. */
     const plans = [
       {
-        name: "Social Media Foundation", tier: "Starter", tag: "Up to 2 profiles", price: "499", per: "/ per month",
+        name: "Social Media Foundation", tier: "Starter", tag: "Up to 2 profiles", price: "499", pay: "https://www.paypal.com/ncp/payment/62JDQSQGMZQNJ", per: "/ per month",
         blurb: "Gets the profiles right first: branding, bios, imagery and the structure that makes them findable.",
         feats: [
           "Up to 2 social profiles optimized",
@@ -4448,7 +4448,7 @@
         ]
       },
       {
-        name: "Social Media Growth", tier: "Most popular", tag: "Up to 4–5 profiles", price: "649", per: "/ per month", pop: true,
+        name: "Social Media Growth", tier: "Most popular", tag: "Up to 4–5 profiles", price: "649", pay: "https://www.paypal.com/ncp/payment/QPRYULNCKQ7D2", per: "/ per month", pop: true,
         blurb: "Optimization plus an active content framework and weekly reviews across your main platforms.",
         feats: [
           "Up to 4–5 social profiles optimized",
@@ -4462,7 +4462,7 @@
         ]
       },
       {
-        name: "Social Media Authority", tier: "Best value", tag: "Unlimited profiles", price: "999", per: "/ per month",
+        name: "Social Media Authority", tier: "Best value", tag: "Unlimited profiles", price: "999", pay: "https://www.paypal.com/ncp/payment/NBBTCYDQCMVTL", per: "/ per month",
         blurb: "A fully customized SMO and content strategy, with conversion-focused profile and funnel work.",
         feats: [
           "Unlimited social profiles optimized",
@@ -4515,8 +4515,8 @@
         '<div class="per">' + p.per + '</div>' +
         '<div class="incl">Includes</div>' +
         '<ul class="feats">' + p.feats.map(function (f) { return '<li>' + ico("check") + '<span>' + f + '</span></li>'; }).join("") + '</ul>' +
-        '<a class="btn ' + (p.pop ? "btn-primary" : "btn-glass") + ' buy" href="' + WA + '">' +
-        (p.custom ? "Request a quote" : "Get quotation") + '</a></div></div>';
+        '<a class="btn ' + (p.pop ? "btn-primary" : "btn-glass") + ' buy" href="' + p.pay +
+        '" target="_blank" rel="noopener noreferrer">Buy Now</a></div></div>';
     }).join("");
 
     /* the comparison table is built from the same plans array as the cards, so

@@ -4435,7 +4435,7 @@
        the reading the rate card's own annotation supports. */
     const plans = [
       {
-        name: "Starter", tier: "Starter", tag: "Basic optimization", price: "299", per: "/ one-off project",
+        name: "Starter", tier: "Starter", tag: "Basic optimization", price: "299", pay: "https://www.paypal.com/ncp/payment/6D3BY6GZCQZ2W", per: "/ one-off project",
         blurb: "Claim it, correct it and fill it in properly — the groundwork every listing needs before anything else.",
         feats: [
           "Google Business Profile setup and optimization",
@@ -4449,7 +4449,7 @@
         ]
       },
       {
-        name: "Business", tier: "Most popular", tag: "Advanced optimization", price: "549", per: "/ one-off project", pop: true,
+        name: "Business", tier: "Most popular", tag: "Advanced optimization", price: "549", pay: "https://www.paypal.com/ncp/payment/GKW4QVFCJRWX2", per: "/ one-off project", pop: true,
         blurb: "Deeper optimization across categories, services and local keywords, with ranking reporting each month.",
         feats: [
           "Everything in Starter",
@@ -4463,7 +4463,7 @@
         ]
       },
       {
-        name: "Enterprise", tier: "Best value", tag: "Conversion-focused", price: "799", per: "/ one-off project",
+        name: "Enterprise", tier: "Best value", tag: "Conversion-focused", price: "799", pay: "https://www.paypal.com/ncp/payment/ZZCAFK4WTD6J6", per: "/ one-off project",
         blurb: "Competitive keyword work, competitor and market analysis, and a profile tuned to produce calls.",
         feats: [
           "Everything in Business",
@@ -4515,8 +4515,8 @@
         '<div class="per">' + p.per + '</div>' +
         '<div class="incl">Includes</div>' +
         '<ul class="feats">' + p.feats.map(function (f) { return '<li>' + ico("check") + '<span>' + f + '</span></li>'; }).join("") + '</ul>' +
-        '<a class="btn ' + (p.pop ? "btn-primary" : "btn-glass") + ' buy" href="' + WA + '">' +
-        (p.custom ? "Request a quote" : "Get quotation") + '</a></div></div>';
+        '<a class="btn ' + (p.pop ? "btn-primary" : "btn-glass") + ' buy" href="' + p.pay +
+        '" target="_blank" rel="noopener noreferrer">Buy Now</a></div></div>';
     }).join("");
 
     /* the comparison table is built from the same plans array as the cards, so
