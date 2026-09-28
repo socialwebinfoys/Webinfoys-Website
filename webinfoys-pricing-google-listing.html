@@ -1736,34 +1736,237 @@
       color: var(--ink)
     }
 
-    /* payment / trust row — the live footer's "Powered by" strip */
-    .foot .pay {
-      margin-top: 22px;
+    /* ---- invoice CTA — the footer's one payment action --------------------
+       Replaces the old "Pay securely · PayPal · Debit & Credit Cards" strip,
+       which read as a trust badge rather than something you could click.
+       The card IS the anchor: nothing inside it is focusable or clickable, so
+       a pointer, a tap and a keyboard activation all do the same single thing.
+       It lives in the brand column — ~290px at full width, full-row under
+       1200px — so the composition is built to read at both. */
+    .foot .pay-cta {
+      --pc-r: 20px;
+      position: relative;
+      isolation: isolate;
+      overflow: hidden;
+      margin-top: 24px;
+      max-width: 420px;
       display: flex;
       align-items: center;
-      gap: 9px;
-      flex-wrap: wrap
+      gap: 12px;
+      padding: 15px 14px 14px 16px;
+      border-radius: var(--pc-r);
+      /* a step brighter than .glass, so the card lifts off the footer ground
+         instead of dissolving into it; the violet wash is a corner hint, not
+         a gradient fill, so it never competes with the CTA above it */
+      background:
+        linear-gradient(145deg, rgba(255, 255, 255, .10), rgba(255, 255, 255, .032) 46%, rgba(255, 255, 255, .014)),
+        radial-gradient(130% 150% at 0% 0%, rgba(139, 123, 242, .17), transparent 58%),
+        rgba(14, 18, 33, .88);
+      backdrop-filter: blur(20px) saturate(140%);
+      -webkit-backdrop-filter: blur(20px) saturate(140%);
+      box-shadow:
+        0 1px 0 0 rgba(255, 255, 255, .30) inset,
+        0 -14px 30px -20px rgba(0, 0, 0, .6) inset,
+        0 18px 44px -26px rgba(0, 0, 0, .8),
+        0 6px 22px -16px rgba(139, 123, 242, .34);
+      transition: transform .32s var(--ease), box-shadow .32s var(--ease)
     }
 
-    .foot .pay .lbl {
-      font-size: 12px;
-      letter-spacing: .16em;
-      text-transform: uppercase;
-      color: var(--muted);
+    /* the hairline, drawn as a masked gradient ring like .glass::before */
+    .foot .pay-cta::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: 2;
+      border-radius: inherit;
+      padding: 1px;
+      pointer-events: none;
+      opacity: .85;
+      background: linear-gradient(135deg, rgba(255, 255, 255, .62), rgba(255, 255, 255, .10) 32%, rgba(255, 255, 255, .04) 58%, rgba(199, 123, 224, .30) 82%, rgba(255, 255, 255, .34));
+      -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+      -webkit-mask-composite: xor;
+      mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+      mask-composite: exclude;
+      transition: opacity .32s var(--ease)
+    }
+
+    /* the highlight that travels across on hover — one pass, never a loop */
+    .foot .pay-cta .pc-sheen {
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+      border-radius: inherit;
+      pointer-events: none;
+      transform: translateX(-120%);
+      background: linear-gradient(105deg, transparent 32%, rgba(255, 255, 255, .11) 48%, transparent 64%);
+      transition: transform .55s var(--ease)
+    }
+
+    .foot .pay-cta .pc-main {
+      position: relative;
+      z-index: 3;
+      flex: 1;
+      min-width: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 7px
+    }
+
+    .foot .pay-cta .pc-lbl {
       font-family: 'Space Mono', monospace;
-      width: 100%;
-      margin-bottom: 3px
+      font-size: 10.5px;
+      line-height: 1;
+      letter-spacing: .17em;
+      text-transform: uppercase;
+      color: var(--b3)
     }
 
-    .foot .pay b {
-      font-size: 13px;
-      font-weight: 600;
-      color: var(--ink);
-      padding: 7px 13px;
+    .foot .pay-cta .pc-ttl {
+      font-family: 'Sora', sans-serif;
+      font-size: 15.5px;
+      font-weight: 700;
+      line-height: 1.25;
+      letter-spacing: -0.02em;
+      color: var(--ink)
+    }
+
+    /* the methods stay secondary: smaller, quieter, below the line they support */
+    .foot .pay-cta .pc-badges {
+      margin-top: 2px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 5px
+    }
+
+    .foot .pay-cta .pc-b {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      padding: 4px 8px;
       border-radius: 999px;
-      border: 1px solid var(--hair);
+      font-size: 10.5px;
+      font-weight: 600;
+      white-space: nowrap;
+      color: var(--muted);
+      border: 1px solid var(--hairSoft);
       background: rgba(255, 255, 255, .05);
-      box-shadow: 0 1px 0 rgba(255, 255, 255, .16) inset
+      transition: color .32s var(--ease), border-color .32s var(--ease)
+    }
+
+    .foot .pay-cta .pc-b svg {
+      width: 12px;
+      height: 12px;
+      flex-shrink: 0;
+      opacity: .85
+    }
+
+    /* the affordance: a chip that says the whole card goes somewhere */
+    .foot .pay-cta .pc-go {
+      position: relative;
+      z-index: 3;
+      flex-shrink: 0;
+      width: 32px;
+      height: 32px;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      color: var(--ink);
+      border: 1px solid rgba(236, 234, 243, .16);
+      background: linear-gradient(135deg, rgba(139, 123, 242, .42), rgba(199, 123, 224, .30));
+      box-shadow: 0 1px 0 rgba(255, 255, 255, .26) inset, 0 6px 16px -10px rgba(199, 123, 224, .7);
+      transition: transform .32s var(--ease), box-shadow .32s var(--ease)
+    }
+
+    .foot .pay-cta .pc-go svg {
+      width: 16px;
+      height: 16px
+    }
+
+    /* ---- hover / focus: the same lift, so a keyboard gets the same answer ---- */
+    .foot .pay-cta:hover,
+    .foot .pay-cta:focus-visible {
+      transform: translateY(-3px);
+      box-shadow:
+        0 1px 0 0 rgba(255, 255, 255, .40) inset,
+        0 -14px 30px -20px rgba(0, 0, 0, .6) inset,
+        0 26px 58px -26px rgba(0, 0, 0, .86),
+        0 12px 32px -16px rgba(139, 123, 242, .48)
+    }
+
+    /* the global a:focus-visible rule sets border-radius:10px, which would
+       square off a 20px card the moment it took focus */
+    .foot .pay-cta:focus-visible {
+      outline: 2px solid var(--b2);
+      outline-offset: 3px;
+      border-radius: var(--pc-r)
+    }
+
+    .foot .pay-cta:hover::before,
+    .foot .pay-cta:focus-visible::before {
+      opacity: 1
+    }
+
+    .foot .pay-cta:hover .pc-sheen,
+    .foot .pay-cta:focus-visible .pc-sheen {
+      transform: translateX(120%)
+    }
+
+    .foot .pay-cta:hover .pc-go,
+    .foot .pay-cta:focus-visible .pc-go {
+      transform: translateX(3px);
+      box-shadow: 0 1px 0 rgba(255, 255, 255, .34) inset, 0 8px 20px -10px rgba(199, 123, 224, .85)
+    }
+
+    .foot .pay-cta:hover .pc-b,
+    .foot .pay-cta:focus-visible .pc-b {
+      color: var(--ink);
+      border-color: var(--hair)
+    }
+
+    /* small phones: the card keeps its horizontal read, just tighter */
+    @media (max-width:420px) {
+      .foot .pay-cta {
+        gap: 10px;
+        padding: 13px 12px 12px 14px
+      }
+
+      .foot .pay-cta .pc-ttl {
+        font-size: 14.5px
+      }
+
+      .foot .pay-cta .pc-b {
+        font-size: 10px;
+        padding: 4px 8px
+      }
+
+      .foot .pay-cta .pc-go {
+        width: 30px;
+        height: 30px
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+
+      .foot .pay-cta,
+      .foot .pay-cta::before,
+      .foot .pay-cta .pc-sheen,
+      .foot .pay-cta .pc-go,
+      .foot .pay-cta .pc-b {
+        transition: none
+      }
+
+      .foot .pay-cta:hover,
+      .foot .pay-cta:focus-visible,
+      .foot .pay-cta:hover .pc-go,
+      .foot .pay-cta:focus-visible .pc-go {
+        transform: none
+      }
+
+      .foot .pay-cta:hover .pc-sheen,
+      .foot .pay-cta:focus-visible .pc-sheen {
+        transform: translateX(-120%)
+      }
     }
 
     .foot h5 {
@@ -4274,11 +4477,25 @@
         <a class="brand" href="/"><span class="logo-stage"><img class="logo-3d" src="/webinfoys-logo.png" alt="Webinfoys logo" width="32" height="32" loading="lazy" decoding="async"></span><span class="wm">webinfoys<span>.</span></span></a>
         <p class="d">Your trusted partner in innovation, growth, and digital success — data-driven marketing and
           advanced web development. Central City, NY, United States.</p>
-        <div class="pay">
-          <span class="lbl">Pay securely</span>
-          <b>PayPal</b>
-          <b>Debit &amp; Credit Cards</b>
-        </div>
+        <!-- invoice CTA: one card, one anchor, one destination. Nothing inside
+             it is clickable on its own, so the whole surface is the action. -->
+        <a class="pay-cta" href="https://www.paypal.com/ncp/payment/2A2RE3BWPYZHC" target="_blank"
+          rel="noopener noreferrer" aria-label="Pay an invoice securely with PayPal — opens in a new tab">
+          <span class="pc-sheen" aria-hidden="true"></span>
+          <span class="pc-main">
+            <span class="pc-lbl">Existing client?</span>
+            <span class="pc-ttl">Pay an invoice securely</span>
+            <span class="pc-badges">
+              <span class="pc-b">PayPal</span>
+              <span class="pc-b"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="5" width="20"
+                    height="14" rx="2.5" /><path d="M2 10h20" /></svg>Debit &amp; Credit Cards</span>
+            </span>
+          </span>
+          <span class="pc-go" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h12" />
+              <path d="m12 5 7 7-7 7" /></svg></span>
+        </a>
       </div>
       <div data-reveal="up">
         <h5>Company</h5>
